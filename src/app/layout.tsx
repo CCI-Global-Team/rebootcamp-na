@@ -1,16 +1,30 @@
 import type { Metadata } from 'next';
-import { Geist } from 'next/font/google';
+import { Barlow_Condensed, Inter, Oswald } from 'next/font/google';
 
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const barlowCondensed = Barlow_Condensed({
+  weight: ['400', '600', '700', '800'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
+  variable: '--font-barlow-condensed',
+});
+
+const inter = Inter({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const oswald = Oswald({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-oswald',
 });
 
 export const metadata: Metadata = {
-  title: `TypeScript starter for Next.js by João Pedro Schmitz`,
-  description: `TypeScript starter for Next.js that includes all you need to build amazing apps`,
+  title: 'Reboot Camp - North America',
+  description: 'Great Grace! 4 - 6 September, 2026',
 };
 export default function RootLayout({
   children,
@@ -18,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable}`}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${barlowCondensed.variable} ${inter.variable} ${oswald.variable}`}>{children}</body>
     </html>
   );
 }

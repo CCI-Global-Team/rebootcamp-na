@@ -1,0 +1,653 @@
+{
+  "site": {
+    "name": "Reboot Camp NA",
+    "orgName": "Reboot Camp International",
+    "email": "info@rebootcamp.ca",
+    "volunteersEmail": "volunteers@rebootcamp.ca",
+    "givingEmail": "giving@rebootcamp.ca",
+    "phone": "+1 (416) 555-0100"
+  },
+  "event": {
+    "name": "Reboot Camp North America",
+    "edition": "2026",
+    "theme": "Great Grace",
+    "dates": "September 4–6, 2026",
+    "datesDisplay": "SEPTEMBER 4–6, 2026",
+    "countdownTarget": "2026-09-04T09:00:00",
+    "admission": "Free (Registration Required)",
+    "registrationUrl": "https://your-registration-link.com"
+  },
+  "navbar": {
+    "links": [
+      { "label": "About",         "href": "#about" },
+      { "label": "Schedule",      "href": "#schedule" },
+      { "label": "Speakers",      "href": "#speakers" },
+      { "label": "Accommodation", "href": "#accommodation" },
+      { "label": "Venue",         "href": "#venue" },
+      { "label": "Past RBCs",   "href": "#past-events" },
+      { "label": "FAQs",          "href": "#faqs" },
+      { "label": "Give",          "href": "#giving" }
+    ],
+    "ctaLabel": "Register Now"
+  },
+  "hero": {
+    "badge": "Camp Meeting · North America",
+    "themeLines": ["Great", "Grace"],
+    "description": "An extraordinary gathering of faith, fire and fellowship. Come encounter the transforming power of God's grace.",
+    "ctaPrimary": "REGISTER NOW — FREE",
+    "ctaSecondary": "LEARN MORE",
+    "countdownLabel": "Event Begins In"
+  },
+  "about": {
+    "sectionLabel": "About The Event",
+    "headingPlain": "What is",
+    "headingAccent": "Reboot Camp?",
+    "paragraphs": [
+      "Reboot Camp is an annual camp meeting experience designed to ignite spiritual renewal, deepen faith, and build kingdom community. Born from a vision to see lives transformed by the power of God's Word, Reboot Camp has grown into one of North America's most anticipated Christian gatherings.",
+      "This year, under the theme {theme} — drawn from Acts 4:33 — we gather in Toronto, Canada for three days of powerful preaching, worship, prayer, and fellowship. Every session is designed to impart fresh grace into every area of your life."
+    ],
+    "verse": {
+      "text": "\"And with great power the apostles gave witness to the resurrection of the Lord Jesus. And great grace was upon them all.\"",
+      "reference": "— Acts 4:33"
+    },
+    "ctaLabel": "SECURE YOUR SPOT",
+    "stats": [
+      { "icon": "Users",  "value": "2,000+", "label": "Expected Attendees" },
+      { "icon": "Globe",  "value": "20+",    "label": "Nations Represented" },
+      { "icon": "Star",   "value": "3 Days", "label": "Of Transforming Sessions" },
+      { "icon": "Flame",  "value": "Free",   "label": "Registration & Admission" }
+    ],
+    "whatToExpect": [
+      "Powerful anointed preaching and teaching",
+      "Dynamic worship and praise sessions",
+      "Healing and miracle prayer nights",
+      "Prophetic ministry and impartation",
+      "Youth & young adults breakout sessions",
+      "Community fellowship and networking"
+    ]
+  },
+  "schedule": {
+    "sectionLabel": "Programme",
+    "headingPlain": "Event",
+    "headingAccent": "Schedule",
+    "subtitle": "All sessions are free and open to all registered attendees. Times are approximate and subject to change.",
+    "footnote": "* Schedule is subject to change. All times are Eastern Time (ET).",
+    "days": [
+      {
+        "day": "Day 1", "date": "September 4", "label": "Friday",
+        "sessions": [
+          { "time": "9:00 AM",  "title": "Registration & Check-In",                         "type": "break",     "note": "Main Entrance Foyer" },
+          { "time": "10:00 AM", "title": "Morning Prayer & Devotion",                        "type": "prayer" },
+          { "time": "11:00 AM", "title": "Morning Session — Grace That Transforms",           "type": "preaching", "speaker": "Guest Minister 1" },
+          { "time": "12:30 PM", "title": "Lunch Break",                                      "type": "break",     "note": "On your own" },
+          { "time": "2:00 PM",  "title": "Afternoon Teaching — Walking in Favour",           "type": "preaching", "speaker": "Guest Minister 2" },
+          { "time": "4:00 PM",  "title": "Prophetic Workshop",                               "type": "special",   "speaker": "Guest Speaker", "note": "Breakout Room A" },
+          { "time": "6:30 PM",  "title": "Opening Night Worship",                            "type": "worship",   "speaker": "Reboot Worship Team" },
+          { "time": "7:30 PM",  "title": "Opening Night Message — The Grace of Power",       "type": "preaching", "speaker": "Lead Speaker", "note": "Theme Keynote" },
+          { "time": "9:30 PM",  "title": "Altar Call & Prayer Ministry",                     "type": "prayer" }
+        ]
+      },
+      {
+        "day": "Day 2", "date": "September 5", "label": "Saturday",
+        "sessions": [
+          { "time": "8:30 AM",  "title": "Morning Prayer Intercession",                      "type": "prayer" },
+          { "time": "9:30 AM",  "title": "Youth & Young Adults Session",                     "type": "special",   "speaker": "Youth Minister", "note": "Youth Hall" },
+          { "time": "10:00 AM", "title": "Morning Message — Grace Unlimited",                "type": "preaching", "speaker": "Guest Minister 3" },
+          { "time": "12:30 PM", "title": "Lunch Break",                                      "type": "break",     "note": "On your own" },
+          { "time": "2:30 PM",  "title": "Women's / Men's Breakout Sessions",               "type": "special",   "note": "Separate Rooms" },
+          { "time": "4:30 PM",  "title": "Ministry Gifts Activation",                        "type": "special",   "speaker": "Lead Speaker" },
+          { "time": "6:30 PM",  "title": "Saturday Praise Night",                            "type": "worship",   "speaker": "Reboot Worship Team", "note": "Special Guest Artist" },
+          { "time": "7:45 PM",  "title": "Saturday Night Live Message",                      "type": "preaching", "speaker": "Lead Speaker" },
+          { "time": "10:00 PM", "title": "Special Night of Miracles",                        "type": "prayer",    "note": "Do Not Miss This!" }
+        ]
+      },
+      {
+        "day": "Day 3", "date": "September 6", "label": "Sunday",
+        "sessions": [
+          { "time": "9:00 AM",  "title": "Communion & Thanksgiving Service",                 "type": "worship" },
+          { "time": "10:30 AM", "title": "Closing Message — Go in Great Grace",              "type": "preaching", "speaker": "Lead Speaker", "note": "Final Keynote" },
+          { "time": "12:00 PM", "title": "Impartation & Commissioning",                     "type": "prayer" },
+          { "time": "1:00 PM",  "title": "Closing Lunch & Fellowship",                      "type": "break",     "note": "Provided" }
+        ]
+      }
+    ]
+  },
+  "speakers": {
+    "sectionLabel": "Faculty",
+    "headingPlain": "Meet the",
+    "headingAccent": "Speakers",
+    "mainBadge": "★ Lead / Main Speaker",
+    "mainLabel": "Main Speaker",
+    "supportingLabel": "Supporting Ministers",
+    "note": "* More speakers to be announced. Check back regularly.",
+    "main": {
+      "name": "Apostle David Emmanuel",
+      "title": "Presiding Apostle, Reboot Camp International",
+      "bio": "Apostle David Emmanuel is a revivalist and apostolic voice to this generation. Known for his fiery preaching and prophetic accuracy, he has ministered to hundreds of thousands across Africa, North America, and Europe. His mandate: to see a generation fully rebooted for God's kingdom purposes.",
+      "specialties": ["Apostolic Preaching", "Prophetic Ministry", "Kingdom Mandate"]
+    },
+    "supporting": [
+      {
+        "name": "Pastor Sarah Mitchell",
+        "title": "Senior Pastor, Grace Life Church",
+        "city": "Chicago, USA",
+        "specialty": "Worship & Intercession",
+        "imgUrl": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80"
+      },
+      {
+        "name": "Dr. James Okonkwo",
+        "title": "Bible Teacher & Author",
+        "city": "London, UK",
+        "specialty": "Word & Doctrine",
+        "imgUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+      },
+      {
+        "name": "Rev. Grace Adeyemi",
+        "title": "Women's Ministry Leader",
+        "city": "Lagos, Nigeria",
+        "specialty": "Prophetic Ministry",
+        "imgUrl": "https://images.unsplash.com/photo-1494790108755-2616b612b913?w=400&q=80"
+      },
+      {
+        "name": "Pastor Michael Chen",
+        "title": "Youth & Next-Gen Leader",
+        "city": "Toronto, Canada",
+        "specialty": "Youth Ministry",
+        "imgUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
+      }
+    ]
+  },
+  "registration": {
+    "sectionLabel": "Secure Your Place",
+    "headingPlain": "Register",
+    "headingAccent": "Free",
+    "description": "Admission is completely free. Reserve your spot and join thousands of believers for three transformative days of Great Grace.",
+    "urgencyText": "Spots are filling fast",
+    "urgencyHeadingPlain": "Don't Miss",
+    "urgencyHeadingAccent": "Great Grace",
+    "ctaLabel": "REGISTER NOW",
+    "externalNote": "Opens external registration page",
+    "contactNote": "Registration is free and open to all.\nFor group inquiries or accessibility needs,\ncontact us at",
+    "highlights": [
+      {
+        "icon": "Music",
+        "color": "#A78BFA",
+        "rgb": "167,139,250",
+        "title": "Worship Nights",
+        "desc": "Three nights of deep, spirit-filled worship led by the Reboot Worship Team and special guest artists."
+      },
+      {
+        "icon": "BookOpen",
+        "color": "#E8C033",
+        "rgb": "232,192,51",
+        "title": "Powerful Teaching",
+        "desc": "Anointed messages on the theme \u201cGreat Grace\u201d from leading ministers across North America and beyond."
+      },
+      {
+        "icon": "Zap",
+        "color": "#E85D04",
+        "rgb": "232,93,4",
+        "title": "Prophetic Activation",
+        "desc": "Workshops, breakout sessions, and ministry gifts activation to stir up your calling and purpose."
+      },
+      {
+        "icon": "Users",
+        "color": "#34D399",
+        "rgb": "52,211,153",
+        "title": "Community",
+        "desc": "Connect with believers from across Canada and the world \u2014 fellowship, networking, and lifelong friendships."
+      }
+    ],
+    "included": [
+      "All 3 days of sessions (Fri \u2013 Sun)",
+      "Youth & Young Adults programming",
+      "Women\u2019s and Men\u2019s breakout sessions",
+      "Sunday commissioning & closing lunch",
+      "Event programme booklet",
+      "Access to all prayer ministry times"
+    ]
+  },
+  "accommodation": {
+    "sectionLabel": "Where to Stay",
+    "headingPlain": "Accommodation",
+    "headingAccent": "Options",
+    "description": "We have negotiated special rates with partner hotels near the venue. Book early to secure the best rates.",
+    "partnerCode": "REBOOT2026",
+    "partnerNote": "Hotels marked with {partnerRate} offer discounted pricing for Reboot Camp attendees. Use code {code} when booking.",
+    "footnote": "All prices are approximate and subject to availability. Rates in Canadian Dollars (CAD). Book early \u2014 rooms fill up fast!",
+    "hotels": [
+      {
+        "name": "Comfort Inn & Suites",
+        "category": "Budget Friendly",
+        "distance": "0.8 km from venue",
+        "price": "~CAD $129/night",
+        "stars": 3,
+        "amenities": ["Free WiFi", "Breakfast", "Parking"],
+        "imgUrl": "https://images.unsplash.com/photo-1642621866758-aa55c9751e74?w=600&q=80",
+        "badge": "Best Value",
+        "badgeColor": "#34D399",
+        "partnerRate": true,
+        "bookUrl": "#",
+        "description": "A comfortable, affordable option within walking distance of the venue. Ideal for attendees on a budget."
+      },
+      {
+        "name": "Marriott Toronto Downtown",
+        "category": "Standard",
+        "distance": "1.2 km from venue",
+        "price": "~CAD $219/night",
+        "stars": 4,
+        "amenities": ["Free WiFi", "Restaurant", "Pool", "Parking"],
+        "imgUrl": "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=600&q=80",
+        "badge": "Recommended",
+        "badgeColor": "#E8C033",
+        "partnerRate": true,
+        "bookUrl": "#",
+        "description": "Full-service hotel with modern amenities. Our most popular choice among international attendees."
+      },
+      {
+        "name": "Intercontinental Toronto",
+        "category": "Premium",
+        "distance": "1.5 km from venue",
+        "price": "~CAD $349/night",
+        "stars": 5,
+        "amenities": ["Free WiFi", "Fine Dining", "Spa", "Valet", "Pool"],
+        "imgUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80",
+        "badge": "Luxury",
+        "badgeColor": "#A78BFA",
+        "partnerRate": false,
+        "bookUrl": "#",
+        "description": "Five-star luxury experience for those who desire premium comfort during their Toronto stay."
+      },
+      {
+        "name": "Airbnb / Short-Term Rentals",
+        "category": "Self-Catering",
+        "distance": "Varies",
+        "price": "~CAD $80\u2013$150/night",
+        "stars": 0,
+        "amenities": ["Kitchen", "More Space", "Local Feel"],
+        "imgUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+        "badge": "Flexible",
+        "badgeColor": "#60A5FA",
+        "partnerRate": false,
+        "bookUrl": "#",
+        "description": "Rent an apartment or home for a more home-like experience. Great option for families and groups."
+      }
+    ]
+  },
+  "venue": {
+    "sectionLabel": "Location",
+    "headingPlain": "Venue &",
+    "headingAccent": "Directions",
+    "name": "Catch The Fire Church",
+    "address": "272 Attwell Dr, Toronto, ON M9W 6M3",
+    "cityDisplay": "TORONTO, ONTARIO, CANADA",
+    "mapsUrl": "https://maps.app.goo.gl/JjNDjHh6TPFukGPK8",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=272+Attwell+Dr,+Toronto,+ON+M9W+6M3&t=&z=16&ie=UTF8&iwloc=&output=embed",
+    "venueImageUrl": "https://images.unsplash.com/photo-1597084214230-473c7bf05a31?w=800&q=80",
+    "facts": [
+      { "icon": "Clock", "text": "Doors open 1 hour before each session" },
+      { "icon": "Car",   "text": "Free parking on-site (500+ spots)" },
+      { "icon": "Phone", "text": "+1 (416) 555-0186 \u2014 Venue Info Line" }
+    ],
+    "aboutCity": {
+      "heading": "About Toronto",
+      "text": "Toronto is Canada\u2019s largest city and a global cultural hub. Known for its diversity, stunning skyline, and warm hospitality, Toronto is the perfect host city for Reboot Camp NA. The city is easily accessible from major North American cities via Pearson International Airport (YYZ) or Billy Bishop Airport (YTZ)."
+    },
+    "directions": [
+      {
+        "icon": "Train",
+        "title": "By Subway (TTC)",
+        "steps": [
+          "Take Line 2 (Bloor\u2013Danforth) to Kipling Station",
+          "Board Route 37 (Islington) bus heading south",
+          "Transfer to Route 112 (West Mall) toward Attwell Dr",
+          "Rideshare or walk approx. 10 min to 272 Attwell Dr"
+        ]
+      },
+      {
+        "icon": "Bus",
+        "title": "By Bus (TTC)",
+        "steps": [
+          "Route 112 (West Mall) serves the Attwell Drive corridor",
+          "Route 37 (Islington) connects from Islington Subway Station",
+          "Route 191 (Highway 27 Rocket) from Kipling Station",
+          "Check ttc.ca for real-time schedules and trip planner"
+        ]
+      },
+      {
+        "icon": "Car",
+        "title": "By Car / Rideshare",
+        "steps": [
+          "From Hwy 401 W: Take Hwy 427 S, exit Dixon Rd E, follow to Attwell Dr",
+          "From downtown: Gardiner Expressway W \u2192 Hwy 427 N \u2192 Dixon Rd E",
+          "Rideshare (Uber/Lyft): Search \u2018272 Attwell Dr, Toronto\u2019",
+          "Free parking available on site"
+        ]
+      }
+    ]
+  },
+  "pastEvents": {
+    "sectionLabel": "Legacy",
+    "headingPlain": "Past",
+    "headingAccent": "Camp Meetings",
+    "description": "A look back at the powerful moves of God at previous Reboot Camp gatherings.",
+    "galleryLabel": "Event Gallery",
+    "testimonyLabel": "Testimony",
+    "testimony": {
+      "text": "\"Reboot Camp changed my life completely. I came broken, I left whole. The anointing in that place was tangible and real.\"",
+      "attribution": "Attendee"
+    },
+    "sermonsSectionTitle": "Featured Sermons",
+    "viewAllLabel": "VIEW ALL SERMONS ON YOUTUBE",
+    "youtubeChannelUrl": "#",
+    "events": [
+      {
+        "year": "2025",
+        "title": "Reboot Camp \u2014 Abuja, Nigeria",
+        "theme": "Double Portion",
+        "location": "Abuja, Nigeria",
+        "attendees": "5,000+",
+        "highlights": "An explosive gathering that saw thousands encounter the Holy Spirit. Over 200 salvation decisions and countless testimonies of healing.",
+        "imgUrl": "https://images.unsplash.com/photo-1600288480699-0b0d8a456dd8?w=700&q=80",
+        "gallery": [
+          "https://images.unsplash.com/photo-1565804951749-2426372cdc74?w=400&q=80",
+          "https://images.unsplash.com/photo-1762838707329-ac85ccc8b5bf?w=400&q=80",
+          "https://images.unsplash.com/photo-1597084214230-473c7bf05a31?w=400&q=80"
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "Reboot Camp \u2014 Lagos, Nigeria",
+        "theme": "Fire & Faith",
+        "location": "Lagos, Nigeria",
+        "attendees": "8,000+",
+        "highlights": "Historic gathering in Lagos with supernatural testimonies of deliverance, healing and transformation across all sessions.",
+        "imgUrl": "https://images.unsplash.com/photo-1731419223625-d76df78fd423?w=700&q=80",
+        "gallery": [
+          "https://images.unsplash.com/photo-1674699244662-980de86e2bbb?w=400&q=80",
+          "https://images.unsplash.com/photo-1600288480699-0b0d8a456dd8?w=400&q=80",
+          "https://images.unsplash.com/photo-1565804951749-2426372cdc74?w=400&q=80"
+        ]
+      }
+    ],
+    "sermons": [
+      {
+        "title": "Grace That Multiplies",
+        "speaker": "Apostle David Emmanuel",
+        "event": "Reboot Camp 2025",
+        "duration": "1hr 12min",
+        "views": "124K",
+        "thumbnailUrl": "https://images.unsplash.com/photo-1565804951749-2426372cdc74?w=500&q=80",
+        "youtubeUrl": "#"
+      },
+      {
+        "title": "The Power of the Holy Spirit",
+        "speaker": "Apostle David Emmanuel",
+        "event": "Reboot Camp 2025",
+        "duration": "58min",
+        "views": "98K",
+        "thumbnailUrl": "https://images.unsplash.com/photo-1597084214230-473c7bf05a31?w=500&q=80",
+        "youtubeUrl": "#"
+      },
+      {
+        "title": "Walking in Kingdom Authority",
+        "speaker": "Pastor Sarah Mitchell",
+        "event": "Reboot Camp 2024",
+        "duration": "45min",
+        "views": "76K",
+        "thumbnailUrl": "https://images.unsplash.com/photo-1731419223625-d76df78fd423?w=500&q=80",
+        "youtubeUrl": "#"
+      },
+      {
+        "title": "Double Portion Anointing",
+        "speaker": "Dr. James Okonkwo",
+        "event": "Reboot Camp 2024",
+        "duration": "1hr 5min",
+        "views": "62K",
+        "thumbnailUrl": "https://images.unsplash.com/photo-1762838707329-ac85ccc8b5bf?w=500&q=80",
+        "youtubeUrl": "#"
+      }
+    ]
+  },
+  "faqs": {
+    "sectionLabel": "Help",
+    "headingPlain": "Frequently Asked",
+    "headingAccent": "Questions",
+    "contactText": "Can\u2019t find your answer here? Email us at",
+    "stillHaveQsHeading": "Still Have Questions?",
+    "stillHaveQsText": "Our team is happy to help. Reach out and we\u2019ll respond within 24\u201348 hours.",
+    "contactCtaLabel": "CONTACT US",
+    "items": [
+      {
+        "q": "Is registration really free?",
+        "a": "Yes! Registration and attendance at all sessions of Reboot Camp North America 2026 are completely free. There is no ticket price or entry fee. We simply ask that you register so we can plan effectively for the gathering."
+      },
+      {
+        "q": "Who can attend Reboot Camp?",
+        "a": "Reboot Camp is open to all \u2014 believers, seekers, young and old, individuals and families. Whether you're a long-time Christian or just beginning your faith journey, you are warmly welcome. All nationalities are welcome."
+      },
+      {
+        "q": "Do I need to book accommodation in advance?",
+        "a": "We strongly recommend booking accommodation early, especially for out-of-town attendees. Toronto is a busy city and accommodation near the venue can fill up quickly around our event dates. Check our Accommodation section for partner hotel rates."
+      },
+      {
+        "q": "Can I attend if I\u2019m not a member of a specific church?",
+        "a": "Absolutely. Reboot Camp is non-denominational. People from all churches, backgrounds and walks of life attend. You do not need to belong to any particular church or denomination."
+      },
+      {
+        "q": "Will childcare be available?",
+        "a": "Yes. Children\u2019s sessions and supervised childcare will be available during key programme times. Please indicate your childcare needs on the registration form so we can make adequate arrangements."
+      },
+      {
+        "q": "Is there parking at the venue?",
+        "a": "Yes, there is ample free parking available at the venue (500+ spots). For public transit users, the venue is accessible by TTC bus and subway. See our Venue section for detailed directions."
+      },
+      {
+        "q": "Will the sessions be recorded / livestreamed?",
+        "a": "Yes! All main sessions will be recorded and available on our YouTube channel after the event. We also plan to livestream key evening sessions. Follow us on social media for livestream links closer to the event date."
+      },
+      {
+        "q": "What should I bring?",
+        "a": "Bring your Bible, a notebook, an open heart, and a faith expectation! The venue is air-conditioned, so you may want a light jacket. Comfortable clothing is encouraged. Food and beverages will be available for purchase on-site."
+      },
+      {
+        "q": "Is there a dress code?",
+        "a": "There is no strict dress code. We encourage smart casual or semi-formal attire, but what matters most is that you come with a heart ready to receive. Please dress modestly and comfortably."
+      },
+      {
+        "q": "How do I get a visa to travel to Canada?",
+        "a": "If you are traveling from outside Canada and require a visa, please begin your application process immediately as visas can take several weeks to process. We are happy to provide a registration confirmation letter to support your visa application. Contact us at info@rebootcamp.ca."
+      },
+      {
+        "q": "Will there be an offering/collection?",
+        "a": "There will be an opportunity to give during services, but giving is completely voluntary. No one will be pressured. You can also give online via our Giving section. All proceeds support the ministry and future camps."
+      },
+      {
+        "q": "How can I volunteer at Reboot Camp?",
+        "a": "We would love to have you serve! To volunteer, please reach out to us via email at volunteers@rebootcamp.ca. Volunteer teams include ushers, hospitality, media, prayer, and children\u2019s ministry."
+      }
+    ]
+  },
+  "giving": {
+    "sectionLabel": "Partner With Us",
+    "headingPlain": "Support the",
+    "headingAccent": "Ministry",
+    "description": "Reboot Camp is free to attend, but it takes significant resources to host. Your generous giving makes it possible for thousands to encounter God. Every gift, large or small, makes an eternal difference.",
+    "scripture": {
+      "text": "\"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.\"",
+      "reference": "\u2014 2 Corinthians 9:7"
+    },
+    "trustNote": "All online transactions are secured with SSL encryption. Receipts are available upon request. We are a registered non-profit and operate with full financial transparency.",
+    "categoriesHeading": "Where Your Gift Goes",
+    "options": [
+      {
+        "icon": "CreditCard",
+        "title": "Online Giving",
+        "description": "Give securely online via credit/debit card, PayPal, or e-transfer. Quick and easy.",
+        "cta": "Give Online",
+        "url": "#",
+        "highlight": true,
+        "methods": ["Visa / Mastercard", "PayPal", "Bank Transfer"]
+      },
+      {
+        "icon": "Smartphone",
+        "title": "E-Transfer (Canada)",
+        "description": "Send an Interac e-Transfer directly to our designated giving email address.",
+        "cta": "Get Details",
+        "url": "#",
+        "highlight": false,
+        "methods": ["Interac e-Transfer"],
+        "details": "giving@rebootcamp.ca"
+      },
+      {
+        "icon": "Globe",
+        "title": "International Giving",
+        "description": "For international supporters, use Wise or PayPal for currency-friendly transfers.",
+        "cta": "Give Internationally",
+        "url": "#",
+        "highlight": false,
+        "methods": ["Wise", "PayPal", "Western Union"]
+      }
+    ],
+    "categories": [
+      { "name": "General Fund",     "description": "Supports all aspects of the camp ministry",      "color": "#E8C033" },
+      { "name": "Scholarship Fund", "description": "Helps cover costs for attendees with financial need", "color": "#34D399" },
+      { "name": "Media Ministry",   "description": "Recording, streaming and content creation",       "color": "#A78BFA" },
+      { "name": "Missions Support", "description": "Supports missionary work and outreach",           "color": "#E85D04" }
+    ]
+  },
+  "flightDiscounts": {
+    "sectionLabel": "Travel Smart",
+    "headingPlain": "Flight",
+    "headingAccent": "Discounts",
+    "description": "We\u2019ve partnered with six major Canadian airlines to bring Reboot Camp attendees exclusive discounts on flights to Toronto. Use your unique promo code at checkout.",
+    "footnote": "* Discounts apply to base fares only. Codes expire August 25, 2026. Subject to availability.",
+    "airlines": [
+      {
+        "name": "Air Canada",
+        "abbr": "AC",
+        "tagline": "Canada\u2019s flag carrier",
+        "discount": "10% off",
+        "discountNote": "base fare",
+        "code": "REBOOT2026AC",
+        "bookingUrl": "https://www.aircanada.com",
+        "color": "#D82F2E",
+        "rgb": "216,47,46",
+        "cardRgb": "216,47,46",
+        "accentColor": "rgba(255,255,255,0.22)",
+        "accentDarkText": false,
+        "headerTextColor": "#fff",
+        "routes": "All domestic & international routes to Toronto (YYZ / YTZ)",
+        "validUntil": "Aug 25, 2026",
+        "instructions": "Enter code during checkout under \u201cPromotional Code\u201d on aircanada.com"
+      },
+      {
+        "name": "WestJet",
+        "abbr": "WS",
+        "tagline": "Friendly, modern flying",
+        "discount": "12% off",
+        "discountNote": "base fare",
+        "code": "REBOOT2026WJ",
+        "bookingUrl": "https://www.westjet.com",
+        "color": "#00AAA6",
+        "rgb": "0,170,166",
+        "cardRgb": "0,170,166",
+        "accentColor": "rgba(255,255,255,0.22)",
+        "accentDarkText": false,
+        "headerTextColor": "#fff",
+        "routes": "All routes to Toronto Pearson (YYZ)",
+        "validUntil": "Aug 25, 2026",
+        "instructions": "Apply code at westjet.com checkout under \u201cPromo / Discount Code\u201d"
+      },
+      {
+        "name": "Porter Airlines",
+        "abbr": "PD",
+        "tagline": "Boutique premium regional flying",
+        "discount": "15% off",
+        "discountNote": "base fare",
+        "code": "REBOOT2026PD",
+        "bookingUrl": "https://www.flyporter.com",
+        "color": "#112855",
+        "rgb": "17,40,85",
+        "cardRgb": "17,40,85",
+        "accentColor": "rgba(255,255,255,0.22)",
+        "accentDarkText": false,
+        "headerTextColor": "#fff",
+        "routes": "All routes to Billy Bishop (YTZ) & Toronto Pearson (YYZ)",
+        "validUntil": "Aug 25, 2026",
+        "instructions": "Select \u201cPromo Code\u201d at flyporter.com checkout and enter the code above"
+      },
+      {
+        "name": "Air Transat",
+        "abbr": "TS",
+        "tagline": "Best leisure airline in North America",
+        "discount": "10% off",
+        "discountNote": "leisure fare",
+        "code": "REBOOT2026TS",
+        "bookingUrl": "https://www.airtransat.com",
+        "color": "#0072CE",
+        "rgb": "0,114,206",
+        "cardRgb": "0,114,206",
+        "accentColor": "rgba(255,255,255,0.22)",
+        "accentDarkText": false,
+        "headerTextColor": "#fff",
+        "routes": "International & U.S. routes to Toronto (YYZ)",
+        "validUntil": "Aug 25, 2026",
+        "instructions": "Enter code on airtransat.com under \u201cPromotional Code\u201d at booking"
+      },
+      {
+        "name": "Flair Airlines",
+        "abbr": "F8",
+        "tagline": "Ultra-low cost, high contrast",
+        "discount": "20% off",
+        "discountNote": "any base fare",
+        "code": "REBOOT2026FL",
+        "bookingUrl": "https://www.flyflair.com",
+        "color": "#0D0D0D",
+        "rgb": "0,0,0",
+        "cardRgb": "57,255,20",
+        "accentColor": "#39FF14",
+        "accentDarkText": true,
+        "headerTextColor": "#fff",
+        "routes": "All domestic routes to Toronto Pearson (YYZ)",
+        "validUntil": "Aug 25, 2026",
+        "instructions": "Add code on flyflair.com in \u201cPromo Code\u201d field before selecting seats"
+      },
+      {
+        "name": "Lynx Air",
+        "abbr": "Y9",
+        "tagline": "Modern low-cost, real value",
+        "discount": "18% off",
+        "discountNote": "any base fare",
+        "code": "REBOOT2026LX",
+        "bookingUrl": "https://www.flylynx.com",
+        "color": "#003A8F",
+        "rgb": "0,58,143",
+        "cardRgb": "0,58,143",
+        "accentColor": "#A4D233",
+        "accentDarkText": true,
+        "headerTextColor": "#fff",
+        "routes": "Domestic routes to Toronto Pearson (YYZ)",
+        "validUntil": "Aug 25, 2026",
+        "instructions": "Enter code at flylynx.com under \u201cDiscount Code\u201d during seat selection"
+      }
+    ]
+  },
+  "footer": {
+    "description": "A Spirit-led camp meeting experience designed to ignite lives with the fire of God and impart Great Grace for every season.",
+    "eventDetails": [
+      { "label": "Theme",     "value": "Great Grace" },
+      { "label": "Dates",     "value": "September 4\u20136, 2026" },
+      { "label": "Location",  "value": "Catch The Fire Church\n272 Attwell Dr, Toronto, ON" },
+      { "label": "Admission", "value": "Free (Registration Required)" }
+    ],
+    "socials": [
+      { "platform": "Instagram", "url": "#" },
+      { "platform": "Facebook",  "url": "#" },
+      { "platform": "Youtube",   "url": "#" },
+      { "platform": "Twitter",   "url": "#" }
+    ],
+    "legalLinks": ["Privacy Policy", "Terms of Use", "Contact"],
+    "registerCta": "REGISTER NOW \u2014 FREE"
+  }
+}
