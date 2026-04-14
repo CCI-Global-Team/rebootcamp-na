@@ -5,6 +5,7 @@ import fireFlyer from "@/assets/images/rbc-na-fire-flyer.jpg";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function Countdown({ target, label }: { target: string; label: string }) {
   const [mounted, setMounted] = useState(false);
@@ -82,6 +83,39 @@ function Countdown({ target, label }: { target: string; label: string }) {
   );
 }
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const stagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.96 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
 export function Hero() {
   const { t } = useTheme();
   const { hero, event, venue } = useSiteContent();
@@ -115,20 +149,27 @@ export function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-32 pb-16 flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
         {/* Left Content */}
-        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          animate="show"
+          className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left"
+        >
           {/* Badge */}
-          <div
+          <motion.div
+            variants={fadeUp}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 text-xs uppercase tracking-widest"
             style={{ backgroundImage: t.heroBadgeBg, border: `1px solid ${t.heroBadgeBorder}`, color: "#E8C033", fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: t.goldAccent }} />
             {hero.badge}
-          </div>
+          </motion.div>
 
           {/* Theme */}
           {hero.themeLines.map((line, i) => (
-            <h1
+            <motion.h1
               key={i}
+              variants={fadeUp}
               className={`${i === 0 ? "mb-2" : "mb-6"} leading-none uppercase`}
               style={{
                 fontFamily: "'Oswald', sans-serif",
@@ -143,15 +184,15 @@ export function Hero() {
               }}
               >
               {line}
-            </h1>
+            </motion.h1>
           ))}
 
-          <p className="max-w-md mb-2" style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", lineHeight: 1.7, color: t.heroSubtextColor }}>
+          <motion.p variants={fadeUp} className="max-w-md mb-2" style={{ fontFamily: "'Inter', sans-serif", fontSize: "1.05rem", lineHeight: 1.7, color: t.heroSubtextColor }}>
             {hero.description}
-          </p>
+          </motion.p>
 
           {/* Event Meta */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-8 mt-4">
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 mb-8 mt-4">
             <div className="flex items-center gap-2 px-4 py-2 rounded" style={{ backgroundImage: t.heroMetaBg, border: `1px solid ${t.heroMetaBorder}` }}>
               <Calendar size={15} style={{ color: t.goldAccent }} />
               <span className="text-sm" style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.06em", color: t.textSecondary }}>
@@ -164,15 +205,15 @@ export function Hero() {
                 {venue.cityDisplay}
               </span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Countdown */}
-          <div className="mb-10">
+          <motion.div variants={fadeUp} className="mb-10">
             <Countdown target={event.countdownTarget} label={hero.countdownLabel} />
-          </div>
+          </motion.div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <a
               href="#register"
               onClick={(e) => { e.preventDefault(); handleScroll("#register"); }}
@@ -189,8 +230,8 @@ export function Hero() {
             >
               {hero.ctaSecondary}
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Right — Flyer Images */}
         <div className="flex-1 flex justify-center lg:justify-end items-center relative w-full max-w-sm lg:max-w-none">
