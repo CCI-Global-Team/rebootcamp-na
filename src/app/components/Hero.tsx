@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { MapPin, Calendar, ChevronDown } from "lucide-react";
 import mainFlyer from "@/assets/images/rbc-na-pivot-main-flyer.jpg";
 import fireFlyer from "@/assets/images/rbc-na-fire-flyer.jpg";
@@ -7,26 +7,44 @@ import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
 
 function Countdown({ target, label }: { target: string; label: string }) {
+  const [mounted, setMounted] = useState(false);
   const { t } = useTheme();
-  const targetDate = new Date(target);
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const targetDate = useMemo(() => new Date(target), [target]);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
     const calc = () => {
       const now = new Date();
       const diff = targetDate.getTime() - now.getTime();
-      if (diff <= 0) return setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+      if (diff <= 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
       setTimeLeft({
         days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((diff % (1000 * 60)) / 1000),
+        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((diff / (1000 * 60)) % 60),
+        seconds: Math.floor((diff / 1000) % 60),
       });
     };
+
     calc();
     const id = setInterval(calc, 1000);
     return () => clearInterval(id);
+  }, [targetDate]);
+
+  useEffect(() => {
+    setMounted(true);
   }, []);
+
+  if (!mounted) return null;
 
   const units = [
     { label: "Days",  value: timeLeft.days },
@@ -46,7 +64,7 @@ function Countdown({ target, label }: { target: string; label: string }) {
             <div className="text-center">
               <div
                 className="w-14 sm:w-16 h-14 sm:h-16 rounded flex items-center justify-center"
-                style={{ background: t.heroCountdownBg, border: `1px solid ${t.heroCountdownBorder}`, fontFamily: "'Oswald', sans-serif", fontSize: "1.75rem", fontWeight: 700, color: t.goldAccent, transition: "background 0.4s, border-color 0.4s" }}
+                style={{ backgroundColor: t.heroCountdownBg, border: `1px solid ${t.heroCountdownBorder}`, fontFamily: "'Oswald', sans-serif", fontSize: "1.75rem", fontWeight: 700, color: t.goldAccent, transition: "background 0.4s, border-color 0.4s" }}
               >
                 {String(value).padStart(2, "0")}
               </div>
@@ -74,18 +92,25 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden" style={{ background: t.heroGradient, transition: "background 0.4s ease" }}>
+    <section id="hero" className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundImage: t.heroGradient, transition: "background 0.4s ease" }}>
       {/* Background glow effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full opacity-20" style={{ background: "radial-gradient(circle, #E85D04, transparent 70%)" }} />
-        <div className="absolute top-1/3 -right-24 w-80 h-80 rounded-full" style={{ background: "radial-gradient(circle, #E8C033, transparent 70%)", opacity: t.isDark ? 0.15 : 0.1 }} />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-64 opacity-20" style={{ background: "radial-gradient(ellipse, #E85D04, transparent 70%)" }} />
+        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full opacity-20" style={{ backgroundImage: "radial-gradient(circle, #E85D04, transparent 70%)" }} />
+        <div className="absolute top-1/3 -right-24 w-80 h-80 rounded-full" style={{ backgroundImage: "radial-gradient(circle, #E8C033, transparent 70%)", opacity: t.isDark ? 0.15 : 0.1 }} />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-64 opacity-20" style={{ backgroundImage: "radial-gradient(ellipse, #E85D04, transparent 70%)" }} />
       </div>
 
       {/* Subtle grid pattern */}
       <div
         className="absolute inset-0"
-        style={{ opacity: Number(t.heroGridOpacity), backgroundImage: `linear-gradient(rgba(232,192,51,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(232,192,51,0.3) 1px, transparent 1px)`, backgroundSize: "60px 60px" }}
+        style={{
+  opacity: Number(t.heroGridOpacity),
+  backgroundImage: `
+    linear-gradient(rgba(232,192,51,0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,192,51,0.3) 1px, transparent 1px)
+  `,
+  backgroundSize: "60px 60px",
+}}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-32 pb-16 flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
@@ -94,9 +119,9 @@ export function Hero() {
           {/* Badge */}
           <div
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 text-xs uppercase tracking-widest"
-            style={{ background: t.heroBadgeBg, border: `1px solid ${t.heroBadgeBorder}`, color: "#E8C033", fontFamily: "'Barlow Condensed', sans-serif" }}
+            style={{ backgroundImage: t.heroBadgeBg, border: `1px solid ${t.heroBadgeBorder}`, color: "#E8C033", fontFamily: "'Barlow Condensed', sans-serif" }}
           >
-            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: t.goldAccent }} />
+            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: t.goldAccent }} />
             {hero.badge}
           </div>
 
@@ -105,8 +130,18 @@ export function Hero() {
             <h1
               key={i}
               className={`${i === 0 ? "mb-2" : "mb-6"} leading-none uppercase`}
-              style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "clamp(3.5rem, 10vw, 7rem)", backgroundImage: t.titleGradient, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", letterSpacing: "0.02em" }}
-            >
+              style={{
+                fontFamily: "'Oswald', sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(3.5rem, 10vw, 7rem)",
+                backgroundImage: t.titleGradient,
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                letterSpacing: "0.02em",
+                transition: "background 0.4s ease"
+              }}
+              >
               {line}
             </h1>
           ))}
@@ -117,13 +152,13 @@ export function Hero() {
 
           {/* Event Meta */}
           <div className="flex flex-col sm:flex-row gap-3 mb-8 mt-4">
-            <div className="flex items-center gap-2 px-4 py-2 rounded" style={{ background: t.heroMetaBg, border: `1px solid ${t.heroMetaBorder}` }}>
+            <div className="flex items-center gap-2 px-4 py-2 rounded" style={{ backgroundImage: t.heroMetaBg, border: `1px solid ${t.heroMetaBorder}` }}>
               <Calendar size={15} style={{ color: t.goldAccent }} />
               <span className="text-sm" style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.06em", color: t.textSecondary }}>
                 {event.datesDisplay}
               </span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded" style={{ background: t.heroMetaBg, border: `1px solid ${t.heroMetaBorder}` }}>
+            <div className="flex items-center gap-2 px-4 py-2 rounded" style={{ backgroundImage: t.heroMetaBg, border: `1px solid ${t.heroMetaBorder}` }}>
               <MapPin size={15} style={{ color: t.goldAccent }} />
               <span className="text-sm" style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.06em", color: t.textSecondary }}>
                 {venue.cityDisplay}
@@ -142,7 +177,7 @@ export function Hero() {
               href="#register"
               onClick={(e) => { e.preventDefault(); handleScroll("#register"); }}
               className="px-8 py-4 rounded text-center transition-all duration-200 hover:scale-105 hover:shadow-lg"
-              style={{ background: t.ctaGradient, color: t.ctaText, fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "1rem", letterSpacing: "0.1em", boxShadow: "0 4px 24px rgba(232,92,4,0.35)" }}
+              style={{ backgroundImage: t.ctaGradient, color: t.ctaText, fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "1rem", letterSpacing: "0.1em", boxShadow: "0 4px 24px rgba(232,92,4,0.35)" }}
             >
               {hero.ctaPrimary}
             </a>
@@ -166,7 +201,7 @@ export function Hero() {
             <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{ zIndex: 2, boxShadow: "0 20px 60px rgba(232,92,4,0.4), 0 0 0 1px rgba(232,192,51,0.2)" }}>
               <Image src={mainFlyer} alt={`${event.name} — ${event.theme}`} className="w-full h-auto" />
             </div>
-            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 rounded-full opacity-40" style={{ background: "radial-gradient(ellipse, #E85D04, transparent 70%)", filter: "blur(12px)" }} />
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 rounded-full opacity-40" style={{ backgroundImage: "radial-gradient(ellipse, #E85D04, transparent 70%)", filter: "blur(12px)" }} />
           </div>
         </div>
       </div>
