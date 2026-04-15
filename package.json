@@ -29,6 +29,7 @@
     "@t3-oss/env-nextjs": "0.13.11",
     "@tailwindcss/postcss": "4.2.2",
     "babel-plugin-react-compiler": "1.0.0",
+
     "clsx": "2.1.1",
     "framer-motion": "12.38.0",
     "lucide-react": "1.8.0",
