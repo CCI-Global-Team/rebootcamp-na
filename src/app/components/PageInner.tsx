@@ -3,6 +3,8 @@
 import { ThemeProvider, useTheme } from "@/app/contexts/ThemeContext";
 import { Navbar } from "@/app/components/Navbar";
 import { Hero } from "@/app/components/Hero";
+import { AboutSection } from "@/app/components/AboutSection";
+import { RegistrationSection } from "@/app/components/RegistrationSection";
 
 export function PageInner() {
   const { t } = useTheme();
@@ -20,6 +22,8 @@ export function PageInner() {
       >
         <Navbar />
         <Hero />
+        <AboutSection />
+        <RegistrationSection />
       </div>
     </ThemeProvider>
   );

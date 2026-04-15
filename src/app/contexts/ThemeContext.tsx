@@ -44,6 +44,7 @@ export interface AppTheme {
   heroGridOpacity: string;
   heroBadgeBg: string;
   heroBadgeBorder: string;
+  heroBadgeColor: string;
   heroMetaBg: string;
   heroMetaBorder: string;
   heroLearnMoreBorder: string;
@@ -187,6 +188,7 @@ const dark: AppTheme = {
   heroGridOpacity: "0.05",
   heroBadgeBg: "rgba(232,192,51,0.1)",
   heroBadgeBorder: "rgba(232,192,51,0.35)",
+  heroBadgeColor: "#E8C033",
   heroMetaBg: "rgba(255,255,255,0.06)",
   heroMetaBorder: "rgba(255,255,255,0.1)",
   heroLearnMoreBorder: "rgba(255,255,255,0.25)",
@@ -319,7 +321,8 @@ const light: AppTheme = {
   sectionDividerColor: "rgba(8,11,26,0.07)",
   heroGridOpacity: "0.04",
   heroBadgeBg: "rgba(200,158,30,0.1)",
-  heroBadgeBorder: "rgba(200,158,30,0.35)",
+  heroBadgeBorder: "rgba(200,158,30,1)",
+  heroBadgeColor: "#836704",
   heroMetaBg: "rgba(8,11,26,0.05)",
   heroMetaBorder: "rgba(8,11,26,0.1)",
   heroLearnMoreBorder: "rgba(8,11,26,0.2)",

@@ -5,7 +5,9 @@ import fireFlyer from "@/assets/images/rbc-na-fire-flyer.jpg";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { cn } from "@/app/components/ui/utils";
+import { fadeUp, scaleIn, stagger } from "@/app/components/ui/animation";
 
 function Countdown({ target, label }: { target: string; label: string }) {
   const [mounted, setMounted] = useState(false);
@@ -83,38 +85,37 @@ function Countdown({ target, label }: { target: string; label: string }) {
   );
 }
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
+interface HeroCtaProps {
+  ctaPrimary: string;
+  ctaSecondary: string;
+  handleScroll: (href: string) => void;
+  className: string;
+}
 
-const stagger: Variants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
+function HeroCta({ ctaPrimary, ctaSecondary, handleScroll, className }: HeroCtaProps) {
+  const { t } = useTheme();
 
-const scaleIn: Variants = {
-  hidden: { opacity: 0, scale: 0.96 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
+  return (
+    <motion.div variants={fadeUp} className={cn("flex flex-col sm:flex-row gap-3 w-full sm:w-auto", className)}>
+      <a
+        href="#register"
+        onClick={(e) => { e.preventDefault(); handleScroll("#register"); }}
+        className="px-8 py-4 rounded text-center transition-all duration-200 hover:scale-105 hover:shadow-lg"
+        style={{ backgroundImage: t.ctaGradient, color: t.ctaText, fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "1rem", letterSpacing: "0.1em", boxShadow: "0 4px 24px rgba(232,92,4,0.35)" }}
+      >
+        {ctaPrimary}
+      </a>
+      <a
+        href="#about"
+        onClick={(e) => { e.preventDefault(); handleScroll("#about"); }}
+        className="px-8 py-4 rounded text-center transition-all duration-200 hover:opacity-80"
+        style={{ border: `1px solid ${t.heroLearnMoreBorder}`, color: t.heroLearnMoreColor, fontFamily: "'Oswald', sans-serif", fontWeight: 500, fontSize: "1rem", letterSpacing: "0.1em" }}
+      >
+        {ctaSecondary}
+      </a>
+    </motion.div>
+  )
+}
 
 export function Hero() {
   const { t } = useTheme();
@@ -159,7 +160,7 @@ export function Hero() {
           <motion.div
             variants={fadeUp}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 text-xs uppercase tracking-widest"
-            style={{ backgroundImage: t.heroBadgeBg, border: `1px solid ${t.heroBadgeBorder}`, color: "#E8C033", fontFamily: "'Barlow Condensed', sans-serif" }}
+            style={{ backgroundImage: t.heroBadgeBg, border: `1px solid ${t.heroBadgeBorder}`, color: t.heroBadgeColor, fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: t.goldAccent }} />
             {hero.badge}
@@ -213,24 +214,12 @@ export function Hero() {
           </motion.div>
 
           {/* CTAs */}
-          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <a
-              href="#register"
-              onClick={(e) => { e.preventDefault(); handleScroll("#register"); }}
-              className="px-8 py-4 rounded text-center transition-all duration-200 hover:scale-105 hover:shadow-lg"
-              style={{ backgroundImage: t.ctaGradient, color: t.ctaText, fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "1rem", letterSpacing: "0.1em", boxShadow: "0 4px 24px rgba(232,92,4,0.35)" }}
-            >
-              {hero.ctaPrimary}
-            </a>
-            <a
-              href="#about"
-              onClick={(e) => { e.preventDefault(); handleScroll("#about"); }}
-              className="px-8 py-4 rounded text-center transition-all duration-200 hover:opacity-80"
-              style={{ border: `1px solid ${t.heroLearnMoreBorder}`, color: t.heroLearnMoreColor, fontFamily: "'Oswald', sans-serif", fontWeight: 500, fontSize: "1rem", letterSpacing: "0.1em" }}
-            >
-              {hero.ctaSecondary}
-            </a>
-          </motion.div>
+          <HeroCta
+            ctaPrimary={hero.ctaPrimary}
+            ctaSecondary={hero.ctaSecondary}
+            handleScroll={handleScroll}
+            className="hidden lg:flex"
+          />
         </motion.div>
 
         {/* Right — Flyer Images */}
@@ -270,12 +259,20 @@ export function Hero() {
               }}
               className="relative rounded-xl overflow-hidden shadow-2xl"
               style={{ zIndex: 2, boxShadow: "0 20px 60px rgba(232,92,4,0.4)" }}
->
+            >
               <Image src={mainFlyer} alt={`${event.name} — ${event.theme}`} className="w-full h-auto" loading="eager" />
             </motion.div>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 rounded-full opacity-40" style={{ backgroundImage: "radial-gradient(ellipse, #E85D04, transparent 70%)", filter: "blur(12px)" }} />
           </div>
         </motion.div>
+
+        {/* Show this CTA button on smaller screen sizes */}
+        <HeroCta
+          ctaPrimary={hero.ctaPrimary}
+          ctaSecondary={hero.ctaSecondary}
+          handleScroll={handleScroll}
+          className="lg:hidden"
+        />
       </div>
 
       {/* Scroll indicator */}
