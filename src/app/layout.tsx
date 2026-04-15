@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   title: 'Reboot Camp - North America',
   description: 'Great Grace! 4 - 6 September, 2026',
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
