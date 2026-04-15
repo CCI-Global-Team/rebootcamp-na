@@ -5,7 +5,7 @@ import fireFlyer from "@/assets/images/rbc-na-fire-flyer.jpg";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 function Countdown({ target, label }: { target: string; label: string }) {
   const [mounted, setMounted] = useState(false);
@@ -83,19 +83,19 @@ function Countdown({ target, label }: { target: string; label: string }) {
   );
 }
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.5,
       ease: "easeOut",
     },
   },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -104,7 +104,7 @@ const stagger = {
   },
 };
 
-const scaleIn = {
+const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.96 },
   show: {
     opacity: 1,
@@ -138,13 +138,13 @@ export function Hero() {
       <div
         className="absolute inset-0"
         style={{
-  opacity: Number(t.heroGridOpacity),
-  backgroundImage: `
-    linear-gradient(rgba(232,192,51,0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(232,192,51,0.3) 1px, transparent 1px)
-  `,
-  backgroundSize: "60px 60px",
-}}
+          opacity: Number(t.heroGridOpacity),
+          backgroundImage: `
+            linear-gradient(rgba(232,192,51,0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(232,192,51,0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: "60px 60px",
+        }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-32 pb-16 flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
@@ -234,24 +234,65 @@ export function Hero() {
         </motion.div>
 
         {/* Right — Flyer Images */}
-        <div className="flex-1 flex justify-center lg:justify-end items-center relative w-full max-w-sm lg:max-w-none">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 40 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+          className="flex-1 flex justify-center lg:justify-end items-center relative w-full max-w-sm lg:max-w-none"
+        >
           <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md">
-            <div className="absolute -right-4 -top-4 w-full rounded-xl overflow-hidden shadow-2xl" style={{ transform: "rotate(4deg)", filter: "brightness(0.75)", zIndex: 1 }}>
-              <Image src={fireFlyer} alt="Reboot Camp Fire" className="w-full h-auto" />
-            </div>
-            <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{ zIndex: 2, boxShadow: "0 20px 60px rgba(232,92,4,0.4), 0 0 0 1px rgba(232,192,51,0.2)" }}>
-              <Image src={mainFlyer} alt={`${event.name} — ${event.theme}`} className="w-full h-auto" />
-            </div>
+            <motion.div
+              initial={{ rotate: 4 }}
+              animate={{
+                y: [0, -50, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute -right-4 -top-4 w-full rounded-xl overflow-hidden shadow-2xl"
+              style={{
+                filter: "brightness(0.75)",
+                zIndex: 1,
+              }}
+            >
+              <Image src={fireFlyer} alt="Reboot Camp Fire" className="w-full h-auto" loading="eager" />
+            </motion.div>
+            <motion.div
+              variants={scaleIn}
+              initial="hidden"
+              animate="show"
+              whileHover={{
+                scale: 1.03,
+                y: -4,
+                transition: { type: "spring", stiffness: 200, damping: 15 },
+              }}
+              className="relative rounded-xl overflow-hidden shadow-2xl"
+              style={{ zIndex: 2, boxShadow: "0 20px 60px rgba(232,92,4,0.4)" }}
+>
+              <Image src={mainFlyer} alt={`${event.name} — ${event.theme}`} className="w-full h-auto" loading="eager" />
+            </motion.div>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 rounded-full opacity-40" style={{ backgroundImage: "radial-gradient(ellipse, #E85D04, transparent 70%)", filter: "blur(12px)" }} />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
       <div className="relative z-10 flex justify-center pb-8">
-        <button onClick={() => handleScroll("#about")} className="transition-colors duration-200 animate-bounce hover:text-[#E8C033]" style={{ color: t.heroScrollColor }}>
+        <motion.button
+          onClick={() => handleScroll("#about")}
+          animate={{ y: [0, 10, 0] }}
+          transition={{
+            duration: 1.2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="transition-colors duration-200 hover:text-[#E8C033] cursor-pointer"
+          style={{ color: t.heroScrollColor }}
+        >
           <ChevronDown size={28} />
-        </button>
+        </motion.button>
       </div>
     </section>
   );

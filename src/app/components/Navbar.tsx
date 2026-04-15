@@ -51,6 +51,7 @@ export function Navbar() {
               src={t.isDark ? logoWhite : logo}
               alt="Reboot Camp North America"
               style={{ height: "52px", width: "auto", display: "block", transition: "opacity 0.3s ease" }}
+              loading="eager"
             />
           </a>
 
