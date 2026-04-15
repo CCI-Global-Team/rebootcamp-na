@@ -5,8 +5,9 @@ import fireFlyer from "@/assets/images/rbc-na-fire-flyer.jpg";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
-import { cn } from "./ui/utils";
+import { motion } from "framer-motion";
+import { cn } from "@/app/components/ui/utils";
+import { fadeUp, scaleIn, stagger } from "@/app/components/ui/animation";
 
 function Countdown({ target, label }: { target: string; label: string }) {
   const [mounted, setMounted] = useState(false);
@@ -115,39 +116,6 @@ function HeroCta({ ctaPrimary, ctaSecondary, handleScroll, className }: HeroCtaP
     </motion.div>
   )
 }
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
-const stagger: Variants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const scaleIn: Variants = {
-  hidden: { opacity: 0, scale: 0.96 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
 
 export function Hero() {
   const { t } = useTheme();
