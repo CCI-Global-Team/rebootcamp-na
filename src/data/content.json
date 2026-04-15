@@ -13,7 +13,7 @@
     "theme": "Great Grace",
     "dates": "September 4 - 6, 2026",
     "datesDisplay": "SEPTEMBER 4 - 6, 2026",
-    "countdownTarget": "2026-09-04T09:00:00",
+    "countdownTarget": "2026-09-04T17:00:00",
     "admission": "Free (Registration Required)",
     "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3565021"
   },
@@ -24,7 +24,7 @@
       { "label": "Speakers",      "href": "#speakers" },
       { "label": "Accommodation", "href": "#accommodation" },
       { "label": "Venue",         "href": "#venue" },
-      { "label": "Past RBCs",   "href": "#past-events" },
+      { "label": "Past RBCs",     "href": "#past-events" },
       { "label": "FAQs",          "href": "#faqs" },
       { "label": "Give",          "href": "#giving" }
     ],
@@ -168,6 +168,7 @@
     "ctaLabel": "REGISTER NOW",
     "externalNote": "Opens external registration page",
     "contactNote": "Registration is free and open to all.\nFor group inquiries or accessibility needs,\ncontact us at",
+    "contactEmail": "canada@joincci.org",
     "highlights": [
       {
         "icon": "Music",
