@@ -113,47 +113,25 @@
     ]
   },
   "speakers": {
-    "sectionLabel": "Faculty",
+    "sectionLabel": "About the Speakers",
     "headingPlain": "Meet the",
     "headingAccent": "Speakers",
-    "mainBadge": "★ Lead / Main Speaker",
+    "mainBadge": "★ Main Speaker",
     "mainLabel": "Main Speaker",
-    "supportingLabel": "Supporting Ministers",
-    "note": "* More speakers to be announced. Check back regularly.",
+    "invitedLabel": "Invited Ministers",
     "main": {
-      "name": "Apostle David Emmanuel",
-      "title": "Presiding Apostle, Reboot Camp International",
-      "bio": "Apostle David Emmanuel is a revivalist and apostolic voice to this generation. Known for his fiery preaching and prophetic accuracy, he has ministered to hundreds of thousands across Africa, North America, and Europe. His mandate: to see a generation fully rebooted for God's kingdom purposes.",
-      "specialties": ["Apostolic Preaching", "Prophetic Ministry", "Kingdom Mandate"]
+      "name": "Apostle Emmanuel Iren",
+      "title": "Lead Pastor, Celebration Church International",
+      "bio": "Apostle Emmanuel Iren is the visionary founder and lead pastor of Celebration Church International, a dynamic teaching ministry dedicated to spreading the gospel and helping people discover their purpose in Christ. With a passion for the Word of God and a heart for missions, Apostle Iren has led the church to establish Over 40 campuses across Nigeria, UK, Europe, Australia, Canada, and the USA, all while inspiring countless lives to grow in their faith and embrace the life-changing power of Christ.",
+      "specialties": ["Apostolic Teaching", "Prophetic Ministry", "Kingdom Mandate"]
     },
-    "supporting": [
+    "invited": [
       {
-        "name": "Pastor Sarah Mitchell",
-        "title": "Senior Pastor, Grace Life Church",
-        "city": "Chicago, USA",
-        "specialty": "Worship & Intercession",
-        "imgUrl": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80"
-      },
-      {
-        "name": "Dr. James Okonkwo",
-        "title": "Bible Teacher & Author",
-        "city": "London, UK",
-        "specialty": "Word & Doctrine",
-        "imgUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
-      },
-      {
-        "name": "Rev. Grace Adeyemi",
-        "title": "Women's Ministry Leader",
-        "city": "Lagos, Nigeria",
-        "specialty": "Prophetic Ministry",
-        "imgUrl": "https://images.unsplash.com/photo-1494790108755-2616b612b913?w=400&q=80"
-      },
-      {
-        "name": "Pastor Michael Chen",
-        "title": "Youth & Next-Gen Leader",
-        "city": "Toronto, Canada",
-        "specialty": "Youth Ministry",
-        "imgUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
+        "name": "Pastor Travis Greene",
+        "title": "Senior Pastor, The Forward City Church",
+        "city": "South Carolina, USA",
+        "specialty": "Worship",
+        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/travis-greene-1.jpg"
       }
     ]
   },

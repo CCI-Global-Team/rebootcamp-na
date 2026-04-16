@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Clock, Music, BookOpen, Zap, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/app/contexts/ThemeContext";
-import { useSiteContent } from "../hooks/useSiteContent";
+import { useSiteContent } from "@/app/hooks/useSiteContent";
 import { fadeUp, stagger } from "@/app/components/ui/animation";
 
 type SessionType = "worship" | "preaching" | "prayer" | "special" | "break";
@@ -100,7 +100,7 @@ export function ScheduleSection() {
             {schedule.headingPlain}{" "}
             <span
               style={{
-                background: t.titleGradient,
+                backgroundImage: t.titleGradient,
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text"
