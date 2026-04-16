@@ -8,6 +8,7 @@ import { RegistrationSection } from "@/app/components/RegistrationSection";
 import { ScheduleSection } from "@/app/components/ScheduleSection";
 import { SpeakersSection } from "@/app/components/SpeakersSection";
 import { AccommodationSection } from "@/app/components/AccommodationSection";
+import { FlightDiscountsSection } from "@/app/components/FlightDiscountsSection";
 
 export function PageInner() {
   const { t } = useTheme();
@@ -30,6 +31,7 @@ export function PageInner() {
         <ScheduleSection />
         <SpeakersSection />
         <AccommodationSection />
+        <FlightDiscountsSection />
       </div>
     </ThemeProvider>
   );
