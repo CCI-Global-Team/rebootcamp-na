@@ -9,6 +9,7 @@ import { ScheduleSection } from "@/app/components/ScheduleSection";
 import { SpeakersSection } from "@/app/components/SpeakersSection";
 import { AccommodationSection } from "@/app/components/AccommodationSection";
 import { FlightDiscountsSection } from "@/app/components/FlightDiscountsSection";
+import { VenueSection } from "@/app/components/VenueSection";
 
 export function PageInner() {
   const { t } = useTheme();
@@ -32,6 +33,7 @@ export function PageInner() {
         <SpeakersSection />
         <AccommodationSection />
         <FlightDiscountsSection />
+        <VenueSection />
       </div>
     </ThemeProvider>
   );
