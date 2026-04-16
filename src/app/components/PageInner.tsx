@@ -5,6 +5,7 @@ import { Navbar } from "@/app/components/Navbar";
 import { Hero } from "@/app/components/Hero";
 import { AboutSection } from "@/app/components/AboutSection";
 import { RegistrationSection } from "@/app/components/RegistrationSection";
+import { ScheduleSection } from "@/app/components/ScheduleSection";
 
 export function PageInner() {
   const { t } = useTheme();
@@ -24,6 +25,7 @@ export function PageInner() {
         <Hero />
         <AboutSection />
         <RegistrationSection />
+        <ScheduleSection />
       </div>
     </ThemeProvider>
   );
