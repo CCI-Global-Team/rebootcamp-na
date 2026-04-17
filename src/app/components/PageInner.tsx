@@ -10,6 +10,10 @@ import { SpeakersSection } from "@/app/components/SpeakersSection";
 import { AccommodationSection } from "@/app/components/AccommodationSection";
 import { FlightDiscountsSection } from "@/app/components/FlightDiscountsSection";
 import { VenueSection } from "@/app/components/VenueSection";
+import { PastEventsSection } from "@/app/components/PastEventsSection";
+import { FAQSection } from "@/app/components/FAQSection";
+import { GivingSection } from "@/app/components/GivingSection";
+import { Footer } from "@/app/components/Footer";
 
 export function PageInner() {
   const { t } = useTheme();
@@ -34,6 +38,10 @@ export function PageInner() {
         <AccommodationSection />
         <FlightDiscountsSection />
         <VenueSection />
+        <PastEventsSection />
+        <FAQSection />
+        <GivingSection />
+        <Footer />
       </div>
     </ThemeProvider>
   );

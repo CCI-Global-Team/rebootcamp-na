@@ -1,8 +1,8 @@
 {
   "site": {
     "name": "Reboot Camp NA",
-    "orgName": "Reboot Camp International",
-    "email": "info@rebootcamp.ca",
+    "orgName": "Celebration Church International",
+    "email": "canada@joincci.org",
     "volunteersEmail": "volunteers@rebootcamp.ca",
     "givingEmail": "giving@rebootcamp.ca",
     "phone": "+1 (416) 555-0100"
@@ -24,7 +24,7 @@
       { "label": "Speakers",      "href": "#speakers" },
       { "label": "Accommodation", "href": "#accommodation" },
       { "label": "Venue",         "href": "#venue" },
-      { "label": "Past RBCs",     "href": "#past-events" },
+      { "label": "Past Events",   "href": "#past-events" },
       { "label": "FAQs",          "href": "#faqs" },
       { "label": "Give",          "href": "#giving" }
     ],
@@ -308,7 +308,7 @@
   "pastEvents": {
     "sectionLabel": "Legacy",
     "headingPlain": "Past",
-    "headingAccent": "Camp Meetings",
+    "headingAccent": "Reboot Camps",
     "description": "A look back at the powerful moves of God at previous Reboot Camp gatherings.",
     "galleryLabel": "Event Gallery",
     "testimonyLabel": "Testimony",
