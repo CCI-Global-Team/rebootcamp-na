@@ -24,7 +24,7 @@
       { "label": "Speakers",      "href": "#speakers" },
       { "label": "Accommodation", "href": "#accommodation" },
       { "label": "Venue",         "href": "#venue" },
-      { "label": "Past RBCs",     "href": "#past-events" },
+      { "label": "Past Events",   "href": "#past-events" },
       { "label": "FAQs",          "href": "#faqs" },
       { "label": "Give",          "href": "#giving" }
     ],
@@ -308,7 +308,7 @@
   "pastEvents": {
     "sectionLabel": "Legacy",
     "headingPlain": "Past",
-    "headingAccent": "Camp Meetings",
+    "headingAccent": "Reboot Camps",
     "description": "A look back at the powerful moves of God at previous Reboot Camp gatherings.",
     "galleryLabel": "Event Gallery",
     "testimonyLabel": "Testimony",
