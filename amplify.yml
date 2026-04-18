@@ -4,10 +4,11 @@ frontend:
     preBuild:
       commands:
         - npm install -g pnpm
+        - pnpm config set ignore-scripts false
         - pnpm install
     build:
       commands:
-        - pnpm run build
+        - NEXT_DISABLE_TURBOPACK=1 pnpm build
   artifacts:
     baseDirectory: .next
     files:
