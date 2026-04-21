@@ -357,7 +357,7 @@ const light: AppTheme = {
   speakerImgGradient: "linear-gradient(to top, rgba(247,244,239,0.95) 0%, transparent 50%)",
   mainSpeakerBg: "linear-gradient(135deg, rgba(232,92,4,0.06) 0%, rgba(200,158,30,0.04) 100%)",
   mainSpeakerBorder: "rgba(200,158,30,0.3)",
-  mainSpeakerImgGradient: "linear-gradient(to right, transparent 50%, #F7F4EF 100%), linear-gradient(to top, #F7F4EF 0%, transparent 30%)",
+  mainSpeakerImgGradient: "linear-gradient(to right, transparent 50%, #81817f 100%), linear-gradient(to top, #bebebd 0%, transparent 30%)",
   regFormBg: "#FFFFFF",
   regFormBorder: "rgba(8,11,26,0.08)",
   accomPartnerBg: "rgba(200,158,30,0.06)",

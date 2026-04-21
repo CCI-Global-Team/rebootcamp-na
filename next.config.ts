@@ -49,6 +49,14 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cci-canada.s3.ca-central-1.amazonaws.com',
+      },
+    ],
+  },
   poweredByHeader: false,
   async headers() {
     return [

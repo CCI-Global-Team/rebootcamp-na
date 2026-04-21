@@ -121,12 +121,12 @@ export function SpeakersSection() {
                   className="absolute inset-0"
                 >
                   <Image
-                    src={mainFlyer}
+                    src={main.imgUrl}
                     alt="Main Speaker"
                     fill
                     priority
                     className="object-cover object-top w-full h-auto"
-                    style={{ filter: "brightness(0.7)" }}
+                    style={{ filter: "brightness(0.9)" }}
                     loading="eager"
                   />
                 </motion.div>
@@ -248,7 +248,7 @@ export function SpeakersSection() {
                   <ImageWithFallback
                     src={speaker.imgUrl}
                     alt={speaker.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                   />
                   <div
                     className="absolute inset-0"
