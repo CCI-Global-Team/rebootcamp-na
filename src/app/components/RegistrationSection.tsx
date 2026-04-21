@@ -177,15 +177,10 @@ export function RegistrationSection() {
                 </motion.div>
               </div>
 
-              <div>
-                <p className="uppercase mb-1" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.72rem", letterSpacing: "0.18em", color: t.textVeryMuted }}>
-                  {registration.urgencyText}
-                </p>
-                <p className="uppercase" style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.6rem", color: t.textPrimary, lineHeight: 1.1 }}>
-                  {registration.urgencyHeadingPlain}<br />
-                  <span style={{ backgroundImage: t.titleGradient, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                    {registration.urgencyHeadingAccent}
-                  </span>
+              <div className="uppercase" style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.6rem", color: t.textPrimary, lineHeight: 1.1 }}>
+                <p className="mb-2">{registration.urgencyHeadingPlain}</p>
+                <p style={{ backgroundImage: t.titleGradient, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                  {registration.urgencyHeadingAccent}
                 </p>
               </div>
 

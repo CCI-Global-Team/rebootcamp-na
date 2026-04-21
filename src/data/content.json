@@ -140,9 +140,8 @@
     "headingPlain": "Register",
     "headingAccent": "Free",
     "description": "Admission is completely free. Reserve your spot and join thousands of believers for three transformative days of Great Grace.",
-    "urgencyText": "Spots are filling fast",
-    "urgencyHeadingPlain": "Don't Miss",
-    "urgencyHeadingAccent": "Great Grace",
+    "urgencyHeadingPlain": "You Don't Want to Miss",
+    "urgencyHeadingAccent": "Reboot Camp",
     "ctaLabel": "REGISTER NOW",
     "externalNote": "Opens external registration page",
     "contactNote": "Registration is free and open to all.\nFor group inquiries or accessibility needs,\ncontact us at",
@@ -257,7 +256,7 @@
     "sectionLabel": "Location",
     "headingPlain": "Venue &",
     "headingAccent": "Directions",
-    "name": "Catch The Fire Church",
+    "name": "Venue",
     "address": "272 Attwell Dr, Toronto, ON M9W 6M3",
     "cityDisplay": "TORONTO, ONTARIO, CANADA",
     "mapsUrl": "https://maps.app.goo.gl/JjNDjHh6TPFukGPK8",
@@ -616,8 +615,8 @@
     "description": "A Spirit-led camp meeting experience designed to ignite lives with the fire of God and impart Great Grace for every season.",
     "eventDetails": [
       { "label": "Theme",     "value": "Great Grace" },
-      { "label": "Dates",     "value": "September 4\u20136, 2026" },
-      { "label": "Location",  "value": "Catch The Fire Church\n272 Attwell Dr, Toronto, ON" },
+      { "label": "Dates",     "value": "September 4 \u2013 6, 2026" },
+      { "label": "Location",  "value": "272 Attwell Dr, Toronto, ON" },
       { "label": "Admission", "value": "Free (Registration Required)" }
     ],
     "socials": [
