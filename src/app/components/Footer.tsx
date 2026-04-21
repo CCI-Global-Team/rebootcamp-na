@@ -84,7 +84,7 @@ export function Footer() {
               {[
                 { icon: Mail, text: site.email },
                 { icon: Phone, text: site.phone },
-                { icon: MapPin, text: `${venue.name}, Toronto, ON` },
+                { icon: MapPin, text: venue.cityDisplay },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-start gap-3">
                   <Icon size={14} style={{ color: t.goldAccent }} className="mt-0.5 shrink-0" />
@@ -110,7 +110,7 @@ export function Footer() {
       <div className="border-t py-6" style={{ borderColor: t.footerBottomBorder }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs" style={{ fontFamily: "'Inter', sans-serif", color: t.textDim }}>
-            © {new Date().getFullYear()} {site.orgName}. All rights reserved.
+            &copy; {new Date().getFullYear()} {site.orgName}. All rights reserved.
           </p>
           <div className="flex gap-5">
             {footer.legalLinks.map((item) => (
