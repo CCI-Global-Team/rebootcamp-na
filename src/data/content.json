@@ -43,8 +43,20 @@
     "headingPlain": "What is",
     "headingAccent": "Reboot Camp?",
     "paragraphs": [
-      "Reboot Camp is an annual camp meeting experience designed to ignite spiritual renewal, deepen faith, and build kingdom community. Born from a vision to see lives transformed by the power of God's Word, Reboot Camp has grown into one of North America's most anticipated Christian gatherings.",
-      "This year, under the theme {theme} — drawn from Acts 4:33 — we gather in Toronto, Canada for three days of powerful preaching, worship, prayer, and fellowship. Every session is designed to impart fresh grace into every area of your life."
+      "What if the exhaustion you've been carrying isn't just physical?",
+      "It's been the kind that sleep doesn't fix. The kind that lingers even when life looks \"fine\" on the outside. You've kept going, building, working, showing up for others but somewhere deep down, there's a quiet knowing: something is missing.",
+      "Maybe you feel a void nothing around you seems to satisfy. A sense that there has to be more to this life.",
+      "And maybe that feeling isn't wrong.",
+      "What if one weekend could actually shift something on you inside? What if one weekend could bring answers to your curious mind? A weekend where the weight you've been carrying begins to lift. Where clarity replaces confusion, and where you reconnect with who your creator has called you to be.",
+      "Reboot Camp 2026 is that experience.",
+      "Thousands gather for one reason: to encounter Jesus in a way that changes everything; In the way that will last a lifetime.",
+      "Over three transformative days, you'll step into an atmosphere charged with intense worship, powerful teaching, fervent prayer, and genuine community - the kind that reminds you that you were never meant to do life alone.",
+      "And this year, it's happening in Toronto, Canada.",
+      "Under the theme {theme}, drawn from Acts 4:33, this isn't just another gathering - it's an encounter.",
+      "We believe this: every person who shows up is one encounter away from a turning point.",
+      "Three days. \nOne city. \nAn encounter that could change everything.",
+      "September 4 - 6, 2026",
+      "You are invited."
     ],
     "verse": {
       "text": "\"And with great power the apostles gave witness to the resurrection of the Lord Jesus. And great grace was upon them all.\"",
@@ -53,7 +65,7 @@
     "ctaLabel": "SECURE YOUR SPOT",
     "stats": [
       { "icon": "Users",  "value": "2,000+", "label": "Expected Attendees" },
-      { "icon": "Globe",  "value": "20+",    "label": "Nations Represented" },
+      { "icon": "Globe",  "value": "20+",    "label": "Cities Represented" },
       { "icon": "Star",   "value": "3 Days", "label": "Of Transforming Sessions" },
       { "icon": "Flame",  "value": "Free",   "label": "Registration & Admission" }
     ],
@@ -76,48 +88,57 @@
       {
         "day": "Day 1", "date": "September 4", "label": "Friday",
         "sessions": [
-          { "time": "9:00 AM",  "title": "Registration & Check-In",                         "type": "break",     "note": "Main Entrance Foyer" },
-          { "time": "10:00 AM", "title": "Morning Prayer & Devotion",                        "type": "prayer" },
-          { "time": "11:00 AM", "title": "Morning Session — Grace That Transforms",           "type": "preaching", "speaker": "Guest Minister 1" },
-          { "time": "12:30 PM", "title": "Lunch Break",                                      "type": "break",     "note": "On your own" },
-          { "time": "2:00 PM",  "title": "Afternoon Teaching — Walking in Favour",           "type": "preaching", "speaker": "Guest Minister 2" },
-          { "time": "4:00 PM",  "title": "Prophetic Workshop",                               "type": "special",   "speaker": "Guest Speaker", "note": "Breakout Room A" },
-          { "time": "6:30 PM",  "title": "Opening Night Worship",                            "type": "worship",   "speaker": "Reboot Worship Team" },
-          { "time": "7:30 PM",  "title": "Opening Night Message — The Grace of Power",       "type": "preaching", "speaker": "Lead Speaker", "note": "Theme Keynote" },
-          { "time": "9:30 PM",  "title": "Altar Call & Prayer Ministry",                     "type": "prayer" }
+          { "time": "",  "title": "Registration & Check-In",                         "type": "break",     "note": "Main Entrance" },
+          { "time": "", "title": "Opening Prayer + Declaration",                    "type": "prayer" },
+          { "time": "",  "title": "Praise and Worship",                            "type": "worship",   "speaker": "Celebration Church Worship" },
+          { "time": "", "title": "Short Charge + Prayers + Declaration",           "type": "prayer", "speaker": "" },
+          { "time": "",  "title": "Special Song",                                  "type": "special",   "speaker": "Celebration Church Worship", "note": "" },
+          { "time": "",  "title": "Teaching/Ministration",                        "type": "special",   "speaker": "", "note": "" },
+          { "time": "", "title": "Teaching",                                        "type": "preaching", "speaker": "" },
+          { "time": "", "title": "Offering/Announcements/Closing",                  "type": "break",     "note": "" }
         ]
       },
       {
         "day": "Day 2", "date": "September 5", "label": "Saturday",
         "sessions": [
-          { "time": "8:30 AM",  "title": "Morning Prayer Intercession",                      "type": "prayer" },
-          { "time": "9:30 AM",  "title": "Youth & Young Adults Session",                     "type": "special",   "speaker": "Youth Minister", "note": "Youth Hall" },
-          { "time": "10:00 AM", "title": "Morning Message — Grace Unlimited",                "type": "preaching", "speaker": "Guest Minister 3" },
-          { "time": "12:30 PM", "title": "Lunch Break",                                      "type": "break",     "note": "On your own" },
-          { "time": "2:30 PM",  "title": "Women's / Men's Breakout Sessions",               "type": "special",   "note": "Separate Rooms" },
-          { "time": "4:30 PM",  "title": "Ministry Gifts Activation",                        "type": "special",   "speaker": "Lead Speaker" },
-          { "time": "6:30 PM",  "title": "Saturday Praise Night",                            "type": "worship",   "speaker": "Reboot Worship Team", "note": "Special Guest Artist" },
-          { "time": "7:45 PM",  "title": "Saturday Night Live Message",                      "type": "preaching", "speaker": "Lead Speaker" },
-          { "time": "10:00 PM", "title": "Special Night of Miracles",                        "type": "prayer",    "note": "Do Not Miss This!" }
+          { "time": "",  "title": "Morning - Opening Prayer",                                   "type": "prayer" },
+          { "time": "",  "title": "Praise and Worship",                               "type": "worship",   "speaker": "Celebration Church Worship" },
+          { "time": "", "title": "Prayer Charge",                                     "type": "preaching", "speaker": "" },
+          { "time": "", "title": "Prayer Stretch",                                     "type": "prayer", "speaker": "" },
+          { "time": "",  "title": "Guest ministration",                                "type": "special",   "speaker": "Brooke Nicholls", "note": "" },
+          { "time": "", "title": "Teaching",                                           "type": "preaching", "speaker": "" },
+          { "time": "", "title": "Announcements and closing",                          "type": "break",     "note": "" },
+          { "time": "", "title": "Break",                                              "type": "break",     "note": "" },
+          { "time": "", "title": "Afternoon - Opening Prayer",                        "type": "prayer" },
+          { "time": "",  "title": "Praise and Worship",                            "type": "worship",   "speaker": "Celebration Church Worship" },
+          { "time": "", "title": "Prayers + Declaration",                        "type": "prayer", "speaker": "" },
+          { "time": "",  "title": "Special Song",                                  "type": "special",   "speaker": "Celebration Church Worship", "note": "" },
+          { "time": "", "title": "Teaching",                                        "type": "preaching", "speaker": "" },
+          { "time": "", "title": "Closing",                                          "type": "break",     "note": "" },
+          { "time": "", "title": "Lunch Break",                                              "type": "break",     "note": "On your own" },
+          { "time": "", "title": "Evening - Opening Prayer + Declaration",             "type": "prayer" },
+          { "time": "",  "title": "Praise and Worship",                            "type": "worship",   "speaker": "Celebration Church Worship" },
+          { "time": "", "title": "Short Charge + Prayers + Declaration",              "type": "prayer", "speaker": "" },
+          { "time": "",  "title": "Special Song",                                  "type": "special",   "speaker": "Celebration Church Worship", "note": "" },
+          { "time": "", "title": "Teaching and Ministration",                        "type": "preaching", "speaker": "" },
+          { "time": "", "title": "Guest Ministration",                                        "type": "special", "speaker": "" },
+          { "time": "", "title": "Offering & Closing",                                          "type": "break",     "note": "" }
         ]
       },
       {
         "day": "Day 3", "date": "September 6", "label": "Sunday",
         "sessions": [
-          { "time": "9:00 AM",  "title": "Communion & Thanksgiving Service",                 "type": "worship" },
-          { "time": "10:30 AM", "title": "Closing Message — Go in Great Grace",              "type": "preaching", "speaker": "Lead Speaker", "note": "Final Keynote" },
-          { "time": "12:00 PM", "title": "Impartation & Commissioning",                     "type": "prayer" },
-          { "time": "1:00 PM",  "title": "Closing Lunch & Fellowship",                      "type": "break",     "note": "Provided" }
+          { "time": "",  "title": "Sunday Services",                      "type": "special", "speaker": "Celebration Church, Toronto", "note": "Join any of the services" }
         ]
       }
     ]
   },
   "speakers": {
-    "sectionLabel": "About the Speakers",
+    "sectionLabel": "About the Ministers",
     "headingPlain": "Meet the",
-    "headingAccent": "Speakers",
-    "mainBadge": "★ Main Speaker",
-    "mainLabel": "Main Speaker",
+    "headingAccent": "Ministers",
+    "mainBadge": "★ Host",
+    "mainLabel": "",
     "invitedLabel": "Invited Ministers",
     "main": {
       "name": "Apostle Emmanuel Iren",
@@ -128,11 +149,11 @@
     },
     "invited": [
       {
-        "name": "Pastor Travis Greene",
-        "title": "Senior Pastor, The Forward City Church",
-        "city": "South Carolina, USA",
+        "name": "Brooke Nicholls",
+        "title": "Worship Leader",
+        "city": "Vancouver, BC",
         "specialty": "Worship",
-        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/travis-greene-1.jpg"
+        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/Brooke-Nicholls.jpg"
       }
     ]
   },
@@ -179,11 +200,9 @@
     ],
     "included": [
       "All 3 days of sessions (Fri \u2013 Sun)",
-      "Youth & Young Adults programming",
-      "Women\u2019s and Men\u2019s breakout sessions",
-      "Sunday commissioning & closing lunch",
-      "Event programme booklet",
-      "Access to all prayer ministry times"
+      "CelebKids (Ages 1 \u2013 12)",
+      "Prayer stretch",
+      "Event programme"
     ]
   },
   "accommodation": {

@@ -64,7 +64,7 @@ export function RegistrationSection() {
                   <Icon size={18} style={{ color }} />
                 </div>
                 <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "1rem", color: t.textPrimary, letterSpacing: "0.03em" }}>{title}</p>
-                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: t.textMuted, lineHeight: 1.5 }}>{desc}</p>
+                {/* <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: t.textMuted, lineHeight: 1.5 }}>{desc}</p> */}
               </motion.div>
             );
           })}
@@ -118,7 +118,7 @@ export function RegistrationSection() {
                   </div>
                   <div>
                     <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "0.95rem", color: "#34D399" }}>Free Admission</p>
-                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.78rem", color: t.textMuted }}>Registration required — limited capacity</p>
+                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.78rem", color: t.textMuted }}>Registration required</p>
                   </div>
                 </motion.div>
               </div>
