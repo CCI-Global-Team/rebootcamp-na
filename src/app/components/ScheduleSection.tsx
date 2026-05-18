@@ -195,8 +195,8 @@ export function ScheduleSection() {
                     willChange: "transform"
                   }}
                 >
-                  {/* Time */}
-                  <div
+                  {/* Time (HIDDEN) */}
+                  {/* <div
                     className="w-20 shrink-0 pt-0.5 text-right"
                     style={{
                       fontFamily: "'Barlow Condensed', sans-serif",
@@ -206,7 +206,7 @@ export function ScheduleSection() {
                     }}
                   >
                     {session.time}
-                  </div>
+                  </div> */}
 
                   {/* Timeline */}
                   <div className="flex flex-col items-center">
