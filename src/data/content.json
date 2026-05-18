@@ -43,8 +43,20 @@
     "headingPlain": "What is",
     "headingAccent": "Reboot Camp?",
     "paragraphs": [
-      "Reboot Camp is an annual camp meeting experience designed to ignite spiritual renewal, deepen faith, and build kingdom community. Born from a vision to see lives transformed by the power of God's Word, Reboot Camp has grown into one of North America's most anticipated Christian gatherings.",
-      "This year, under the theme {theme} — drawn from Acts 4:33 — we gather in Toronto, Canada for three days of powerful preaching, worship, prayer, and fellowship. Every session is designed to impart fresh grace into every area of your life."
+      "What if the exhaustion you've been carrying isn't just physical?",
+      "It's been the kind that sleep doesn't fix. The kind that lingers even when life looks \"fine\" on the outside. You've kept going, building, working, showing up for others but somewhere deep down, there's a quiet knowing: something is missing.",
+      "Maybe you feel a void nothing around you seems to satisfy. A sense that there has to be more to this life.",
+      "And maybe that feeling isn't wrong.",
+      "What if one weekend could actually shift something on you inside? What if one weekend could bring answers to your curious mind? A weekend where the weight you've been carrying begins to lift. Where clarity replaces confusion, and where you reconnect with who your creator has called you to be.",
+      "Reboot Camp 2026 is that experience.",
+      "Thousands gather for one reason: to encounter Jesus in a way that changes everything; In the way that will last a lifetime.",
+      "Over three transformative days, you'll step into an atmosphere charged with intense worship, powerful teaching, fervent prayer, and genuine community - the kind that reminds you that you were never meant to do life alone.",
+      "And this year, it's happening in Toronto, Canada.",
+      "Under the theme {theme}, drawn from Acts 4:33, this isn't just another gathering - it's an encounter.",
+      "We believe this: every person who shows up is one encounter away from a turning point.",
+      "Three days. \nOne city. \nAn encounter that could change everything.",
+      "September 4 - 6, 2026",
+      "You are invited."
     ],
     "verse": {
       "text": "\"And with great power the apostles gave witness to the resurrection of the Lord Jesus. And great grace was upon them all.\"",
@@ -53,7 +65,7 @@
     "ctaLabel": "SECURE YOUR SPOT",
     "stats": [
       { "icon": "Users",  "value": "2,000+", "label": "Expected Attendees" },
-      { "icon": "Globe",  "value": "20+",    "label": "Nations Represented" },
+      { "icon": "Globe",  "value": "20+",    "label": "Cities Represented" },
       { "icon": "Star",   "value": "3 Days", "label": "Of Transforming Sessions" },
       { "icon": "Flame",  "value": "Free",   "label": "Registration & Admission" }
     ],
@@ -113,11 +125,11 @@
     ]
   },
   "speakers": {
-    "sectionLabel": "About the Speakers",
+    "sectionLabel": "About the Ministers",
     "headingPlain": "Meet the",
-    "headingAccent": "Speakers",
-    "mainBadge": "★ Main Speaker",
-    "mainLabel": "Main Speaker",
+    "headingAccent": "Ministers",
+    "mainBadge": "★ Host",
+    "mainLabel": "",
     "invitedLabel": "Invited Ministers",
     "main": {
       "name": "Apostle Emmanuel Iren",
@@ -179,11 +191,9 @@
     ],
     "included": [
       "All 3 days of sessions (Fri \u2013 Sun)",
-      "Youth & Young Adults programming",
-      "Women\u2019s and Men\u2019s breakout sessions",
-      "Sunday commissioning & closing lunch",
-      "Event programme booklet",
-      "Access to all prayer ministry times"
+      "CelebKids (Ages 1 \u2013 12)",
+      "Prayer stretch",
+      "Event programme"
     ]
   },
   "accommodation": {

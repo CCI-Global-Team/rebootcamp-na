@@ -29,7 +29,7 @@ export function AboutSection() {
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
           <motion.div variants={fadeUp}>
             <h2 className="mb-6 uppercase leading-tight" style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "clamp(2.2rem, 5vw, 3.5rem)", color: t.textPrimary, lineHeight: 1.1 }}>
@@ -113,8 +113,8 @@ export function AboutSection() {
               })}
             </motion.div>
 
-            {/* What to Expect */}
-            <motion.div
+            {/* What to Expect - HIDDEN */}
+            {/* <motion.div
               variants={fadeUp}
               className="p-6 rounded-xl"
               style={{ backgroundImage: t.aboutHighlightBg, border: `1px solid ${t.aboutHighlightBorder}` }}
@@ -130,7 +130,8 @@ export function AboutSection() {
                   </motion.li>
                 ))}
               </motion.ul>
-            </motion.div>
+            </motion.div> */}
+
           </motion.div>
         </div>
       </motion.div>
