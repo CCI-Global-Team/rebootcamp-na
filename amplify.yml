@@ -5,7 +5,7 @@ frontend:
       commands:
         - npm install -g pnpm
         - pnpm config set ignore-scripts false
-        - pnpm install
+        - pnpm install --no-frozen-lockfile
     build:
       commands:
         - NEXT_DISABLE_TURBOPACK=1 pnpm build
