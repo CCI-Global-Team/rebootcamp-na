@@ -140,7 +140,7 @@ export function SpeakersSection() {
               {/* Content */}
               <motion.div
                 variants={stagger}
-                className="p-8 lg:p-12 flex flex-col justify-center"
+                className="p-6 lg:p-8 flex flex-col justify-center"
               >
                 <motion.div variants={fadeUp}>
                   <div
@@ -190,9 +190,37 @@ export function SpeakersSection() {
                   </p>
                 </motion.div>
 
+                {/* Instagram Reels */}
+                <motion.div variants={stagger}>
+                  <div className="flex items-center gap-2 mb-3">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: t.goldAccent }}>
+                      <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.15em", color: t.textVeryMuted, textTransform: "uppercase" }}>
+                      {main.excerptsTitle}
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    {main.excerpts.map(({url, caption}) => (
+                      <div key={caption} className="rounded-xl overflow-hidden" style={{ border: `1px solid rgba(${t.accentRgb},0.2)`, background: "#000", aspectRatio: "9/16" }}>
+                        <video
+                          src={url}
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="w-full h-full block"
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* Main Speaker - specialties */}
                 <motion.div
                   variants={stagger}
-                  className="flex flex-wrap gap-2"
+                  className="flex flex-wrap gap-2 mt-8"
                 >
                   {main.specialties?.map((s) => (
                     <motion.span
