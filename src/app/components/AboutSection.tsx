@@ -113,6 +113,11 @@ export function AboutSection() {
               })}
             </motion.div>
 
+            {/* Toronto image */}
+            <motion.div variants={stagger} className="rounded-xl overflow-hidden" style={{ border: `1px solid ${t.aboutHighlightBorder}` }}>
+              <img src="https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/hotels/holiday-inn-toronto.avif" alt="RBC" className="w-full h-auto object-cover" />
+            </motion.div>
+
             {/* What to Expect - HIDDEN */}
             {/* <motion.div
               variants={fadeUp}

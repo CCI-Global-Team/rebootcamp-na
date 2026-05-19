@@ -91,8 +91,8 @@ export function AccommodationSection() {
           </p>
         </motion.div>
 
-        {/* Partner Banner */}
-        <motion.div
+        {/* Partner Banner (HIDDEN) */}
+        {/* <motion.div
           variants={fadeUp}
           className="flex items-center gap-3 mb-8 p-4 rounded-xl max-w-2xl mx-auto"
           style={{
@@ -115,7 +115,7 @@ export function AccommodationSection() {
               {accommodation.partnerCode}
             </strong>
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Hotels */}
         <motion.div
