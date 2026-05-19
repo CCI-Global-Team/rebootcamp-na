@@ -42,12 +42,13 @@
     "sectionLabel": "About The Event",
     "headingPlain": "What is",
     "headingAccent": "Reboot Camp?",
+    "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/img-toronto-pie.jpg",
     "paragraphs": [
       "What if the exhaustion you've been carrying isn't just physical?",
       "It's been the kind that sleep doesn't fix. The kind that lingers even when life looks \"fine\" on the outside. You've kept going, building, working, showing up for others but somewhere deep down, there's a quiet knowing: something is missing.",
       "Maybe you feel a void nothing around you seems to satisfy. A sense that there has to be more to this life.",
       "And maybe that feeling isn't wrong.",
-      "What if one weekend could actually shift something on you inside? What if one weekend could bring answers to your curious mind? A weekend where the weight you've been carrying begins to lift. Where clarity replaces confusion, and where you reconnect with who your creator has called you to be.",
+      "What if one weekend could actually shift something on your inside? What if one weekend could bring answers to your curious mind? A weekend where the weight you've been carrying begins to lift. Where clarity replaces confusion, and where you reconnect with who your creator has called you to be.",
       "Reboot Camp 2026 is that experience.",
       "Thousands gather for one reason: to encounter Jesus in a way that changes everything; In the way that will last a lifetime.",
       "Over three transformative days, you'll step into an atmosphere charged with intense worship, powerful teaching, fervent prayer, and genuine community - the kind that reminds you that you were never meant to do life alone.",
@@ -145,7 +146,18 @@
       "title": "Lead Pastor, Celebration Church International",
       "bio": "Apostle Emmanuel Iren is the visionary founder and lead pastor of Celebration Church International, a dynamic teaching ministry dedicated to spreading the gospel and helping people discover their purpose in Christ. With a passion for the Word of God and a heart for missions, Apostle Iren has led the church to establish Over 40 campuses across Nigeria, UK, Europe, Australia, Canada, and the USA, all while inspiring countless lives to grow in their faith and embrace the life-changing power of Christ.",
       "specialties": ["Apostolic Teaching", "Prophetic Ministry", "Kingdom Mandate"],
-      "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/AIE-X-portrait.jpg"
+      "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/AIE-X-portrait.jpg",
+      "excerptsTitle": "Watch",
+      "excerpts": [
+        {
+          "caption": "Oannes",
+          "url": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/aie/oannes.mp4"
+        },
+        {
+          "caption": "Dagon will Bow!",
+          "url": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/aie/dagon-will-bow.mp4"
+        }
+      ]
     },
     "invited": [
       {
@@ -174,28 +186,32 @@
         "color": "#A78BFA",
         "rgb": "167,139,250",
         "title": "Worship Nights",
-        "desc": "Three nights of deep, spirit-filled worship led by the Reboot Worship Team and special guest artists."
+        "desc": "Three nights of deep, spirit-filled worship led by the Reboot Worship Team and special guest artists.",
+        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
       },
       {
         "icon": "BookOpen",
         "color": "#E8C033",
         "rgb": "232,192,51",
         "title": "Powerful Teaching",
-        "desc": "Anointed messages on the theme \u201cGreat Grace\u201d from leading ministers across North America and beyond."
+        "desc": "Anointed messages on the theme \u201cGreat Grace\u201d from leading ministers across North America and beyond.",
+        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
       },
       {
         "icon": "Zap",
         "color": "#E85D04",
         "rgb": "232,93,4",
         "title": "Prophetic Activation",
-        "desc": "Workshops, breakout sessions, and ministry gifts activation to stir up your calling and purpose."
+        "desc": "Workshops, breakout sessions, and ministry gifts activation to stir up your calling and purpose.",
+        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
       },
       {
         "icon": "Users",
         "color": "#34D399",
         "rgb": "52,211,153",
         "title": "Community",
-        "desc": "Connect with believers from across Canada and the world \u2014 fellowship, networking, and lifelong friendships."
+        "desc": "Connect with believers from across Canada and the world \u2014 fellowship, networking, and lifelong friendships.",
+        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
       }
     ],
     "included": [
@@ -215,60 +231,34 @@
     "footnote": "All prices are approximate and subject to availability. Rates in Canadian Dollars (CAD). Book early \u2014 rooms fill up fast!",
     "hotels": [
       {
-        "name": "Comfort Inn & Suites",
+        "name": "Holiday Inn Toronto International Airport by IHG",
         "category": "Budget Friendly",
-        "distance": "0.8 km from venue",
-        "price": "~CAD $129/night",
-        "stars": 3,
-        "amenities": ["Free WiFi", "Breakfast", "Parking"],
-        "imgUrl": "https://images.unsplash.com/photo-1642621866758-aa55c9751e74?w=600&q=80",
-        "badge": "Best Value",
+        "distance": "3 km from venue",
+        "price": "CAD $169/night (excludes taxes)",
+        "stars": 4,
+        "amenities": ["On-site Restaurant", "Free WiFi", "Discounted Breakfast Buffet for $20", "Kids Eat Free", "Discounted on-site parking at $10", "EV Charging", "Indoor Pool and Fitness Center", "Airport Shuttle"],
+        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/hotels/holiday-inn-toronto.avif",
+        "imgPosition": "object-center",
+        "badge": "",
         "badgeColor": "#34D399",
         "partnerRate": true,
-        "bookUrl": "#",
-        "description": "A comfortable, affordable option within walking distance of the venue. Ideal for attendees on a budget."
+        "bookUrl": "https://www.ihg.com/holidayinn/hotels/us/en/find-hotels/select-roomrate?fromRedirect=true&qSrt=sBR&qIta=99801505&icdv=99801505&qSlH=YYZIA&qCiD=04&qCiMy=082026&qCoD=06&qCoMy=082026&qGrpCd=CCI&setPMCookies=true&qSHBrC=HI&qDest=970%20Dixon%20Road,%20Rexdale,%20Toronto,%20ON,%20CA&showApp=true&adjustMonth=false&srb_u=1&qRmFltr=",
+        "description": "A comfortable, affordable option. Ideal for attendees on a budget."
       },
       {
-        "name": "Marriott Toronto Downtown",
+        "name": "Crowne Plaza Toronto Airport by IHG",
         "category": "Standard",
         "distance": "1.2 km from venue",
-        "price": "~CAD $219/night",
+        "price": "CAD $190/night (excludes taxes)",
         "stars": 4,
-        "amenities": ["Free WiFi", "Restaurant", "Pool", "Parking"],
-        "imgUrl": "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=600&q=80",
-        "badge": "Recommended",
+        "amenities": ["Free WiFi", "In Hotel Restaurants", "Indoor Pool", "Fitness Centre", "Self-Parking for $33.90 CAD (HST included) per night", "EV Charging", "Area shuttle", "Airport shuttle"],
+        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/hotels/crowne-plaza-toronto.avif",
+        "imgPosition": "object-top",
+        "badge": "",
         "badgeColor": "#E8C033",
         "partnerRate": true,
-        "bookUrl": "#",
-        "description": "Full-service hotel with modern amenities. Our most popular choice among international attendees."
-      },
-      {
-        "name": "Intercontinental Toronto",
-        "category": "Premium",
-        "distance": "1.5 km from venue",
-        "price": "~CAD $349/night",
-        "stars": 5,
-        "amenities": ["Free WiFi", "Fine Dining", "Spa", "Valet", "Pool"],
-        "imgUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80",
-        "badge": "Luxury",
-        "badgeColor": "#A78BFA",
-        "partnerRate": false,
-        "bookUrl": "#",
-        "description": "Five-star luxury experience for those who desire premium comfort during their Toronto stay."
-      },
-      {
-        "name": "Airbnb / Short-Term Rentals",
-        "category": "Self-Catering",
-        "distance": "Varies",
-        "price": "~CAD $80\u2013$150/night",
-        "stars": 0,
-        "amenities": ["Kitchen", "More Space", "Local Feel"],
-        "imgUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
-        "badge": "Flexible",
-        "badgeColor": "#60A5FA",
-        "partnerRate": false,
-        "bookUrl": "#",
-        "description": "Rent an apartment or home for a more home-like experience. Great option for families and groups."
+        "bookUrl": "https://www.ihg.com/redirect?path=asearch&brandCode=CP&localeCode=en&regionCode=1&hotelCode=yyzca&checkInDate=04&checkInMonthYear=082026&checkOutDate=06&checkOutMonthYear=082026&rateCode=6CBARC&_PMID=99801505&GPC=GTW&cn=no&adjustMonth=false&showApp=true&monthIndex=00",
+        "description": "Full-service hotel with modern amenities within walking distance of the venue."
       }
     ]
   },
@@ -526,8 +516,8 @@
         "abbr": "AC",
         "tagline": "Canada\u2019s flag carrier",
         "discount": "10% off",
-        "discountNote": "base fare",
-        "code": "REBOOT2026AC",
+        "discountNote": "",
+        "code": "ZKCTMWR1",
         "bookingUrl": "https://www.aircanada.com",
         "color": "#D82F2E",
         "rgb": "216,47,46",
@@ -535,99 +525,53 @@
         "accentColor": "rgba(255,255,255,0.22)",
         "accentDarkText": false,
         "headerTextColor": "#fff",
-        "routes": "All domestic & international routes to Toronto (YYZ / YTZ)",
-        "validUntil": "Aug 25, 2026",
-        "instructions": "Enter code during checkout under \u201cPromotional Code\u201d on aircanada.com"
-      },
-      {
-        "name": "WestJet",
-        "abbr": "WS",
-        "tagline": "Friendly, modern flying",
-        "discount": "12% off",
-        "discountNote": "base fare",
-        "code": "REBOOT2026WJ",
-        "bookingUrl": "https://www.westjet.com",
-        "color": "#00AAA6",
-        "rgb": "0,170,166",
-        "cardRgb": "0,170,166",
-        "accentColor": "rgba(255,255,255,0.22)",
-        "accentDarkText": false,
-        "headerTextColor": "#fff",
-        "routes": "All routes to Toronto Pearson (YYZ)",
-        "validUntil": "Aug 25, 2026",
-        "instructions": "Apply code at westjet.com checkout under \u201cPromo / Discount Code\u201d"
+        "routes": [
+          "ALL INTERNATIONAL - Toronto All Airports (YTZ,YYZ) (ON)",
+          "ALL USA - Toronto All Airports (YTZ,YYZ) (ON)",
+          "ALL SUN - Toronto All Airports (YTZ,YYZ) (ON)",
+          "ALL CANADA - Toronto All Airports (YTZ,YYZ) (ON)"
+        ],
+        "validity": "August 28, 2026 to September 13, 2026.",
+        "instructions": "Enter code while booking under \u201cPromotion Code\u201d on aircanada.com"
       },
       {
         "name": "Porter Airlines",
         "abbr": "PD",
         "tagline": "Boutique premium regional flying",
-        "discount": "15% off",
-        "discountNote": "base fare",
-        "code": "REBOOT2026PD",
-        "bookingUrl": "https://www.flyporter.com",
+        "discount": "10 - 15% off",
+        "discountNote": "available base fares",
+        "code": "RCNA26",
+        "bookingUrl": "https://www.flyporter.com/en-ca/?promocode=RCNA26",
         "color": "#112855",
         "rgb": "17,40,85",
         "cardRgb": "17,40,85",
         "accentColor": "rgba(255,255,255,0.22)",
         "accentDarkText": false,
         "headerTextColor": "#fff",
-        "routes": "All routes to Billy Bishop (YTZ) & Toronto Pearson (YYZ)",
-        "validUntil": "Aug 25, 2026",
-        "instructions": "Select \u201cPromo Code\u201d at flyporter.com checkout and enter the code above"
+        "routes": [
+          "All Markets - Toronto-all airports (YTO) (2 Sept 26 - 6 Sept 26)",
+          "Toronto-all airports (YTO) - All Markets (4 Sept 26 - 8 Sept 26)"
+        ],
+        "validity": "April 21, 2026 to September 8, 2026",
+        "instructions": "Book online by clicking the button below or through your travel agent using promo code \u201cRCNA26\u201d"
       },
       {
-        "name": "Air Transat",
-        "abbr": "TS",
-        "tagline": "Best leisure airline in North America",
-        "discount": "10% off",
-        "discountNote": "leisure fare",
-        "code": "REBOOT2026TS",
-        "bookingUrl": "https://www.airtransat.com",
-        "color": "#0072CE",
-        "rgb": "0,114,206",
-        "cardRgb": "0,114,206",
-        "accentColor": "rgba(255,255,255,0.22)",
-        "accentDarkText": false,
-        "headerTextColor": "#fff",
-        "routes": "International & U.S. routes to Toronto (YYZ)",
-        "validUntil": "Aug 25, 2026",
-        "instructions": "Enter code on airtransat.com under \u201cPromotional Code\u201d at booking"
-      },
-      {
-        "name": "Flair Airlines",
-        "abbr": "F8",
-        "tagline": "Ultra-low cost, high contrast",
-        "discount": "20% off",
-        "discountNote": "any base fare",
-        "code": "REBOOT2026FL",
-        "bookingUrl": "https://www.flyflair.com",
-        "color": "#0D0D0D",
-        "rgb": "0,0,0",
-        "cardRgb": "57,255,20",
-        "accentColor": "#39FF14",
-        "accentDarkText": true,
-        "headerTextColor": "#fff",
-        "routes": "All domestic routes to Toronto Pearson (YYZ)",
-        "validUntil": "Aug 25, 2026",
-        "instructions": "Add code on flyflair.com in \u201cPromo Code\u201d field before selecting seats"
-      },
-      {
-        "name": "Lynx Air",
-        "abbr": "Y9",
-        "tagline": "Modern low-cost, real value",
+        "name": "Delta Air Lines",
+        "abbr": "DT",
+        "tagline": "Keep Climbing",
         "discount": "18% off",
         "discountNote": "any base fare",
-        "code": "REBOOT2026LX",
-        "bookingUrl": "https://www.flylynx.com",
-        "color": "#003A8F",
+        "code": "NY4SX",
+        "bookingUrl": "https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=price&originCity=&destinationCity=&departureDate=&returnDate=&paxCount=1&meetingEventCode=NY4SX&searchByCabin=true&cabinFareClass=BE&deltaOnlySearch=false&deltaOnly=deltaPartner",
+        "color": "#003A70",
         "rgb": "0,58,143",
         "cardRgb": "0,58,143",
-        "accentColor": "#A4D233",
+        "accentColor": "#ffffff",
         "accentDarkText": true,
         "headerTextColor": "#fff",
-        "routes": "Domestic routes to Toronto Pearson (YYZ)",
-        "validUntil": "Aug 25, 2026",
-        "instructions": "Enter code at flylynx.com under \u201cDiscount Code\u201d during seat selection"
+        "routes": "All International to Toronto Pearson (YYZ)",
+        "validity": "September 8, 2026",
+        "instructions": "Book online by clicking the button below or You may also call Conferences and Events® at 1.800.328.1111 Monday - Friday, 8:00 a.m. - 8:00 p.m. (EST) and refer to Meeting Event Code  NY4SX"
       }
     ]
   },

@@ -113,6 +113,11 @@ export function AboutSection() {
               })}
             </motion.div>
 
+            {/* Toronto image */}
+            <motion.div variants={stagger} className="rounded-xl overflow-hidden" style={{ border: `1px solid ${t.aboutHighlightBorder}` }}>
+              <img src={about.imgUrl} alt="RBC" className="w-full h-auto object-cover" />
+            </motion.div>
+
             {/* What to Expect - HIDDEN */}
             {/* <motion.div
               variants={fadeUp}

@@ -4,6 +4,7 @@ import { ImageWithFallback } from "@/app/utils/ImageWithFallback";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import { fadeUp, scaleIn, stagger } from "@/app/components/ui/animation";
+import { cn } from "./ui/utils";
 
 const amenityIcons: Record<string, React.ElementType> = {
   "Free WiFi": Wifi,
@@ -91,8 +92,8 @@ export function AccommodationSection() {
           </p>
         </motion.div>
 
-        {/* Partner Banner */}
-        <motion.div
+        {/* Partner Banner (HIDDEN) */}
+        {/* <motion.div
           variants={fadeUp}
           className="flex items-center gap-3 mb-8 p-4 rounded-xl max-w-2xl mx-auto"
           style={{
@@ -115,7 +116,7 @@ export function AccommodationSection() {
               {accommodation.partnerCode}
             </strong>
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Hotels */}
         <motion.div
@@ -139,7 +140,7 @@ export function AccommodationSection() {
                 <ImageWithFallback
                   src={hotel.imgUrl}
                   alt={hotel.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={cn("w-full h-full object-cover transition-transform duration-500 group-hover:scale-105", hotel.imgPosition)}
                 />
                 <div
                   className="absolute inset-0"
@@ -239,10 +240,10 @@ export function AccommodationSection() {
                   </span>
                   <span style={{ color: t.textDim }}>·</span>
                   <span
-                    className="text-sm"
+                    className="text-base tracking-wide"
                     style={{
-                      fontFamily: "'Barlow Condensed', sans-serif",
-                      fontWeight: 600,
+                      fontFamily: "'Oswald', sans-serif",
+                      fontWeight: 500,
                       color: t.goldAccent
                     }}
                   >
@@ -277,7 +278,8 @@ export function AccommodationSection() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.97 }}
                   href={hotel.bookUrl}
-                  className="block w-full py-2.5 rounded text-center text-sm uppercase tracking-wider"
+                  target="_blank"
+                  className="block w-full py-2.5 rounded text-center text-sm uppercase tracking-wider cursor-pointer"
                   style={{
                     background: hotel.partnerRate
                       ? t.ctaGradient

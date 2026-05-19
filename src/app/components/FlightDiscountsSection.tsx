@@ -232,18 +232,21 @@ function AirlineCard({ airline }: { airline: Airline }) {
         </div>
 
         {/* Routes */}
-        <p
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: "0.77rem",
-            color: t.textSecondary,
-            margin: "0 0 3px 0",
-            lineHeight: 1.5,
-          }}
-        >
-          <span style={{ color: t.textMuted }}>Routes: </span>
-          {airline.routes}
-        </p>
+        <div className="mb-4">
+          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.77rem", color: t.textMuted }}>Routes: </span>
+          {Array.isArray(airline.routes) ? (
+            <ul style={{ margin: "4px 0 0 0", padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "3px" }}>
+              {(airline.routes as string[]).map((r) => (
+                <li key={r} style={{ display: "flex", alignItems: "flex-start", gap: "6px" }}>
+                  <span style={{ color: t.goldAccent, marginTop: "1px", flexShrink: 0, fontSize: "0.6rem" }}>▸</span>
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.75rem", color: t.textSecondary, lineHeight: 1.45 }}>{r}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.77rem", color: t.textSecondary, lineHeight: 1.5 }}>{airline.routes as string}</span>
+          )}
+        </div>
 
         {/* Valid until */}
         <p
@@ -254,8 +257,8 @@ function AirlineCard({ airline }: { airline: Airline }) {
             margin: "0 0 12px 0",
           }}
         >
-          <span style={{ color: t.textMuted }}>Valid until: </span>
-          <span style={{ color: t.goldAccent }}>{airline.validUntil}</span>
+          <span style={{ color: t.textMuted }}>Validity: </span>
+          <span style={{ color: t.goldAccent }}>{airline.validity}</span>
         </p>
 
         {/* How-to toggle */}
@@ -381,8 +384,8 @@ export function FlightDiscountsSection() {
           </p>
         </div>
 
-        {/* Note banner */}
-        <div
+        {/* Note banner - HIDDEN */}
+        {/* <div
           className="max-w-3xl mx-auto mb-12 flex items-start gap-3 rounded-xl px-5 py-4"
           style={{ background: t.isDark ? "rgba(232,192,51,0.07)" : "rgba(200,158,30,0.07)", border: `1px solid ${t.isDark ? "rgba(232,192,51,0.2)" : "rgba(200,158,30,0.25)"}` }}
         >
@@ -390,7 +393,7 @@ export function FlightDiscountsSection() {
           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: t.textSecondary, margin: 0, lineHeight: 1.65 }}>
             {flightDiscounts.footnote}
           </p>
-        </div>
+        </div> */}
 
         {/* Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

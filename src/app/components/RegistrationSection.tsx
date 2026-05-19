@@ -50,22 +50,32 @@ export function RegistrationSection() {
           variants={stagger}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14"
         >
-          {registration.highlights.map(({ icon, color, rgb, title, desc }) => {
+          {registration.highlights.map(({ icon, color, rgb, title, imgUrl }) => {
             const Icon = ICON_MAP[icon] ?? Zap;
             return (
-              <motion.div
-                variants={scaleIn}
-                whileHover={{ y: -6 }}
-                key={title}
-                className="rounded-2xl p-5 flex flex-col gap-3 transition-transform duration-200"
-                style={{ backgroundColor: t.isDark ? `rgba(${rgb},0.07)` : `rgba(${rgb},0.05)`, border: `1px solid rgba(${rgb},${t.isDark ? "0.25" : "0.18"})` }}
+              <div key={title} className="rounded-2xl overflow-hidden flex flex-col transition-transform duration-200 hover:-translate-y-1"
+                style={{ border: `1px solid rgba(${rgb},${t.isDark ? "0.25" : "0.18"})` }}
               >
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `rgba(${rgb},0.15)`, border: `1px solid rgba(${rgb},0.3)` }}>
-                  <Icon size={18} style={{ color }} />
+                {/* Image */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={imgUrl}
+                    alt={title}
+                    className="w-full h-full object-cover"
+                    style={{ filter: t.isDark ? "brightness(0.85)" : "brightness(0.9)" }}
+                  />
+                  {/* Colour tint overlay */}
+                  <div className="absolute inset-0" style={{ background: `rgba(${rgb},0.18)` }} />
+                  {/* Icon badge */}
+                  <div className="absolute top-3 left-3 w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "rgba(0,0,0,0.45)", backdropFilter: "blur(4px)" }}>
+                    <Icon size={15} style={{ color }} />
+                  </div>
                 </div>
-                <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "1rem", color: t.textPrimary, letterSpacing: "0.03em" }}>{title}</p>
-                {/* <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: t.textMuted, lineHeight: 1.5 }}>{desc}</p> */}
-              </motion.div>
+                {/* Title bar */}
+                <div className="px-4 py-3" style={{ background: t.isDark ? `rgba(${rgb},0.07)` : `rgba(${rgb},0.05)` }}>
+                  <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "1rem", color: t.textPrimary, letterSpacing: "0.03em" }}>{title}</p>
+                </div>
+              </div>
             );
           })}
         </motion.div>

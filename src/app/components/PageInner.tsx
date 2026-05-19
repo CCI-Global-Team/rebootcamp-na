@@ -38,7 +38,7 @@ export function PageInner() {
         <AccommodationSection />
         <FlightDiscountsSection />
         <VenueSection />
-        <PastEventsSection />
+        {/* <PastEventsSection /> */}
         <FAQSection />
         <GivingSection />
         <Footer />
