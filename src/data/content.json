@@ -42,12 +42,13 @@
     "sectionLabel": "About The Event",
     "headingPlain": "What is",
     "headingAccent": "Reboot Camp?",
+    "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/img-toronto-pie.jpg",
     "paragraphs": [
       "What if the exhaustion you've been carrying isn't just physical?",
       "It's been the kind that sleep doesn't fix. The kind that lingers even when life looks \"fine\" on the outside. You've kept going, building, working, showing up for others but somewhere deep down, there's a quiet knowing: something is missing.",
       "Maybe you feel a void nothing around you seems to satisfy. A sense that there has to be more to this life.",
       "And maybe that feeling isn't wrong.",
-      "What if one weekend could actually shift something on you inside? What if one weekend could bring answers to your curious mind? A weekend where the weight you've been carrying begins to lift. Where clarity replaces confusion, and where you reconnect with who your creator has called you to be.",
+      "What if one weekend could actually shift something on your inside? What if one weekend could bring answers to your curious mind? A weekend where the weight you've been carrying begins to lift. Where clarity replaces confusion, and where you reconnect with who your creator has called you to be.",
       "Reboot Camp 2026 is that experience.",
       "Thousands gather for one reason: to encounter Jesus in a way that changes everything; In the way that will last a lifetime.",
       "Over three transformative days, you'll step into an atmosphere charged with intense worship, powerful teaching, fervent prayer, and genuine community - the kind that reminds you that you were never meant to do life alone.",
@@ -186,7 +187,7 @@
         "rgb": "167,139,250",
         "title": "Worship Nights",
         "desc": "Three nights of deep, spirit-filled worship led by the Reboot Worship Team and special guest artists.",
-        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/Brooke-Nicholls.jpg"
+        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
       },
       {
         "icon": "BookOpen",
@@ -194,7 +195,7 @@
         "rgb": "232,192,51",
         "title": "Powerful Teaching",
         "desc": "Anointed messages on the theme \u201cGreat Grace\u201d from leading ministers across North America and beyond.",
-        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/Brooke-Nicholls.jpg"
+        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
       },
       {
         "icon": "Zap",
@@ -202,7 +203,7 @@
         "rgb": "232,93,4",
         "title": "Prophetic Activation",
         "desc": "Workshops, breakout sessions, and ministry gifts activation to stir up your calling and purpose.",
-        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/Brooke-Nicholls.jpg"
+        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
       },
       {
         "icon": "Users",
@@ -210,7 +211,7 @@
         "rgb": "52,211,153",
         "title": "Community",
         "desc": "Connect with believers from across Canada and the world \u2014 fellowship, networking, and lifelong friendships.",
-        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/Brooke-Nicholls.jpg"
+        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
       }
     ],
     "included": [
@@ -230,60 +231,34 @@
     "footnote": "All prices are approximate and subject to availability. Rates in Canadian Dollars (CAD). Book early \u2014 rooms fill up fast!",
     "hotels": [
       {
-        "name": "Comfort Inn & Suites",
+        "name": "Holiday Inn Toronto International Airport by IHG",
         "category": "Budget Friendly",
-        "distance": "0.8 km from venue",
-        "price": "~CAD $129/night",
-        "stars": 3,
-        "amenities": ["Free WiFi", "Breakfast", "Parking"],
-        "imgUrl": "https://images.unsplash.com/photo-1642621866758-aa55c9751e74?w=600&q=80",
-        "badge": "Best Value",
+        "distance": "3 km from venue",
+        "price": "CAD $169/night (excludes taxes)",
+        "stars": 4,
+        "amenities": ["On-site Restaurant", "Free WiFi", "Discounted Breakfast Buffet for $20", "Kids Eat Free", "Discounted on-site parking at $10", "EV Charging", "Indoor Pool and Fitness Center", "Airport Shuttle"],
+        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/hotels/holiday-inn-toronto.avif",
+        "imgPosition": "object-center",
+        "badge": "",
         "badgeColor": "#34D399",
         "partnerRate": true,
-        "bookUrl": "#",
-        "description": "A comfortable, affordable option within walking distance of the venue. Ideal for attendees on a budget."
+        "bookUrl": "https://www.ihg.com/holidayinn/hotels/us/en/find-hotels/select-roomrate?fromRedirect=true&qSrt=sBR&qIta=99801505&icdv=99801505&qSlH=YYZIA&qCiD=04&qCiMy=082026&qCoD=06&qCoMy=082026&qGrpCd=CCI&setPMCookies=true&qSHBrC=HI&qDest=970%20Dixon%20Road,%20Rexdale,%20Toronto,%20ON,%20CA&showApp=true&adjustMonth=false&srb_u=1&qRmFltr=",
+        "description": "A comfortable, affordable option. Ideal for attendees on a budget."
       },
       {
-        "name": "Marriott Toronto Downtown",
+        "name": "Crowne Plaza Toronto Airport by IHG",
         "category": "Standard",
         "distance": "1.2 km from venue",
-        "price": "~CAD $219/night",
+        "price": "CAD $190/night (excludes taxes)",
         "stars": 4,
-        "amenities": ["Free WiFi", "Restaurant", "Pool", "Parking"],
-        "imgUrl": "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=600&q=80",
-        "badge": "Recommended",
+        "amenities": ["Free WiFi", "In Hotel Restaurants", "Indoor Pool", "Fitness Centre", "Self-Parking for $33.90 CAD (HST included) per night", "EV Charging", "Area shuttle", "Airport shuttle"],
+        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/hotels/crowne-plaza-toronto.avif",
+        "imgPosition": "object-top",
+        "badge": "",
         "badgeColor": "#E8C033",
         "partnerRate": true,
-        "bookUrl": "#",
-        "description": "Full-service hotel with modern amenities. Our most popular choice among international attendees."
-      },
-      {
-        "name": "Intercontinental Toronto",
-        "category": "Premium",
-        "distance": "1.5 km from venue",
-        "price": "~CAD $349/night",
-        "stars": 5,
-        "amenities": ["Free WiFi", "Fine Dining", "Spa", "Valet", "Pool"],
-        "imgUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80",
-        "badge": "Luxury",
-        "badgeColor": "#A78BFA",
-        "partnerRate": false,
-        "bookUrl": "#",
-        "description": "Five-star luxury experience for those who desire premium comfort during their Toronto stay."
-      },
-      {
-        "name": "Airbnb / Short-Term Rentals",
-        "category": "Self-Catering",
-        "distance": "Varies",
-        "price": "~CAD $80\u2013$150/night",
-        "stars": 0,
-        "amenities": ["Kitchen", "More Space", "Local Feel"],
-        "imgUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
-        "badge": "Flexible",
-        "badgeColor": "#60A5FA",
-        "partnerRate": false,
-        "bookUrl": "#",
-        "description": "Rent an apartment or home for a more home-like experience. Great option for families and groups."
+        "bookUrl": "https://www.ihg.com/redirect?path=asearch&brandCode=CP&localeCode=en&regionCode=1&hotelCode=yyzca&checkInDate=04&checkInMonthYear=082026&checkOutDate=06&checkOutMonthYear=082026&rateCode=6CBARC&_PMID=99801505&GPC=GTW&cn=no&adjustMonth=false&showApp=true&monthIndex=00",
+        "description": "Full-service hotel with modern amenities within walking distance of the venue."
       }
     ]
   },
