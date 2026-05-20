@@ -1,9 +1,9 @@
-import { MapPin, Navigation, Train, Car, Bus, Clock, Phone, ExternalLink } from "lucide-react";
+import { CalendarDays, MapPin, Navigation, Train, Car, Bus, Clock, ExternalLink, AlertCircle } from "lucide-react";
 import { ImageWithFallback } from "@/app/utils/ImageWithFallback";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 
-const ICON_MAP: Record<string, React.ElementType> = { Train, Car, Bus, Clock, Phone, MapPin };
+const ICON_MAP: Record<string, React.ElementType> = { Train, Car, Bus, Clock, MapPin };
 
 export function VenueSection() {
   const { t } = useTheme();
@@ -34,6 +34,7 @@ export function VenueSection() {
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Left — Venue Info */}
           <div className="flex flex-col gap-6">
+
             {/* Venue card */}
             <div className="rounded-2xl overflow-hidden" style={{ background: t.venueInfoBg, border: `1px solid ${t.venueInfoBorder}` }}>
               <div className="relative h-52 overflow-hidden">
@@ -75,6 +76,56 @@ export function VenueSection() {
                   </a>
                   <a href={venue.mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-4 py-2.5 rounded text-sm transition-all duration-200" style={{ border: `1px solid ${t.cardBorder}`, color: t.textMuted, fontFamily: "'Barlow Condensed', sans-serif" }}>
                     <ExternalLink size={14} /> VIEW MAP
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Sunday venue notice */}
+            <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid rgba(232,93,4,0.45)", background: t.isDark ? "rgba(232,93,4,0.07)" : "rgba(232,93,4,0.04)" }}>
+              {/* Orange header band */}
+              <div className="flex items-center gap-3 px-5 py-3" style={{ background: t.isDark ? "rgba(232,93,4,0.18)" : "rgba(232,93,4,0.12)", borderBottom: "1px solid rgba(232,93,4,0.3)" }}>
+                <AlertCircle size={16} style={{ color: "#E85D04", flexShrink: 0 }} />
+                <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.78rem", letterSpacing: "0.14em", color: "#E85D04", textTransform: "uppercase", fontWeight: 700 }}>
+                  {venue.sundayVenue.notice}
+                </span>
+              </div>
+
+              <div className="p-5 flex flex-col gap-4">
+                <div className="flex items-start gap-3">
+                  <CalendarDays size={15} style={{ color: t.goldAccent, marginTop: "2px", flexShrink: 0 }} />
+                  <div>
+                    <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "0.95rem", color: t.textPrimary, margin: 0 }}>
+                      {venue.sundayVenue.date}
+                    </p>
+                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.78rem", color: t.textMuted, margin: "2px 0 0 0" }}>
+                      {venue.sundayVenue.note}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin size={15} style={{ color: t.goldAccent, marginTop: "2px", flexShrink: 0 }} />
+                  <div>
+                    <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "0.95rem", color: t.textPrimary, margin: 0 }}>
+                      {venue.sundayVenue.name}
+                    </p>
+                    <p style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.04em", fontSize: "0.85rem", color: "rgba(232,192,51,0.85)", margin: "2px 0 0 0" }}>
+                      {venue.sundayVenue.address}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-3 pt-1">
+                  <a href={venue.sundayVenue.mapsUrl} target="_blank" rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded text-sm transition-all duration-200 hover:scale-105"
+                    style={{ background: t.ctaGradient, color: "#000", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, letterSpacing: "0.06em", textDecoration: "none" }}>
+                    <Navigation size={13} /> GET DIRECTIONS
+                  </a>
+                  <a href={venue.sundayVenue.mapsUrl} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 px-4 py-2.5 rounded text-sm transition-all duration-200"
+                    style={{ border: `1px solid ${t.cardBorder}`, color: t.textMuted, fontFamily: "'Barlow Condensed', sans-serif", textDecoration: "none" }}>
+                    <ExternalLink size={13} /> VIEW MAP
                   </a>
                 </div>
               </div>

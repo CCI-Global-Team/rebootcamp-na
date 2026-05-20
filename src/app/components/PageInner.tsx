@@ -5,6 +5,7 @@ import { Navbar } from "@/app/components/Navbar";
 import { Hero } from "@/app/components/Hero";
 import { AboutSection } from "@/app/components/AboutSection";
 import { RegistrationSection } from "@/app/components/RegistrationSection";
+import { ChildcareSection } from "@/app/components/ChildcareSection";
 import { ScheduleSection } from "@/app/components/ScheduleSection";
 import { SpeakersSection } from "@/app/components/SpeakersSection";
 import { AccommodationSection } from "@/app/components/AccommodationSection";
@@ -33,6 +34,7 @@ export function PageInner() {
         <Hero />
         <AboutSection />
         <RegistrationSection />
+        <ChildcareSection />
         <ScheduleSection />
         <SpeakersSection />
         <AccommodationSection />
@@ -40,7 +42,7 @@ export function PageInner() {
         <VenueSection />
         {/* <PastEventsSection /> */}
         <FAQSection />
-        <GivingSection />
+        {/* <GivingSection /> */}
         <Footer />
       </div>
     </ThemeProvider>

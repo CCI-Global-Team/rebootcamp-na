@@ -1,8 +1,8 @@
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import { motion } from "framer-motion";
-import { MapPin, Calendar, Ticket, Music, BookOpen, Users, Zap, ArrowRight, ExternalLink, CheckCircle } from "lucide-react";
-import { fadeUp, scaleIn, stagger } from "@/app/components/ui/animation";
+import { MapPin, Calendar, Ticket, Music, BookOpen, Users, Zap, ArrowRight, Baby, CheckCircle } from "lucide-react";
+import { fadeUp, stagger } from "@/app/components/ui/animation";
 
 const ICON_MAP: Record<string, React.ElementType> = { Music, BookOpen, Users, Zap, Ticket, Calendar, MapPin };
 
@@ -210,16 +210,32 @@ export function RegistrationSection() {
                 </motion.span>
               </a>
 
-              <a
-                href={event.registrationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 transition-opacity duration-200 hover:opacity-70"
-                style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.73rem", color: t.textVeryMuted, textDecoration: "none" }}
+              <button
+                onClick={() => document.querySelector("#childcare")?.scrollIntoView({ behavior: "smooth" })}
+                className="group w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl transition-all duration-200 hover:scale-[1.02]"
+                style={{
+                  background: "transparent",
+                  border: `1.5px solid rgba(${t.accentRgb},0.35)`,
+                  color: t.textSecondary,
+                  fontFamily: "'Oswald', sans-serif",
+                  fontWeight: 600,
+                  fontSize: "0.9rem",
+                  letterSpacing: "0.08em",
+                  cursor: "pointer",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLButtonElement).style.borderColor = t.goldAccent;
+                  (e.currentTarget as HTMLButtonElement).style.color = t.goldAccent;
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLButtonElement).style.borderColor = `rgba(${t.accentRgb},0.35)`;
+                  (e.currentTarget as HTMLButtonElement).style.color = t.textSecondary;
+                }}
               >
-                <ExternalLink size={11} />
-                {registration.externalNote}
-              </a>
+                <Baby size={15} />
+                BRINGING CHILDREN? REGISTER FOR CHILDCARE
+                <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
+              </button>
 
               <div className="w-full" style={{ borderTop: `1px solid rgba(${t.accentRgb},0.12)` }} />
 

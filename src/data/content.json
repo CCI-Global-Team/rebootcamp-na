@@ -4,8 +4,7 @@
     "orgName": "Celebration Church International",
     "email": "canada@joincci.org",
     "volunteersEmail": "volunteers@rebootcamp.ca",
-    "givingEmail": "giving@rebootcamp.ca",
-    "phone": "+1 (416) 555-0100"
+    "givingEmail": "giving@rebootcamp.ca"
   },
   "event": {
     "name": "Reboot Camp North America",
@@ -221,6 +220,73 @@
       "Event programme"
     ]
   },
+  "childcare": {
+    "sectionLabel": "CelebKids RBC'26",
+    "headingPlain": "Child Care",
+    "headingAccent": "Registration",
+    "description": "Child care service is available at RBC'26 North America. Our dedicated CelebKids team will care for your children so you can fully engage in every session.",
+    "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3629974",
+    "imageUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/rbc-na-childcare.png",
+    "ctaLabel": "REGISTER YOUR CHILD NOW",
+    "compulsoryTitle": "Registration is Compulsory",
+    "compulsoryNote": "All children attending must be registered in advance. Unregistered children cannot be admitted to child care. Spots are limited — register early.",
+    "chips": [
+      { "label": "CelebKids RBC'26 NA" },
+      { "label": "Sept 4 - 6, 2026" }
+    ],
+    "faqsLabel": "CelebKids FAQs",
+    "faqsContact": "ccicelebkidsca@gmail.com",
+    "faqs": [
+      {
+        "q": "Is the child care service available for each Reboot Camp session?",
+        "a": "Yes, the Celebkids team would be ready to take in your child(ren) and care for them till the end of each session."
+      },
+      {
+        "q": "Do I need to register my child?",
+        "a": "Yes, please! Every child must be registered so we can keep accurate records, prepare and ensure their safety at all times. Register now at the link provided on this page."
+      },
+      {
+        "q": "Are there any requirements when bringing my child(ren)?",
+        "a": "You will be required to check in your child at the designated area before they can enter the CelebKids Centre. This is to ensure that they are accounted for during that session."
+      },
+      {
+        "q": "Is it compulsory to pick up my child after each session?",
+        "a": "Yes, it is. You will be required to pick up your child immediately at the end of each session and drop them off at the beginning of the next session."
+      },
+      {
+        "q": "Are parents allowed to come in and feed their child(ren)?",
+        "a": "Only nursing mothers are allowed in the designated area to nurse their child. Every other child will be well fed (advisable to have their meals packed) and cared for throughout the camp meeting."
+      },
+      {
+        "q": "Will my child be fed during the sessions at the CelebKids Centre?",
+        "a": "Snacks and drinks will be provided for all children during every session of the meeting. However, we recommend that parents bring packed meals in case your child desires to eat more food."
+      },
+      {
+        "q": "Is there an age limit for kids at the CelebKids Centre?",
+        "a": "We would be catering to the following age groups:\n• TenderFoot: Ages 1–4\n• LightTroopers: Ages 5–8\n• Tribe of Truth: Ages 9–13"
+      },
+      {
+        "q": "Can I bring my child in if he/she has a cold?",
+        "a": "For the safety of the other kids and the swift recuperation of your child, we would be unable to bring in children who are down with a visible cold or the flu."
+      },
+      {
+        "q": "What would be done if my child has an emergency situation?",
+        "a": "Parents would be contacted immediately in the case of an emergency, while we do our best to ensure the child(ren) is in the best possible condition. Parents are advised to keep their contact line available at all times. A trained first aid team will also be on-site to ensure your child's safety."
+      },
+      {
+        "q": "What kind of activities would my child be involved in during the Reboot Camp sessions?",
+        "a": "While you enjoy all God has prepared for you, your child is not left out! All children will be in a fun, nurturing environment filled with exciting learning and engaging activities they'll love. We are committed to ensuring they have a full and beautiful experience."
+      },
+      {
+        "q": "What happens if my child loses a belonging?",
+        "a": "If your child loses a belonging at the CelebKids Centre, please speak with an instructor to check the lost and found box at the check-in area."
+      },
+      {
+        "q": "I have more questions — how can I reach the CelebKids team?",
+        "a": "If you have questions or special requests, we'd love to hear from you! Send us an email at ccicelebkidsca@gmail.com and we'll be happy to help."
+      }
+    ]
+  },
   "accommodation": {
     "sectionLabel": "Where to Stay",
     "headingPlain": "Accommodation",
@@ -268,14 +334,22 @@
     "headingAccent": "Directions",
     "name": "Venue",
     "address": "272 Attwell Dr, Toronto, ON M9W 6M3",
+    "sundayVenue": {
+      "notice": "Sunday Service — Different Venue",
+      "date": "Sunday, September 6, 2026",
+      "name": "Sunday Service Venue",
+      "address": "1000 Finch Ave W, North York, ON M3J 2V5",
+      "mapsUrl": "https://maps.google.com/maps?q=1000+Finch+Ave+W,+North+York,+ON+M3J+2V5",
+      "mapEmbedUrl": "https://maps.google.com/maps?q=1000+Finch+Ave+W,+North+York,+ON+M3J+2V5&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      "note": "All Sunday services on September 6th will take place at this location. Please plan your travel accordingly."
+    },
     "cityDisplay": "TORONTO, ONTARIO, CANADA",
     "mapsUrl": "https://maps.app.goo.gl/JjNDjHh6TPFukGPK8",
     "mapEmbedUrl": "https://maps.google.com/maps?q=272+Attwell+Dr,+Toronto,+ON+M9W+6M3&t=&z=16&ie=UTF8&iwloc=&output=embed",
     "venueImageUrl": "https://images.unsplash.com/photo-1597084214230-473c7bf05a31?w=800&q=80",
     "facts": [
       { "icon": "Clock", "text": "Doors open 1 hour before each session" },
-      { "icon": "Car",   "text": "Free parking on-site (500+ spots)" },
-      { "icon": "Phone", "text": "+1 (416) 555-0186 \u2014 Venue Info Line" }
+      { "icon": "Car",   "text": "Free parking on-site (500+ spots)" }
     ],
     "aboutCity": {
       "heading": "About Toronto",
@@ -508,8 +582,8 @@
     "sectionLabel": "Travel Smart",
     "headingPlain": "Flight",
     "headingAccent": "Discounts",
-    "description": "We\u2019ve partnered with six major Canadian airlines to bring Reboot Camp attendees exclusive discounts on flights to Toronto. Use your unique promo code at checkout.",
-    "footnote": "* Discounts apply to base fares only. Codes expire August 25, 2026. Subject to availability.",
+    "description": "We\u2019ve partnered with major airlines to bring Reboot Camp attendees exclusive discounts on flights to Toronto.",
+    "footnote": "",
     "airlines": [
       {
         "name": "Air Canada",
@@ -559,11 +633,11 @@
         "name": "Delta Air Lines",
         "abbr": "DT",
         "tagline": "Keep Climbing",
-        "discount": "18% off",
+        "discount": "10% off",
         "discountNote": "any base fare",
         "code": "NY4SX",
         "bookingUrl": "https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=price&originCity=&destinationCity=&departureDate=&returnDate=&paxCount=1&meetingEventCode=NY4SX&searchByCabin=true&cabinFareClass=BE&deltaOnlySearch=false&deltaOnly=deltaPartner",
-        "color": "#003A70",
+        "color": "#001932",
         "rgb": "0,58,143",
         "cardRgb": "0,58,143",
         "accentColor": "#ffffff",

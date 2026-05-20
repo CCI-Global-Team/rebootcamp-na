@@ -110,9 +110,9 @@ function AirlineCard({ airline }: { airline: Airline }) {
       >
         {/* Logo + name */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px", minWidth: 0 }}>
-          <div className="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center">
+          {/* <div className="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center">
             {airline.abbr}
-          </div>
+          </div> */}
           <div style={{ minWidth: 0 }}>
             <p
               style={{
