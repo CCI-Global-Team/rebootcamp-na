@@ -4,8 +4,7 @@
     "orgName": "Celebration Church International",
     "email": "canada@joincci.org",
     "volunteersEmail": "volunteers@rebootcamp.ca",
-    "givingEmail": "giving@rebootcamp.ca",
-    "phone": "+1 (416) 555-0100"
+    "givingEmail": "giving@rebootcamp.ca"
   },
   "event": {
     "name": "Reboot Camp North America",
@@ -221,6 +220,21 @@
       "Event programme"
     ]
   },
+  "childcare": {
+    "sectionLabel": "CelebKids RBC'26",
+    "headingPlain": "Child Care",
+    "headingAccent": "Registration",
+    "description": "Child care service is available at RBC'26 North America. Our dedicated CelebKids team will care for your children so you can fully engage in every session.",
+    "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3629974",
+    "imageUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/rbc-na-childcare.png",
+    "ctaLabel": "REGISTER YOUR CHILD NOW",
+    "compulsoryTitle": "Registration is Compulsory",
+    "compulsoryNote": "All children attending must be registered in advance. Unregistered children cannot be admitted to child care. Spots are limited — register early.",
+    "chips": [
+      { "label": "CelebKids RBC'26 NA" },
+      { "label": "Sept 4 - 6, 2026" }
+    ]
+  },
   "accommodation": {
     "sectionLabel": "Where to Stay",
     "headingPlain": "Accommodation",
@@ -274,8 +288,7 @@
     "venueImageUrl": "https://images.unsplash.com/photo-1597084214230-473c7bf05a31?w=800&q=80",
     "facts": [
       { "icon": "Clock", "text": "Doors open 1 hour before each session" },
-      { "icon": "Car",   "text": "Free parking on-site (500+ spots)" },
-      { "icon": "Phone", "text": "+1 (416) 555-0186 \u2014 Venue Info Line" }
+      { "icon": "Car",   "text": "Free parking on-site (500+ spots)" }
     ],
     "aboutCity": {
       "heading": "About Toronto",

@@ -1,6 +1,6 @@
 import logo from "@/assets/logo/rbc-na-full-blue.png";
 import logoWhite from "@/assets/logo/rbc-na-full-white.png";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
@@ -83,7 +83,6 @@ export function Footer() {
             <div className="flex flex-col gap-3 mb-6">
               {[
                 { icon: Mail, text: site.email },
-                { icon: Phone, text: site.phone },
                 { icon: MapPin, text: venue.cityDisplay },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-start gap-3">

@@ -1,9 +1,9 @@
-import { MapPin, Navigation, Train, Car, Bus, Clock, Phone, ExternalLink } from "lucide-react";
+import { MapPin, Navigation, Train, Car, Bus, Clock, ExternalLink } from "lucide-react";
 import { ImageWithFallback } from "@/app/utils/ImageWithFallback";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 
-const ICON_MAP: Record<string, React.ElementType> = { Train, Car, Bus, Clock, Phone, MapPin };
+const ICON_MAP: Record<string, React.ElementType> = { Train, Car, Bus, Clock, MapPin };
 
 export function VenueSection() {
   const { t } = useTheme();
