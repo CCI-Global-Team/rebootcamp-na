@@ -41,7 +41,7 @@
     "sectionLabel": "About The Event",
     "headingPlain": "What is",
     "headingAccent": "Reboot Camp?",
-    "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/img-toronto-pie.jpg",
+    "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779339537/OMV-0020_gyqiou.jpg",
     "paragraphs": [
       "What if the exhaustion you've been carrying isn't just physical?",
       "It's been the kind that sleep doesn't fix. The kind that lingers even when life looks \"fine\" on the outside. You've kept going, building, working, showing up for others but somewhere deep down, there's a quiet knowing: something is missing.",
@@ -145,16 +145,16 @@
       "title": "Lead Pastor, Celebration Church International",
       "bio": "Apostle Emmanuel Iren is the visionary founder and lead pastor of Celebration Church International, a dynamic teaching ministry dedicated to spreading the gospel and helping people discover their purpose in Christ. With a passion for the Word of God and a heart for missions, Apostle Iren has led the church to establish Over 40 campuses across Nigeria, UK, Europe, Australia, Canada, and the USA, all while inspiring countless lives to grow in their faith and embrace the life-changing power of Christ.",
       "specialties": ["Apostolic Teaching", "Prophetic Ministry", "Kingdom Mandate"],
-      "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/AIE-X-portrait.jpg",
+      "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779387102/AIE-X_hkoh0r.jpg",
       "excerptsTitle": "Watch",
       "excerpts": [
         {
           "caption": "Oannes",
-          "url": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/aie/oannes.mp4"
+          "url": "https://res.cloudinary.com/dyvg90tel/video/upload/q_auto/f_auto/v1779387984/oannes_wxrozf.mov"
         },
         {
           "caption": "Dagon will Bow!",
-          "url": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/aie/dagon-will-bow.mp4"
+          "url": "https://res.cloudinary.com/dyvg90tel/video/upload/q_auto/f_auto/v1779388533/dagon-will-bow_a5rpkf.mov"
         }
       ]
     },
@@ -164,7 +164,7 @@
         "title": "Worship Leader",
         "city": "Vancouver, BC",
         "specialty": "Worship",
-        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/speakers/Brooke-Nicholls.jpg"
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779387151/Brooke-Nicholls_zm3siv.jpg"
       }
     ]
   },
@@ -186,7 +186,7 @@
         "rgb": "167,139,250",
         "title": "Worship Nights",
         "desc": "Three nights of deep, spirit-filled worship led by the Reboot Worship Team and special guest artists.",
-        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386128/worship_bfylpk.jpg"
       },
       {
         "icon": "BookOpen",
@@ -194,7 +194,7 @@
         "rgb": "232,192,51",
         "title": "Powerful Teaching",
         "desc": "Anointed messages on the theme \u201cGreat Grace\u201d from leading ministers across North America and beyond.",
-        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386412/teaching-2_zbnb2f.jpg"
       },
       {
         "icon": "Zap",
@@ -202,7 +202,7 @@
         "rgb": "232,93,4",
         "title": "Prophetic Activation",
         "desc": "Workshops, breakout sessions, and ministry gifts activation to stir up your calling and purpose.",
-        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386127/prophetic-actv_x68vid.jpg"
       },
       {
         "icon": "Users",
@@ -210,7 +210,7 @@
         "rgb": "52,211,153",
         "title": "Community",
         "desc": "Connect with believers from across Canada and the world \u2014 fellowship, networking, and lifelong friendships.",
-        "imgUrl": "https://images.unsplash.com/photo-1542327546-881c2a68a4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80"
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386128/community_nyogl3.jpg"
       }
     ],
     "included": [
@@ -226,7 +226,7 @@
     "headingAccent": "Registration",
     "description": "Child care service is available at RBC'26 North America. Our dedicated CelebKids team will care for your children so you can fully engage in every session.",
     "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3629974",
-    "imageUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/rbc-na-childcare.png",
+    "imageUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386650/rbc-na-childcare_apg8fg.jpg",
     "ctaLabel": "REGISTER YOUR CHILD NOW",
     "compulsoryTitle": "Registration is Compulsory",
     "compulsoryNote": "All children attending must be registered in advance. Unregistered children cannot be admitted to child care. Spots are limited — register early.",
@@ -303,7 +303,7 @@
         "price": "CAD $169/night (excludes taxes)",
         "stars": 4,
         "amenities": ["On-site Restaurant", "Free WiFi", "Discounted Breakfast Buffet for $20", "Kids Eat Free", "Discounted on-site parking at $10", "EV Charging", "Indoor Pool and Fitness Center", "Airport Shuttle"],
-        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/hotels/holiday-inn-toronto.avif",
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779389087/holiday-inn-toronto_p1mduo.avif",
         "imgPosition": "object-center",
         "badge": "",
         "badgeColor": "#34D399",
@@ -318,7 +318,7 @@
         "price": "CAD $190/night (excludes taxes)",
         "stars": 4,
         "amenities": ["Free WiFi", "In Hotel Restaurants", "Indoor Pool", "Fitness Centre", "Self-Parking for $33.90 CAD (HST included) per night", "EV Charging", "Area shuttle", "Airport shuttle"],
-        "imgUrl": "https://cci-canada.s3.ca-central-1.amazonaws.com/rebootcamp-na/hotels/crowne-plaza-toronto.avif",
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779389085/crowne-plaza-toronto_waulha.avif",
         "imgPosition": "object-top",
         "badge": "",
         "badgeColor": "#E8C033",
@@ -346,7 +346,7 @@
     "cityDisplay": "TORONTO, ONTARIO, CANADA",
     "mapsUrl": "https://maps.app.goo.gl/JjNDjHh6TPFukGPK8",
     "mapEmbedUrl": "https://maps.google.com/maps?q=272+Attwell+Dr,+Toronto,+ON+M9W+6M3&t=&z=16&ie=UTF8&iwloc=&output=embed",
-    "venueImageUrl": "https://images.unsplash.com/photo-1597084214230-473c7bf05a31?w=800&q=80",
+    "venueImageUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779389220/venue-img_u5tbwz.jpg",
     "facts": [
       { "icon": "Clock", "text": "Doors open 1 hour before each session" },
       { "icon": "Car",   "text": "Free parking on-site (500+ spots)" }

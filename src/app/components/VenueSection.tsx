@@ -54,7 +54,7 @@ export function VenueSection() {
                 <h3 className="mb-1 uppercase" style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.4rem", color: t.textPrimary }}>
                   {venue.name}
                 </h3>
-                <p className="mb-4" style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.05em", color: "rgba(232,192,51,0.8)" }}>
+                <p className="mb-4 text-lg" style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.05em", color: t.heroBadgeColor }}>
                   {venue.address}
                 </p>
 
@@ -110,7 +110,7 @@ export function VenueSection() {
                     <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "0.95rem", color: t.textPrimary, margin: 0 }}>
                       {venue.sundayVenue.name}
                     </p>
-                    <p style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.04em", fontSize: "0.85rem", color: "rgba(232,192,51,0.85)", margin: "2px 0 0 0" }}>
+                    <p style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.04em", fontSize: "1rem", color: t.heroBadgeColor, margin: "2px 0 0 0" }}>
                       {venue.sundayVenue.address}
                     </p>
                   </div>

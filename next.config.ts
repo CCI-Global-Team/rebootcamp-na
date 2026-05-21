@@ -55,6 +55,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'cci-canada.s3.ca-central-1.amazonaws.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      }
     ],
   },
   poweredByHeader: false,
