@@ -148,18 +148,20 @@ export function AccommodationSection() {
                 />
 
                 {/* Badge */}
-                <div
-                  className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs uppercase tracking-wider"
-                  style={{
-                    background: `${hotel.badgeColor}20`,
-                    border: `1px solid ${hotel.badgeColor}60`,
-                    color: hotel.badgeColor,
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontWeight: 700
-                  }}
-                >
-                  {hotel.badge}
-                </div>
+                {hotel.badge && (
+                  <div
+                    className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs uppercase tracking-wider"
+                    style={{
+                      background: `${hotel.badgeColor}`,
+                      border: `1px solid ${hotel.badgeColor}60`,
+                      color: hotel.badgeTextColor,
+                      fontFamily: "'Barlow Condensed', sans-serif",
+                      fontWeight: 600
+                    }}
+                  >
+                    {hotel.badge}
+                  </div>
+                )}
 
                 {hotel.partnerRate && (
                   <div

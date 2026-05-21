@@ -305,8 +305,9 @@
         "amenities": ["On-site Restaurant", "Free WiFi", "Discounted Breakfast Buffet for $20", "Kids Eat Free", "Discounted on-site parking at $10", "EV Charging", "Indoor Pool and Fitness Center", "Airport Shuttle"],
         "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779389087/holiday-inn-toronto_p1mduo.avif",
         "imgPosition": "object-center",
-        "badge": "",
+        "badge": "Valid Until August 1, 2026",
         "badgeColor": "#34D399",
+        "badgeTextColor": "#000000",
         "partnerRate": true,
         "bookUrl": "https://www.ihg.com/holidayinn/hotels/us/en/find-hotels/select-roomrate?fromRedirect=true&qSrt=sBR&qIta=99801505&icdv=99801505&qSlH=YYZIA&qCiD=04&qCiMy=082026&qCoD=06&qCoMy=082026&qGrpCd=CCI&setPMCookies=true&qSHBrC=HI&qDest=970%20Dixon%20Road,%20Rexdale,%20Toronto,%20ON,%20CA&showApp=true&adjustMonth=false&srb_u=1&qRmFltr=",
         "description": "A comfortable, affordable option. Ideal for attendees on a budget."
@@ -322,8 +323,25 @@
         "imgPosition": "object-top",
         "badge": "",
         "badgeColor": "#E8C033",
+        "badgeTextColor": "#E8C033",
         "partnerRate": true,
         "bookUrl": "https://www.ihg.com/redirect?path=asearch&brandCode=CP&localeCode=en&regionCode=1&hotelCode=yyzca&checkInDate=04&checkInMonthYear=082026&checkOutDate=06&checkOutMonthYear=082026&rateCode=6CBARC&_PMID=99801505&GPC=GTW&cn=no&adjustMonth=false&showApp=true&monthIndex=00",
+        "description": "Full-service hotel with modern amenities within walking distance of the venue."
+      },
+      {
+        "name": "Sheraton Toronto Airport Hotel & Conference Centre",
+        "category": "Standard",
+        "distance": "1.4 km from venue",
+        "price": "CAD $199/night (excludes taxes)",
+        "stars": 4,
+        "amenities": ["Free WiFi", "Restaurant on-site", "Pool", "Fitness center", "Parking", "EV Charging", "Airport shuttle"],
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779397488/sheraton-htl_vvi0oo.webp",
+        "imgPosition": "object-center",
+        "badge": "Book By July 16, 2026",
+        "badgeColor": "#34D399",
+        "badgeTextColor": "#000000",
+        "partnerRate": true,
+        "bookUrl": "https://app.marriott.com/resview2?id=1779382902565&key=GRP&app=resvlink",
         "description": "Full-service hotel with modern amenities within walking distance of the venue."
       }
     ]
