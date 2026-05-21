@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Barlow_Condensed, Inter, Oswald } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 import './globals.css';
 
@@ -34,7 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${barlowCondensed.variable} ${inter.variable} ${oswald.variable}`}>{children}</body>
+      <body className={`${barlowCondensed.variable} ${inter.variable} ${oswald.variable}`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
