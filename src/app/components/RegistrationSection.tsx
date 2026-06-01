@@ -210,6 +210,13 @@ export function RegistrationSection() {
                 </motion.span>
               </a>
 
+              <p
+                className="flex items-center gap-1.5 transition-opacity duration-200 hover:opacity-70"
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.73rem", color: t.textVeryMuted, textDecoration: "none" }}
+              >
+                {registration.externalNote}
+              </p>
+
               <button
                 onClick={() => document.querySelector("#childcare")?.scrollIntoView({ behavior: "smooth" })}
                 className="group w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl transition-all duration-200 hover:scale-[1.02]"
@@ -233,7 +240,7 @@ export function RegistrationSection() {
                 }}
               >
                 <Baby size={15} />
-                BRINGING CHILDREN? REGISTER FOR CHILDCARE
+                {registration.childcareCta}
                 <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
               </button>
 
