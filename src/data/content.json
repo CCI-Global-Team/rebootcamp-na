@@ -39,29 +39,51 @@
   },
   "about": {
     "sectionLabel": "About The Event",
-    "headingPlain": "What is",
-    "headingAccent": "Reboot Camp?",
+    "headingPlain": "More than a",
+    "headingAccent": "Conference",
     "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779339537/OMV-0020_gyqiou.jpg",
     "paragraphs": [
-      "What if the exhaustion you've been carrying isn't just physical?",
-      "It's been the kind that sleep doesn't fix. The kind that lingers even when life looks \"fine\" on the outside. You've kept going, building, working, showing up for others but somewhere deep down, there's a quiet knowing: something is missing.",
-      "Maybe you feel a void nothing around you seems to satisfy. A sense that there has to be more to this life.",
-      "And maybe that feeling isn't wrong.",
-      "What if one weekend could actually shift something on your inside? What if one weekend could bring answers to your curious mind? A weekend where the weight you've been carrying begins to lift. Where clarity replaces confusion, and where you reconnect with who your creator has called you to be.",
-      "Reboot Camp 2026 is that experience.",
-      "Thousands gather for one reason: to encounter Jesus in a way that changes everything; In the way that will last a lifetime.",
-      "Over three transformative days, you'll step into an atmosphere charged with intense worship, powerful teaching, fervent prayer, and genuine community - the kind that reminds you that you were never meant to do life alone.",
-      "And this year, it's happening in Toronto, Canada.",
-      "Under the theme {theme}, drawn from Acts 4:33, this isn't just another gathering - it's an encounter.",
-      "We believe this: every person who shows up is one encounter away from a turning point.",
+      "Reboot Camp North America is a three-day gathering of thousands of people from across Canada and the United States. It's an extended time of worship, teaching, prayer, and genuine human connection.",
+      "Whether you've been part of a church for years, or you're walking into something like this for the very first time — you belong here.",
+      "Under the theme {theme}, this isn't just another gathering - it's an encounter.",
       "Three days. \nOne city. \nAn encounter that could change everything.",
-      "September 4 - 6, 2026",
-      "You are invited."
+      "September 4 - 6, 2026"
     ],
     "verse": {
       "text": "\"And with great power the apostles gave witness to the resurrection of the Lord Jesus. And great grace was upon them all.\"",
       "reference": "— Acts 4:33"
     },
+    "richHeading": "Get ready for a R.I.C.H experience",
+    "rich": [
+      {
+        "letter": "R",
+        "word": "Rejuvenation",
+        "desc": "Come tired. Leave renewed. This is a space built for restoration — of faith, of purpose, of fervor.",
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1780554635/rejuvenation_bsvnne.jpg",
+        "tint": "59,130,246"
+      },
+      {
+        "letter": "I",
+        "word": "Indoctrination",
+        "desc": "The Word of God taught with precision, depth and accuracy. Not surface. Not performance. Truth that holds",
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1780596500/teaching_jcqrio.jpg",
+        "tint": "232,192,51"
+      },
+      {
+        "letter": "C",
+        "word": "Celebration",
+        "desc": "Live worship. Community. Joy. When thousands gather in faith, miracles happen. Come ready to receive your miracles, grow in faith, and help others encounter theirs",
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1780596043/celebration_tdmj5p.jpg",
+        "tint": "167,139,250"
+      },
+      {
+        "letter": "H",
+        "word": "Harvest",
+        "desc": "Lives change at Reboot Camp. Come encounter Christ, discover endless life in Him, and find what you've been searching for",
+        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1780596043/harvest_v9okqx.jpg",
+        "tint": "232,93,4"
+      }
+    ],
     "ctaLabel": "SECURE YOUR SPOT",
     "stats": [
       { "icon": "Users",  "value": "2,000+", "label": "Expected Attendees" },
