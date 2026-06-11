@@ -35,7 +35,7 @@ function AccordionList({ items, accentEmail, registerUrl, registerLabel }: {
                   <a href={`mailto:${accentEmail}`} style={{ color: t.goldAccent }} className="hover:underline">{accentEmail}</a>
                 )}
               </p>
-              {faq.hasLink && registerUrl && (
+              {/* {faq.hasLink && registerUrl && (
                 <a
                   href={registerUrl}
                   target="_blank"
@@ -46,7 +46,7 @@ function AccordionList({ items, accentEmail, registerUrl, registerLabel }: {
                   <BusFront size={13} />
                   {registerLabel ?? "REGISTER FOR TRANSPORTATION"}
                 </a>
-              )}
+              )} */}
             </div>
           )}
         </div>

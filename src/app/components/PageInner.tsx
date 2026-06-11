@@ -10,8 +10,9 @@ import { ScheduleSection } from "@/app/components/ScheduleSection";
 import { SpeakersSection } from "@/app/components/SpeakersSection";
 import { AccommodationSection } from "@/app/components/AccommodationSection";
 import { FlightDiscountsSection } from "@/app/components/FlightDiscountsSection";
+import { TransportationSection } from "@/app/components/TransportationSection";
 import { VenueSection } from "@/app/components/VenueSection";
-import { PastEventsSection } from "@/app/components/PastEventsSection";
+// import { PastEventsSection } from "@/app/components/PastEventsSection";
 import { FAQSection } from "@/app/components/FAQSection";
 import { GivingSection } from "@/app/components/GivingSection";
 import { Footer } from "@/app/components/Footer";
@@ -39,6 +40,7 @@ export function PageInner() {
         <SpeakersSection />
         <AccommodationSection />
         <FlightDiscountsSection />
+        <TransportationSection />
         <VenueSection />
         {/* <PastEventsSection /> */}
         <FAQSection />

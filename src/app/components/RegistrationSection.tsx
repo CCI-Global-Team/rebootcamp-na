@@ -247,7 +247,7 @@ export function RegistrationSection() {
               <div className="w-full" style={{ borderTop: `1px solid rgba(${t.accentRgb},0.12)` }} />
 
               {/* Transport nudge */}
-              <a
+              {/* <a
                 href={venue.transport.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -261,7 +261,7 @@ export function RegistrationSection() {
                     Register for subsidized transportation
                   </span>
                 </span>
-              </a>
+              </a> */}
 
               <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.75rem", color: t.textVeryMuted, lineHeight: 1.6 }}>
                 {registration.contactNote.split("\n").map((line, i) => (

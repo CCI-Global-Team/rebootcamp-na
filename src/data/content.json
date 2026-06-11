@@ -17,14 +17,16 @@
     "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3565021/reservations/new"
   },
   "navbar": {
+    "keepHere": [
+      { "label": "Past Events",   "href": "#past-events", "desc": "Our legacy & highlights" }
+    ],
     "groups": [
       {
         "label": "The Event",
         "items": [
           { "label": "About",         "href": "#about",       "desc": "What is Reboot Camp?" },
           { "label": "Schedule",      "href": "#schedule",    "desc": "Full 3-day programme" },
-          { "label": "Speakers",      "href": "#speakers",    "desc": "Meet the ministers" },
-          { "label": "Past Events",   "href": "#past-events", "desc": "Our legacy & highlights" }
+          { "label": "Speakers",      "href": "#speakers",    "desc": "Meet the ministers" }
         ]
       },
       {
@@ -405,6 +407,27 @@
       "heading": "Need a Ride?",
       "desc": "The cost of transportation has been subsidized to convey members to and from designated stops to the RBC NA venue. Register now to secure your seat on the shuttle.",
       "ctaLabel": "REGISTER FOR TRANSPORTATION",
+      "comingSoon": true,
+      "comingSoonText": "Registration Opening Soon",
+      "sectionLabel": "Event Transportation",
+      "heroHeading": "Need A Ride?",
+      "heroSub": "Subsidized shuttle transportation is available to and from designated stops at the venue.",
+      "deadline": "August 8, 2026",
+      "isRoundTrip": true,
+      "openToPublic": true,
+      "contact": "canada@joincci.org",
+      "transportCover": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1781211878/transportation_cover_g3br0j.png",
+      "locations": [
+        "Brampton", "Mississauga", "Oshawa", "Scarborough", "Markham",
+        "Richmond Hill", "North York", "Etobicoke", "Downtown", "Midtown",
+        "Barrie", "Vaughan", "Hamilton", "London", "Kitchener"
+      ],
+      "keyFacts": [
+        { "label": "Registration Deadline", "value": "August 8, 2026" },
+        { "label": "Trip Type",             "value": "Round Trip Included" },
+        { "label": "Open To",               "value": "Everyone (Public)" },
+        { "label": "Cost",                  "value": "Subsidized — Partial Fee" }
+      ],
       "faqsLabel": "Transportation FAQs",
       "faqsContact": "canada@joincci.org",
       "faqs": [
