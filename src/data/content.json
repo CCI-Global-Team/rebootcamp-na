@@ -368,7 +368,7 @@
         "distance": "1.2 km from venue",
         "price": "CAD $190/night (excludes taxes)",
         "stars": 4,
-        "amenities": ["Free WiFi", "In Hotel Restaurants", "Indoor Pool", "Fitness Centre", "Self-Parking for $33.90 CAD (HST included) per night", "EV Charging", "Area shuttle", "Airport shuttle"],
+        "amenities": ["Free WiFi", "In Hotel Restaurants", "Indoor Pool", "Fitness Centre", "Self-Parking for $33.90 CAD (HST included) per night", "EV Charging", "Airport shuttle"],
         "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779389085/crowne-plaza-toronto_waulha.avif",
         "imgPosition": "object-top",
         "badge": "",
