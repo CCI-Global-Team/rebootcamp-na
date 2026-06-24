@@ -68,7 +68,7 @@
     "sectionLabel": "About The Event",
     "headingPlain": "More than a",
     "headingAccent": "Conference",
-    "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779339537/OMV-0020_gyqiou.jpg",
+    "imgUrl": "/images/OMV-0020.jpg",
     "paragraphs": [
       "Reboot Camp North America is a three-day gathering of thousands of people from across Canada and the United States. It's an extended time of worship, teaching, prayer, and genuine human connection.",
       "Whether you've been part of a church for years, or you're walking into something like this for the very first time — you belong here.",
@@ -86,28 +86,28 @@
         "letter": "R",
         "word": "Rejuvenation",
         "desc": "Come tired. Leave renewed. This is a space built for restoration — of faith, of purpose, of fervor.",
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1780554635/rejuvenation_bsvnne.jpg",
+        "imgUrl": "/images/rejuvenation.jpg",
         "tint": "59,130,246"
       },
       {
         "letter": "I",
         "word": "Indoctrination",
         "desc": "The Word of God taught with precision, depth and accuracy. Not surface. Not performance. Truth that holds",
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1780596500/teaching_jcqrio.jpg",
+        "imgUrl": "/images/teaching_slim.png",
         "tint": "232,192,51"
       },
       {
         "letter": "C",
         "word": "Celebration",
         "desc": "Live worship. Community. Joy. When thousands gather in faith, miracles happen. Come ready to receive your miracles, grow in faith, and help others encounter theirs",
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1780596043/celebration_tdmj5p.jpg",
+        "imgUrl": "/images/celebration.jpg",
         "tint": "167,139,250"
       },
       {
         "letter": "H",
         "word": "Harvest",
         "desc": "Lives change at Reboot Camp. Come encounter Christ, discover endless life in Him, and find what you've been searching for",
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1780596043/harvest_v9okqx.jpg",
+        "imgUrl": "/images/harvest.jpg",
         "tint": "232,93,4"
       }
     ],
@@ -194,16 +194,16 @@
       "title": "Lead Pastor, Celebration Church International",
       "bio": "Apostle Emmanuel Iren is the visionary founder and lead pastor of Celebration Church International, a dynamic teaching ministry dedicated to spreading the gospel and helping people discover their purpose in Christ. With a passion for the Word of God and a heart for missions, Apostle Iren has led the church to establish Over 40 campuses across Nigeria, UK, Europe, Australia, Canada, and the USA, all while inspiring countless lives to grow in their faith and embrace the life-changing power of Christ.",
       "specialties": ["Apostolic Teaching", "Prophetic Ministry", "Kingdom Mandate"],
-      "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779387102/AIE-X_hkoh0r.jpg",
+      "imgUrl": "/images/AIE-X.webp",
       "excerptsTitle": "Watch",
       "excerpts": [
         {
           "caption": "Oannes",
-          "url": "https://res.cloudinary.com/dyvg90tel/video/upload/q_auto/f_auto/v1779387984/oannes_wxrozf.mov"
+          "url": "/videos/oannes.mov"
         },
         {
           "caption": "Dagon will Bow!",
-          "url": "https://res.cloudinary.com/dyvg90tel/video/upload/q_auto/f_auto/v1779388533/dagon-will-bow_a5rpkf.mov"
+          "url": "/videos/dagon-will-bow.mov"
         }
       ]
     },
@@ -213,7 +213,7 @@
         "title": "Worship Leader",
         "city": "Vancouver, BC",
         "specialty": "Worship",
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779387151/Brooke-Nicholls_zm3siv.jpg"
+        "imgUrl": "/images/Brooke-Nicholls.jpg"
       }
     ]
   },
@@ -236,7 +236,7 @@
         "rgb": "167,139,250",
         "title": "Worship Nights",
         "desc": "Three nights of deep, spirit-filled worship led by the Reboot Worship Team and special guest artists.",
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386128/worship_bfylpk.jpg"
+        "imgUrl": "/images/worship.jpg"
       },
       {
         "icon": "BookOpen",
@@ -244,7 +244,7 @@
         "rgb": "232,192,51",
         "title": "Powerful Teaching",
         "desc": "Anointed messages on the theme \u201cGreat Grace\u201d from leading ministers across North America and beyond.",
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386412/teaching-2_zbnb2f.jpg"
+        "imgUrl": "/images/teaching-2.jpg"
       },
       {
         "icon": "Zap",
@@ -252,7 +252,7 @@
         "rgb": "232,93,4",
         "title": "Prophetic Activation",
         "desc": "Workshops, breakout sessions, and ministry gifts activation to stir up your calling and purpose.",
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386127/prophetic-actv_x68vid.jpg"
+        "imgUrl": "/images/prophetic-actv.jpg"
       },
       {
         "icon": "Users",
@@ -260,7 +260,7 @@
         "rgb": "52,211,153",
         "title": "Community",
         "desc": "Connect with believers from across Canada and the world \u2014 fellowship, networking, and lifelong friendships.",
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386128/community_nyogl3.jpg"
+        "imgUrl": "/images/community.jpg"
       }
     ],
     "included": [
@@ -276,7 +276,7 @@
     "headingAccent": "Registration",
     "description": "Child care service is available at RBC'26 North America. Our dedicated CelebKids team will care for your children so you can fully engage in every session.",
     "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3629974/reservations/new",
-    "imageUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779386650/rbc-na-childcare_apg8fg.jpg",
+    "imageUrl": "/images/rbc-na-childcare.jpg",
     "ctaLabel": "REGISTER YOUR CHILD NOW",
     "compulsoryTitle": "Registration is Compulsory",
     "compulsoryNote": "All children attending must be registered in advance. Unregistered children cannot be admitted to child care. Spots are limited — register early.",
@@ -353,7 +353,7 @@
         "price": "CAD $169/night (excludes taxes)",
         "stars": 4,
         "amenities": ["On-site Restaurant", "Free WiFi", "Discounted Breakfast Buffet for $20", "Kids Eat Free", "Discounted on-site parking at $10", "EV Charging", "Indoor Pool and Fitness Center", "Airport Shuttle"],
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779389087/holiday-inn-toronto_p1mduo.avif",
+        "imgUrl": "/images/hotels/holiday-inn-toronto.avif",
         "imgPosition": "object-center",
         "badge": "Valid Until August 1, 2026",
         "badgeColor": "#34D399",
@@ -369,7 +369,7 @@
         "price": "CAD $179/night (excludes taxes)",
         "stars": 4,
         "amenities": ["Kitchen", "Free WiFi", "Free Breakfast", "Restaurant on-site", "Pool", "Fitness center", "Discounted parking at $20 per day", "EV Charging", "Airport shuttle"],
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1781894933/residence-inn-marriott_nfjjtn.jpg",
+        "imgUrl": "/images/hotels/residence-inn-marriott.jpg",
         "imgPosition": "object-center",
         "badge": "Book By August 5, 2026",
         "badgeColor": "#34D399",
@@ -385,7 +385,7 @@
         "price": "CAD $190/night (excludes taxes)",
         "stars": 4,
         "amenities": ["Free WiFi", "In Hotel Restaurants", "Indoor Pool", "Fitness Centre", "Self-Parking for $33.90 CAD (HST included) per night", "EV Charging", "Airport shuttle"],
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779389085/crowne-plaza-toronto_waulha.avif",
+        "imgUrl": "/images/hotels/crowne-plaza-toronto.avif",
         "imgPosition": "object-top",
         "badge": "",
         "badgeColor": "#E8C033",
@@ -401,7 +401,7 @@
         "price": "CAD $199/night (excludes taxes)",
         "stars": 4,
         "amenities": ["Free WiFi", "Restaurant on-site", "Pool", "Fitness center", "Parking", "EV Charging", "Airport shuttle"],
-        "imgUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779397488/sheraton-htl_vvi0oo.webp",
+        "imgUrl": "/images/hotels/sheraton-htl.webp",
         "imgPosition": "object-center",
         "badge": "Book By July 16, 2026",
         "badgeColor": "#34D399",
@@ -432,7 +432,7 @@
       "isRoundTrip": true,
       "openToPublic": true,
       "contact": "canada@joincci.org",
-      "transportCover": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1781211878/transportation_cover_g3br0j.png",
+      "transportCover": "/images/transportation_cover.png",
       "locations": [
         "Brampton", "Mississauga", "Oshawa", "Scarborough", "Markham",
         "Richmond Hill", "North York", "Etobicoke", "Downtown", "Midtown",
@@ -552,7 +552,7 @@
     "cityDisplay": "TORONTO, ONTARIO, CANADA",
     "mapsUrl": "https://maps.app.goo.gl/JjNDjHh6TPFukGPK8",
     "mapEmbedUrl": "https://maps.google.com/maps?q=272+Attwell+Dr,+Toronto,+ON+M9W+6M3&t=&z=16&ie=UTF8&iwloc=&output=embed",
-    "venueImageUrl": "https://res.cloudinary.com/dyvg90tel/image/upload/q_auto/f_auto/v1779389220/venue-img_u5tbwz.jpg",
+    "venueImageUrl": "/images/venue-img.jpeg",
     "facts": [
       { "icon": "Clock", "text": "Doors open 1 hour before each session" },
       { "icon": "Car",   "text": "Free parking on-site (500+ spots)" }
