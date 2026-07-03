@@ -213,21 +213,24 @@
         "title": "Worship Leader",
         "city": "Vancouver, BC",
         "specialty": "Worship",
-        "imgUrl": "/images/speakers/Brooke-Nicholls.jpg"
+        "imgUrl": "/images/speakers/Brooke-Nicholls.jpg",
+        "videoUrl": "/videos/WhateverYouSay.mov"
       },
       {
         "name": "Limoblaze",
         "title": "Gospel singer-songwriter",
         "city": "London, UK",
         "specialty": "Worship",
-        "imgUrl": "/images/speakers/Limoblaze.jpg"
+        "imgUrl": "/images/speakers/Limoblaze.jpg",
+        "videoUrl": "/videos/Limoblaze-Calling--Bless-Me.mp4"
       },
       {
         "name": "Joe Mettle",
         "title": "Worshipper",
         "city": "Accra, Ghana",
         "specialty": "Worship",
-        "imgUrl": "/images/speakers/Joe-Mettle.jpg"
+        "imgUrl": "/images/speakers/Joe-Mettle.jpg",
+        "videoUrl": ""
       }
     ]
   },
