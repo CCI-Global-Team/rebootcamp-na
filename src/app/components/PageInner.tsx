@@ -6,6 +6,7 @@ import { Hero } from "@/app/components/Hero";
 import { AboutSection } from "@/app/components/AboutSection";
 import { RegistrationSection } from "@/app/components/RegistrationSection";
 import { ChildcareSection } from "@/app/components/ChildcareSection";
+import { SundayServiceSection } from "./SundayServiceSection";
 import { ScheduleSection } from "@/app/components/ScheduleSection";
 import { SpeakersSection } from "@/app/components/SpeakersSection";
 import { AccommodationSection } from "@/app/components/AccommodationSection";
@@ -36,6 +37,7 @@ export function PageInner() {
         <AboutSection />
         <RegistrationSection />
         <ChildcareSection />
+        <SundayServiceSection />
         <ScheduleSection />
         <SpeakersSection />
         <AccommodationSection />

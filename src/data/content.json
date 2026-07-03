@@ -33,6 +33,7 @@
         "label": "Attend",
         "items": [
           { "label": "Register Free",      "href": "#register",      "desc": "Secure your free spot" },
+          { "label": "Sunday Service",     "href": "#sunday-service", "desc": "Register for your service time" },
           { "label": "Childcare",          "href": "#childcare",     "desc": "CelebKids registration" },
           { "label": "Accommodation",      "href": "#accommodation", "desc": "Hotels near the venue" },
           { "label": "Venue & Directions", "href": "#venue",         "desc": "How to get there" }
@@ -352,6 +353,21 @@
         "q": "I have more questions — how can I reach the CelebKids team?",
         "a": "If you have questions or special requests, we'd love to hear from you! Send us an email at ccicelebkidsca@gmail.com and we'll be happy to help."
       }
+    ]
+  },
+    "sundayService": {
+    "sectionLabel": "September 6, 2026",
+    "heading": "Reboot Camp",
+    "headingAccent": "Sunday Service",
+    "subheading": "Register for your service time.",
+    "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3713464/reservations/new",
+    "ctaLabel": "REGISTER FOR A SERVICE",
+    "venueNote": "Sunday services take place at a different venue — 1000 Finch Ave W, North York, ON M3J 2V5",
+    "requiredNote": "Registration is required to attend any of the services. You will only be checked in for the service you register for.",
+    "services": [
+      { "label": "First Service",  "time": "9:00 - 10:30 AM EST" },
+      { "label": "Second Service", "time": "11:00 AM - 12:30 PM EST" },
+      { "label": "Third Service",  "time": "1:00 - 2:30 PM EST" }
     ]
   },
   "accommodation": {
