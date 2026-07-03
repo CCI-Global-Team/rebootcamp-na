@@ -194,7 +194,7 @@
       "title": "Lead Pastor, Celebration Church International",
       "bio": "Apostle Emmanuel Iren is the visionary founder and lead pastor of Celebration Church International, a dynamic teaching ministry dedicated to spreading the gospel and helping people discover their purpose in Christ. With a passion for the Word of God and a heart for missions, Apostle Iren has led the church to establish Over 40 campuses across Nigeria, UK, Europe, Australia, Canada, and the USA, all while inspiring countless lives to grow in their faith and embrace the life-changing power of Christ.",
       "specialties": ["Apostolic Teaching", "Prophetic Ministry", "Kingdom Mandate"],
-      "imgUrl": "/images/AIE-X.webp",
+      "imgUrl": "/images/speakers/AIE-X.webp",
       "excerptsTitle": "Watch",
       "excerpts": [
         {
@@ -213,7 +213,21 @@
         "title": "Worship Leader",
         "city": "Vancouver, BC",
         "specialty": "Worship",
-        "imgUrl": "/images/Brooke-Nicholls.jpg"
+        "imgUrl": "/images/speakers/Brooke-Nicholls.jpg"
+      },
+      {
+        "name": "Limoblaze",
+        "title": "Gospel singer-songwriter",
+        "city": "London, UK",
+        "specialty": "Worship",
+        "imgUrl": "/images/speakers/Limoblaze.jpg"
+      },
+      {
+        "name": "Joe Mettle",
+        "title": "Worshipper",
+        "city": "Accra, Ghana",
+        "specialty": "Worship",
+        "imgUrl": "/images/speakers/Joe-Mettle.jpg"
       }
     ]
   },
