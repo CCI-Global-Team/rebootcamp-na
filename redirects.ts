@@ -6,4 +6,9 @@ export const redirects: Redirect[] = [
     destination: '/',
     permanent: true,
   },
+  {
+    source: "/testimony",
+    destination: "https://ccicanada.churchcenter.com/people/forms",
+    permanent: false,
+  }
 ];
