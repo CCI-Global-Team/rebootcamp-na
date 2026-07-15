@@ -4,17 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  '@types/react': 19.2.14
-  '@types/react-dom': 19.2.3
-
 importers:
 
   .:
     dependencies:
+      '@next/third-parties':
+        specifier: ^16.2.10
+        version: 16.2.10(next@16.2.3(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react@19.2.5)
       '@t3-oss/env-nextjs':
         specifier: 0.13.11
-        version: 0.13.11(arktype@2.1.20)(typescript@6.0.2)(zod@4.3.6)
+        version: 0.13.11(typescript@6.0.2)(zod@4.3.6)
       '@tailwindcss/postcss':
         specifier: 4.2.2
         version: 4.2.2
@@ -100,12 +99,6 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
-
-  '@ark/schema@0.46.0':
-    resolution: {integrity: sha512-c2UQdKgP2eqqDArfBqQIJppxJHvNNXuQPeuSPlDML4rjw+f1cu0qAlzOG4b8ujgm9ctIDWwhpyw6gjG5ledIVQ==}
-
-  '@ark/util@0.46.0':
-    resolution: {integrity: sha512-JPy/NGWn/lvf1WmGCPw2VGpBg5utZraE84I7wli18EDF3p3zc/e9WolT35tINeZO3l7C77SjqRJeAUoT0CvMRg==}
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -430,6 +423,12 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
+
+  '@next/third-parties@16.2.10':
+    resolution: {integrity: sha512-H3yxCMLziM1JKXnjQv83WBH2cp1fB1vMxpC1/bBTpvvaesBEuRuprpzq5RI32atis0VhUZflgdpJdGNZIGpQaQ==}
+    peerDependencies:
+      next: ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0-beta.0
+      react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
 
   '@oxfmt/binding-android-arm-eabi@0.44.0':
     resolution: {integrity: sha512-5UvghMd9SA/yvKTWCAxMAPXS1d2i054UeOf4iFjZjfayTwCINcC3oaSXjtbZfCaEpxgJod7XiOjTtby5yEv/BQ==}
@@ -848,7 +847,7 @@ packages:
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
     peerDependencies:
-      '@types/react': 19.2.14
+      '@types/react': ^19.2.0
 
   '@types/react@19.2.14':
     resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
@@ -933,9 +932,6 @@ packages:
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
-
-  arktype@2.1.20:
-    resolution: {integrity: sha512-IZCEEXaJ8g+Ijd59WtSYwtjnqXiwM8sWQ5EjGamcto7+HVN9eK0C4p0zDlCuAwWhpqr6fIBkxPuYDl4/Mcj/+Q==}
 
   array-ify@1.0.0:
     resolution: {integrity: sha512-c5AMf34bKdvPhQ7tBGhqkgKNUzMr4WUs+WDtC2ZUGOUncbxKMTvqxYctiseW3+L4bA8ec+GcZ6/A/FW4m8ukng==}
@@ -1088,6 +1084,7 @@ packages:
   git-raw-commits@5.0.1:
     resolution: {integrity: sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ==}
     engines: {node: '>=18'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   global-directory@4.0.1:
@@ -1474,6 +1471,9 @@ packages:
     resolution: {integrity: sha512-1MOpMXuhGzGL5TTCZFItxCc0AARf1EZFQkGqMm7ERKj8+Hgr5oLvJOVFcC+lRmR8hCe2S3jC4T5D7Vg/d7/fhA==}
     engines: {node: '>=6'}
 
+  third-party-capital@1.0.20:
+    resolution: {integrity: sha512-oB7yIimd8SuGptespDAZnNkzIz+NWaJCu2RMsbs4Wmp9zSDUM8Nhi3s2OOcqYuv3mN4hitXc8DVx+LyUmbUDiA==}
+
   tinyexec@1.0.4:
     resolution: {integrity: sha512-u9r3uZC0bdpGOXtlxUIdwf9pkmvhqJdrVCH9fapQtgy/OeTTMZ1nqH7agtvEfmGui6e1XxjcdrlxvxJvc3sMqw==}
     engines: {node: '>=18'}
@@ -1530,14 +1530,6 @@ packages:
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
-
-  '@ark/schema@0.46.0':
-    dependencies:
-      '@ark/util': 0.46.0
-    optional: true
-
-  '@ark/util@0.46.0':
-    optional: true
 
   '@babel/code-frame@7.27.1':
     dependencies:
@@ -1823,6 +1815,12 @@ snapshots:
   '@next/swc-win32-x64-msvc@16.2.3':
     optional: true
 
+  '@next/third-parties@16.2.10(next@16.2.3(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react@19.2.5)':
+    dependencies:
+      next: 16.2.3(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+      react: 19.2.5
+      third-party-capital: 1.0.20
+
   '@oxfmt/binding-android-arm-eabi@0.44.0':
     optional: true
 
@@ -1965,17 +1963,15 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@t3-oss/env-core@0.13.11(arktype@2.1.20)(typescript@6.0.2)(zod@4.3.6)':
+  '@t3-oss/env-core@0.13.11(typescript@6.0.2)(zod@4.3.6)':
     optionalDependencies:
-      arktype: 2.1.20
       typescript: 6.0.2
       zod: 4.3.6
 
-  '@t3-oss/env-nextjs@0.13.11(arktype@2.1.20)(typescript@6.0.2)(zod@4.3.6)':
+  '@t3-oss/env-nextjs@0.13.11(typescript@6.0.2)(zod@4.3.6)':
     dependencies:
-      '@t3-oss/env-core': 0.13.11(arktype@2.1.20)(typescript@6.0.2)(zod@4.3.6)
+      '@t3-oss/env-core': 0.13.11(typescript@6.0.2)(zod@4.3.6)
     optionalDependencies:
-      arktype: 2.1.20
       typescript: 6.0.2
       zod: 4.3.6
 
@@ -2092,12 +2088,6 @@ snapshots:
   ansi-styles@6.2.1: {}
 
   argparse@2.0.1: {}
-
-  arktype@2.1.20:
-    dependencies:
-      '@ark/schema': 0.46.0
-      '@ark/util': 0.46.0
-    optional: true
 
   array-ify@1.0.0: {}
 
@@ -2602,6 +2592,8 @@ snapshots:
   tailwindcss@4.2.2: {}
 
   tapable@2.3.2: {}
+
+  third-party-capital@1.0.20: {}
 
   tinyexec@1.0.4: {}
 
