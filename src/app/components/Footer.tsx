@@ -47,7 +47,7 @@ export function Footer() {
               Quick Links
             </h4>
             <ul className="flex flex-col gap-2">
-              {navbar.links.map((link) => (
+              {navbar.groups.flatMap((g) => g.items).map((link) => (
                 <li key={link.href}>
                   <a href={link.href} onClick={(e) => { e.preventDefault(); scrollTo(link.href); }} className="text-sm transition-colors duration-200" style={{ fontFamily: "'Inter', sans-serif", color: t.textMuted }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = t.goldAccent)}

@@ -1,14 +1,73 @@
-import mainFlyer from "@/assets/images/rbc-na-pivot-main-flyer.jpg";
+import { useEffect, useRef, useState } from "react";
 import { ImageWithFallback } from "@/app/utils/ImageWithFallback";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, scaleIn, stagger } from "@/app/components/ui/animation";
+import { X } from "lucide-react";
+
+function VideoModal({ speaker, onClose }: { speaker: { name: string; videoUrl: string }; onClose: () => void }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center"
+      style={{ background: "rgba(0,0,0,0.85)", backdropFilter: "blur(8px)" }}
+      onClick={onClose}
+    >
+      <div
+        className="relative flex flex-col items-center gap-3"
+        style={{ maxWidth: "360px", width: "90vw" }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close */}
+        <button
+          onClick={onClose}
+          className="absolute -top-10 right-0 flex items-center gap-1.5 transition-opacity hover:opacity-70"
+          style={{ background: "none", border: "none", cursor: "pointer", color: "rgba(255,255,255,0.7)" }}
+        >
+          <X size={18} />
+          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.75rem", letterSpacing: "0.1em" }}>CLOSE</span>
+        </button>
+
+        {/* Speaker name */}
+        <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", color: "rgba(232,192,51,0.9)", textTransform: "uppercase" }}>
+          {speaker.name}
+        </p>
+
+        {/* Video */}
+        <div className="rounded-2xl overflow-hidden w-full" style={{ background: "#000", border: "1px solid rgba(255,255,255,0.1)" }}>
+          <video
+            ref={videoRef}
+            src={speaker.videoUrl}
+            controls
+            autoPlay
+            playsInline
+            preload="metadata"
+            className="w-full h-full block"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function SpeakersSection() {
   const { t } = useTheme();
   const { speakers } = useSiteContent();
+  const [activeVideo, setActiveVideo] = useState<{ name: string; videoUrl: string } | null>(null);
 
   const invited = speakers?.invited ?? [];
   const main = speakers?.main;
@@ -260,78 +319,111 @@ export function SpeakersSection() {
             variants={stagger}
             className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
           >
-            {invited.map((speaker) => (
-              <motion.div
-                key={speaker.name}
-                variants={scaleIn}
-                whileHover={{ scale: 1.05 }}
-                className="rounded-xl overflow-hidden group"
-                style={{
-                  background: t.speakerCardBg,
-                  border: `1px solid ${t.speakerCardBorder}`,
-                  willChange: "transform"
-                }}
-              >
-                <div className="relative h-52 overflow-hidden">
-                  <ImageWithFallback
-                    src={speaker.imgUrl}
-                    alt={speaker.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{ backgroundImage: t.speakerImgGradient }}
-                  />
-                </div>
+            {invited.map((speaker) => {
+              const hasVideo = !!speaker.videoUrl;
 
-                <div className="p-4">
-                  <h4
-                    style={{
-                      fontFamily: "'Oswald', sans-serif",
-                      fontWeight: 600,
-                      fontSize: "1.05rem",
-                      color: t.textPrimary
-                    }}
-                  >
-                    {speaker.name}
-                  </h4>
+              return (
+                <motion.div
+                  key={speaker.name}
+                  variants={scaleIn}
+                  className="rounded-xl overflow-hidden group transition-transform duration-300"
+                  style={{ background: t.speakerCardBg, border: `1px solid ${t.speakerCardBorder}`, transform: "translateY(0)", cursor: hasVideo ? "pointer" : "default" }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}
+                  onClick={() => hasVideo && setActiveVideo({ name: speaker.name, videoUrl: speaker.videoUrl })}
+                >
+                  <div className="relative h-52 overflow-hidden">
+                    <ImageWithFallback
+                      src={speaker.imgUrl}
+                      alt={speaker.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div
+                      className="absolute inset-0"
+                      style={{ backgroundImage: t.speakerImgGradient }}
+                    />
 
-                  <p
-                    className="text-sm mt-1"
-                    style={{
-                      fontFamily: "'Inter', sans-serif",
-                      color: t.textMuted
-                    }}
-                  >
-                    {speaker.title}
-                  </p>
+                    {/* Play button overlay — only if video exists */}
+                    {hasVideo && (
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                          className="flex items-center gap-2 px-4 py-2 rounded-full"
+                          style={{ background: "rgba(0,0,0,0.55)", backdropFilter: "blur(8px)", border: "1px solid rgba(255,255,255,0.25)" }}
+                        >
+                          <svg width="12" height="14" viewBox="0 0 12 14" fill="white">
+                            <path d="M1 1l10 6-10 6V1z"/>
+                          </svg>
+                          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, fontSize: "0.75rem", letterSpacing: "0.12em", color: "#fff" }}>
+                            WATCH
+                          </span>
+                        </div>
+                      </div>
+                    )}
 
-                  <div className="flex items-center justify-between mt-3">
-                    <span
-                      className="text-xs"
+                    {/* Subtle persistent video indicator — bottom-right corner */}
+                    {hasVideo && (
+                      <div
+                        className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full flex items-center justify-center"
+                        style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(6px)", border: "1px solid rgba(255,255,255,0.2)" }}
+                      >
+                        <svg width="9" height="10" viewBox="0 0 9 10" fill="white">
+                          <path d="M1 1l7 4-7 4V1z"/>
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="p-4">
+                    <h4
                       style={{
-                        color: t.goldAccent,
-                        fontFamily: "'Barlow Condensed', sans-serif"
+                        fontFamily: "'Oswald', sans-serif",
+                        fontWeight: 600,
+                        fontSize: "1.05rem",
+                        color: t.textPrimary
                       }}
                     >
-                      {speaker.specialty}
-                    </span>
-                    <span
-                      className="text-xs"
+                      {speaker.name}
+                    </h4>
+
+                    <p
+                      className="text-sm mt-1"
                       style={{
                         fontFamily: "'Inter', sans-serif",
-                        color: t.textVeryMuted
+                        color: t.textMuted
                       }}
                     >
-                      {speaker.city}
-                    </span>
+                      {speaker.title}
+                    </p>
+
+                    <div className="flex items-center justify-between mt-3">
+                      <span
+                        className="text-xs"
+                        style={{
+                          color: t.goldAccent,
+                          fontFamily: "'Barlow Condensed', sans-serif"
+                        }}
+                      >
+                        {speaker.specialty}
+                      </span>
+                      <span
+                        className="text-xs"
+                        style={{
+                          fontFamily: "'Inter', sans-serif",
+                          color: t.textVeryMuted
+                        }}
+                      >
+                        {speaker.city}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </motion.div>
         </motion.div>
       </motion.div>
+
+      {activeVideo && <VideoModal speaker={activeVideo} onClose={() => setActiveVideo(null)} />}
     </section>
   );
 }

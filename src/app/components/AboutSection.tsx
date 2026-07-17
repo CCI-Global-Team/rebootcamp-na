@@ -63,7 +63,7 @@ export function AboutSection() {
             </motion.div>
 
             {/* Verse highlight */}
-            <motion.div
+            {/* <motion.div
               variants={fadeUp}
               className="p-5 rounded-lg mb-8 relative overflow-hidden"
               style={{ background: t.aboutVerseBg, border: `1px solid ${t.aboutVerseBorder}` }}
@@ -75,7 +75,7 @@ export function AboutSection() {
               <p className="pl-4 mt-2 text-sm" style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.08em", color: t.goldAccent }}>
                 {about.verse.reference}
               </p>
-            </motion.div>
+            </motion.div> */}
 
             <motion.a
               variants={fadeUp}
@@ -139,6 +139,89 @@ export function AboutSection() {
 
           </motion.div>
         </div>
+
+        {/* R.I.C.H. sub-section */}
+        <motion.div variants={fadeUp} className="mt-20 pt-16" style={{ borderTop: `1px solid rgba(${t.accentRgb},0.15)` }}>
+
+          {/* Heading */}
+          <motion.div variants={stagger} className="text-center mb-12">
+            <h3 style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", color: t.textPrimary }}>
+              Get ready for a{" "}
+              <span style={{ backgroundImage: t.titleGradient, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                R.I.C.H
+              </span>{" "}
+              experience
+            </h3>
+          </motion.div>
+
+          {/* Cards */}
+          <motion.div variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {about.rich.map(({ letter, word, desc, imgUrl, tint }) => (
+              <div
+                key={letter}
+                className="group relative rounded-2xl overflow-hidden cursor-default"
+                style={{ aspectRatio: "3/4", minHeight: "380px" }}
+              >
+                {/* Background image */}
+                <img
+                  src={imgUrl}
+                  alt={word}
+                  className=" absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  style={{ filter: "brightness(0.45)" }}
+                />
+
+                {/* Tint overlay — strengthens on hover */}
+                <div
+                  className="absolute inset-0 transition-opacity duration-500"
+                  style={{ background: `linear-gradient(160deg, rgba(${tint},0.30) 0%, transparent 60%)`, opacity: 0.6 }}
+                />
+
+                {/* Bottom gradient — text legibility */}
+                <div
+                  className="absolute inset-0"
+                  style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 45%, transparent 100%)" }}
+                />
+
+                {/* Bottom content block */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+
+                  {/* Large letter — part of the text layout */}
+                  <div style={{ lineHeight: 0.85, marginBottom: "6px" }}>
+                    <span
+                      style={{
+                        fontFamily: "'Oswald', sans-serif",
+                        fontWeight: 900,
+                        fontSize: "4.5rem",
+                        color: `rgb(${tint})`,
+                        opacity: 0.9,
+                        letterSpacing: "-0.02em",
+                        display: "block",
+                        filter: `drop-shadow(0 0 20px rgba(${tint},0.5))`,
+                        transition: "opacity 0.4s, filter 0.4s",
+                      }}
+                      className="group-hover:opacity-100"
+                    >
+                      {letter}
+                    </span>
+                  </div>
+
+                  {/* Thin coloured rule */}
+                  <div
+                    className="mb-3 h-px rounded-full transition-all duration-500 group-hover:opacity-100"
+                    style={{ background: `linear-gradient(90deg, rgb(${tint}), transparent)`, width: "100%", opacity: 0.5 }}
+                  />
+
+                  <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.2rem", color: "#fff", letterSpacing: "0.03em", marginBottom: "8px", textTransform: "uppercase" }}>
+                    {word}
+                  </p>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.7 }}>
+                    {desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
       </motion.div>
     </section>
   );

@@ -246,7 +246,7 @@ export function Hero() {
                 zIndex: 1,
               }}
             >
-              <Image src={fireFlyer} alt="Reboot Camp Fire" className="w-full h-auto" loading="eager" />
+              <Image src={mainFlyer} alt="Reboot Camp Fire" className="w-full h-auto" loading="eager" />
             </motion.div>
             <motion.div
               variants={scaleIn}
@@ -260,7 +260,7 @@ export function Hero() {
               className="relative rounded-xl overflow-hidden shadow-2xl"
               style={{ zIndex: 2, boxShadow: "0 20px 60px rgba(232,92,4,0.4)" }}
             >
-              <Image src={mainFlyer} alt={`${event.name} — ${event.theme}`} className="w-full h-auto" loading="eager" />
+              <Image src={fireFlyer} alt={`${event.name} — ${event.theme}`} className="w-full h-auto" loading="eager" />
             </motion.div>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 rounded-full opacity-40" style={{ backgroundImage: "radial-gradient(ellipse, #E85D04, transparent 70%)", filter: "blur(12px)" }} />
           </div>

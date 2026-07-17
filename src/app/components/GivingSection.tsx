@@ -48,8 +48,9 @@ export function GivingSection() {
         </div>
 
         {/* Giving Options */}
-        <div className="grid md:grid-cols-3 gap-5 mb-12">
-          {giving.options.map((option) => {
+        {/* <div className="grid md:grid-cols-2 gap-5 mb-12"> */}
+        <div className="mb-12">
+          {giving.options.filter((o) => o.show).map((option) => {
             const Icon = ICON_MAP[option.icon] ?? CreditCard;
             return (
               <div key={option.title} className="p-6 rounded-2xl flex flex-col gap-4 hover:scale-[1.02] transition-transform duration-200"
@@ -74,7 +75,7 @@ export function GivingSection() {
                   </div>
                 </div>
 
-                <a href={option.url} className="flex items-center justify-center gap-2 py-3 rounded-lg text-sm transition-all duration-200 hover:scale-105"
+                <a href={option.url} target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg text-sm transition-all duration-200 hover:scale-105 cursor-pointer"
                   style={{ background: option.highlight ? t.ctaGradient : t.givingMethodBg, color: option.highlight ? t.ctaText : t.textPrimary, border: option.highlight ? "none" : `1px solid ${t.cardBorder}`, fontFamily: "'Oswald', sans-serif", fontWeight: option.highlight ? 700 : 500, letterSpacing: "0.08em" }}
                 >
                   {option.cta}
@@ -85,8 +86,8 @@ export function GivingSection() {
           })}
         </div>
 
-        {/* Giving Categories */}
-        <div className="p-6 rounded-2xl mb-8" style={{ background: t.givingCategoriesBg, border: `1px solid ${t.givingCategoriesBorder}` }}>
+        {/* Giving Categories - HIDDEN */}
+        {/* <div className="p-6 rounded-2xl mb-8" style={{ background: t.givingCategoriesBg, border: `1px solid ${t.givingCategoriesBorder}` }}>
           <h3 className="mb-5 uppercase" style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1.1rem", letterSpacing: "0.08em", color: t.textPrimary }}>
             {giving.categoriesHeading}
           </h3>
@@ -101,7 +102,7 @@ export function GivingSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Trust note */}
         <div className="flex items-start gap-3 justify-center">

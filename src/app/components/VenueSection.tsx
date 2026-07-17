@@ -1,4 +1,4 @@
-import { CalendarDays, MapPin, Navigation, Train, Car, Bus, Clock, ExternalLink, AlertCircle } from "lucide-react";
+import { CalendarDays, MapPin, Navigation, Train, Car, Bus, Clock, ExternalLink, AlertCircle, BusFront, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "@/app/utils/ImageWithFallback";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
@@ -54,7 +54,7 @@ export function VenueSection() {
                 <h3 className="mb-1 uppercase" style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.4rem", color: t.textPrimary }}>
                   {venue.name}
                 </h3>
-                <p className="mb-4" style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.05em", color: "rgba(232,192,51,0.8)" }}>
+                <p className="mb-4 text-lg" style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.05em", color: t.heroBadgeColor }}>
                   {venue.address}
                 </p>
 
@@ -110,7 +110,7 @@ export function VenueSection() {
                     <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "0.95rem", color: t.textPrimary, margin: 0 }}>
                       {venue.sundayVenue.name}
                     </p>
-                    <p style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.04em", fontSize: "0.85rem", color: "rgba(232,192,51,0.85)", margin: "2px 0 0 0" }}>
+                    <p style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.04em", fontSize: "1rem", color: t.heroBadgeColor, margin: "2px 0 0 0" }}>
                       {venue.sundayVenue.address}
                     </p>
                   </div>
@@ -161,6 +161,43 @@ export function VenueSection() {
                 </div>
               </div>
             </a>
+
+            {/* Transport registration card */}
+            <div
+              className="rounded-2xl overflow-hidden"
+              style={{ background: t.isDark ? "rgba(232,192,51,0.06)" : "rgba(232,192,51,0.04)", border: `1px solid rgba(232,192,51,${t.isDark ? "0.3" : "0.22"})` }}
+            >
+              <div
+                className="flex items-center gap-3 px-5 py-3"
+                style={{ background: t.isDark ? "rgba(232,192,51,0.12)" : "rgba(232,192,51,0.09)", borderBottom: `1px solid rgba(232,192,51,${t.isDark ? "0.25" : "0.18"})` }}
+              >
+                <BusFront size={15} style={{ color: t.goldAccent, flexShrink: 0 }} />
+                <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.72rem", letterSpacing: "0.15em", color: t.goldAccent, textTransform: "uppercase", fontWeight: 700 }}>
+                  {venue.transport.label}
+                </span>
+              </div>
+              <div className="px-5 py-4 flex flex-col gap-3">
+                <div>
+                  <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.1rem", color: t.textPrimary, margin: "0 0 4px 0" }}>
+                    {venue.transport.heading}
+                  </p>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: t.textSecondary, lineHeight: 1.6, margin: 0 }}>
+                    {venue.transport.desc}
+                  </p>
+                </div>
+                <a
+                  href={venue.transport.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center gap-2 py-3 px-5 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-lg"
+                  style={{ background: t.ctaGradient, color: "#fff", fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "0.88rem", letterSpacing: "0.09em", textDecoration: "none", boxShadow: "0 4px 20px rgba(232,93,4,0.28)" }}
+                >
+                  <BusFront size={15} />
+                  {venue.transport.ctaLabel}
+                  <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
+                </a>
+              </div>
+            </div>
 
             {/* Directions */}
             <div className="flex flex-col gap-4">

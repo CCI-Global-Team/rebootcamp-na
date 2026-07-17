@@ -6,12 +6,14 @@ import { Hero } from "@/app/components/Hero";
 import { AboutSection } from "@/app/components/AboutSection";
 import { RegistrationSection } from "@/app/components/RegistrationSection";
 import { ChildcareSection } from "@/app/components/ChildcareSection";
+import { SundayServiceSection } from "./SundayServiceSection";
 import { ScheduleSection } from "@/app/components/ScheduleSection";
 import { SpeakersSection } from "@/app/components/SpeakersSection";
 import { AccommodationSection } from "@/app/components/AccommodationSection";
 import { FlightDiscountsSection } from "@/app/components/FlightDiscountsSection";
+import { TransportationSection } from "@/app/components/TransportationSection";
 import { VenueSection } from "@/app/components/VenueSection";
-import { PastEventsSection } from "@/app/components/PastEventsSection";
+// import { PastEventsSection } from "@/app/components/PastEventsSection";
 import { FAQSection } from "@/app/components/FAQSection";
 import { GivingSection } from "@/app/components/GivingSection";
 import { Footer } from "@/app/components/Footer";
@@ -35,14 +37,16 @@ export function PageInner() {
         <AboutSection />
         <RegistrationSection />
         <ChildcareSection />
+        <SundayServiceSection />
         <ScheduleSection />
         <SpeakersSection />
         <AccommodationSection />
         <FlightDiscountsSection />
+        <TransportationSection />
         <VenueSection />
         {/* <PastEventsSection /> */}
         <FAQSection />
-        {/* <GivingSection /> */}
+        <GivingSection />
         <Footer />
       </div>
     </ThemeProvider>
