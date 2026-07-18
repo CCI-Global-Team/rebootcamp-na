@@ -1,4 +1,5 @@
-import { createEnv } from '@t3-oss/env-nextjs';
+import { createEnv } from "@t3-oss/env-nextjs";
+import { z } from "zod/v4";
 
 export const clientEnv = createEnv({
   /**
@@ -6,9 +7,14 @@ export const clientEnv = createEnv({
    * isn't built with invalid env vars. To expose them to the client, prefix them with
    * `NEXT_PUBLIC_`.
    */
-  client: {},
+  client: {
+    NEXT_PUBLIC_CHURCH_CENTER_FORM_URL: z.url().optional(),
+  },
 
-  experimental__runtimeEnv: {},
+  experimental__runtimeEnv: {
+    NEXT_PUBLIC_CHURCH_CENTER_FORM_URL:
+      process.env.NEXT_PUBLIC_CHURCH_CENTER_FORM_URL,
+  },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
    * useful for Docker builds.
