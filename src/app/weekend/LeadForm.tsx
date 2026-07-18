@@ -3,13 +3,13 @@
 import { useEffect, useId, useRef, useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 
-import { hopeCampaign } from "@/lib/hope/campaign";
+import { weekendCampaign } from "@/lib/weekend/campaign";
 import {
   formatNorthAmericanPhoneInput,
   getLeadFieldErrors,
   leadSubmissionSchema,
-} from "@/lib/hope/lead-schema";
-import type { LeadFieldErrors, LeadFieldName } from "@/lib/hope/lead-schema";
+} from "@/lib/weekend/lead-schema";
+import type { LeadFieldErrors, LeadFieldName } from "@/lib/weekend/lead-schema";
 
 type SubmitState =
   | { status: "idle" | "submitting" | "success"; message: string }
@@ -95,7 +95,7 @@ export function LeadForm({ fallbackHref }: { fallbackHref: string }) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const payload = {
-      campaign: "hope",
+      campaign: "weekend",
       firstName: String(formData.get("firstName") ?? ""),
       lastName: String(formData.get("lastName") ?? ""),
       email: String(formData.get("email") ?? ""),
@@ -174,16 +174,16 @@ export function LeadForm({ fallbackHref }: { fallbackHref: string }) {
           Details received
         </p>
         <h3 className="font-oswald text-[clamp(2.5rem,7vw,4rem)] leading-none font-bold uppercase">
-          {hopeCampaign.thanksTitle}
+          {weekendCampaign.thanksTitle}
         </h3>
         <p className="mx-auto mt-5 max-w-md leading-7 text-white/65">
-          {hopeCampaign.thanksBody}
+          {weekendCampaign.thanksBody}
         </p>
         <a
           className="font-oswald mt-8 inline-flex rounded-sm border border-[#e8c033] px-6 py-3 font-semibold tracking-widest text-[#e8c033] uppercase focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#e8c033]"
-          href={hopeCampaign.nextHref}
+          href={weekendCampaign.nextHref}
         >
-          {hopeCampaign.nextLabel}
+          {weekendCampaign.nextLabel}
         </a>
       </div>
     );
@@ -196,7 +196,7 @@ export function LeadForm({ fallbackHref }: { fallbackHref: string }) {
 
   return (
     <form className="flex flex-col gap-5" noValidate onSubmit={handleSubmit}>
-      <input type="hidden" name="campaign" value="hope" />
+      <input type="hidden" name="campaign" value="weekend" />
       <div className="absolute -left-[100vw]" aria-hidden="true">
         <label htmlFor={`${id}-website`}>Website</label>
         <input
@@ -307,7 +307,7 @@ export function LeadForm({ fallbackHref }: { fallbackHref: string }) {
           What are you hoping to find? <span>(optional)</span>
         </legend>
         <div className="mt-3 flex flex-wrap gap-3">
-          {hopeCampaign.interests.map((interest) => (
+          {weekendCampaign.interests.map((interest) => (
             <label className="cursor-pointer" key={interest}>
               <input
                 className="peer sr-only"
@@ -355,10 +355,10 @@ export function LeadForm({ fallbackHref }: { fallbackHref: string }) {
       >
         {state.status === "submitting"
           ? "Sending..."
-          : hopeCampaign.submitLabel}
+          : weekendCampaign.submitLabel}
       </button>
       <p className="m-0 text-center text-xs leading-6 text-white/40">
-        {hopeCampaign.finePrint}
+        {weekendCampaign.finePrint}
       </p>
     </form>
   );

@@ -1,10 +1,10 @@
-import { getChurchCenterFormUrl } from '@/lib/hope/campaign';
-import { getLeadFieldErrors, leadSubmissionSchema } from '@/lib/hope/lead-schema';
+import { getChurchCenterFormUrl } from '@/lib/weekend/campaign';
+import { getLeadFieldErrors, leadSubmissionSchema } from '@/lib/weekend/lead-schema';
 import {
   MissingPlanningCenterConfigError,
   PlanningCenterSubmissionError,
   submitLead,
-} from '@/lib/hope/planning-center';
+} from '@/lib/weekend/planning-center';
 
 export const runtime = 'nodejs';
 

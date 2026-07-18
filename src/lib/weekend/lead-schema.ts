@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { hopeInterests } from './campaign';
+import { campaignInterests } from './campaign';
 
 export const leadFieldNames = ['firstName', 'lastName', 'email', 'phone', 'city', 'interests'] as const;
 
@@ -36,7 +36,7 @@ export function formatNorthAmericanPhoneInput(value: string) {
 }
 
 export const leadSubmissionSchema = z.strictObject({
-  campaign: z.literal('hope'),
+  campaign: z.literal('weekend'),
   firstName: z.string().trim().min(1, 'First name is required.').max(80),
   lastName: z.string().trim().min(1, 'Last name is required.').max(80),
   email: z.email('Enter a valid email address.').trim().toLowerCase().max(160),
@@ -53,7 +53,7 @@ export const leadSubmissionSchema = z.strictObject({
       .optional(),
   ),
   city: z.string().trim().min(2, 'City must be at least 2 characters.').max(100),
-  interests: z.array(z.enum(hopeInterests)).max(4).default([]),
+  interests: z.array(z.enum(campaignInterests)).max(4).default([]),
   website: z.string().trim().max(300).optional().default(''),
 });
 

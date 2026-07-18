@@ -1,9 +1,9 @@
-export const hopeInterests = ['Hope', 'Community', 'Answers', 'Just Curious'] as const;
+export const campaignInterests = ['Hope', 'Community', 'Answers', 'Just Curious'] as const;
 
-export type HopeInterest = (typeof hopeInterests)[number];
+export type CampaignInterest = (typeof campaignInterests)[number];
 
-export const hopeCampaign = {
-  slug: 'hope' as const,
+export const weekendCampaign = {
+  slug: 'weekend' as const,
   eyebrow: 'Reboot Camp North America',
   heroTitle: 'Hope Starts Here',
   heroLead: 'A new invitation is taking shape.',
@@ -20,7 +20,7 @@ export const hopeCampaign = {
   thanksBody: 'Thanks for reaching out. We’ll be in touch with more details soon.',
   nextLabel: 'Visit Reboot Camp',
   nextHref: '/',
-  interests: hopeInterests,
+  interests: campaignInterests,
   footerTitle: 'Hope Campaign',
   footerBody: 'Placeholder footer copy for this campaign landing page.',
 } as const;

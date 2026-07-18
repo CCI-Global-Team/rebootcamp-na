@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import type { HopeInterest } from './campaign';
+import type { CampaignInterest } from './campaign';
 import type { LeadSubmission } from './lead-schema';
 
 const apiVersion = '2026-06-04';
@@ -72,7 +72,7 @@ function buildPayload(lead: LeadSubmission, config: Config) {
   for (const interest of lead.interests) {
     values.push({
       form_field_id: config.fieldIds.interests,
-      value: config.optionIds[interest satisfies HopeInterest] ?? interest,
+      value: config.optionIds[interest satisfies CampaignInterest] ?? interest,
     });
   }
 
@@ -93,7 +93,7 @@ function buildPayload(lead: LeadSubmission, config: Config) {
 
 export async function submitLead(lead: LeadSubmission, env: Env = process.env) {
   if (enabled(env.PLANNING_CENTER_USE_MOCK_SUBMISSIONS)) {
-    console.info('[hope] Mock Planning Center submission', { lead });
+    console.info('[weekend] Mock Planning Center submission', { lead });
     return { mode: 'mock' as const };
   }
 
@@ -115,7 +115,7 @@ export async function submitLead(lead: LeadSubmission, env: Env = process.env) {
   );
 
   if (enabled(env.PLANNING_CENTER_LOG_SUBMISSIONS)) {
-    console.info('[hope] Planning Center response', { status: response.status });
+    console.info('[weekend] Planning Center response', { status: response.status });
   }
   if (!response.ok) {
     throw new PlanningCenterSubmissionError(response.status, getRetryAfter(response.headers.get('Retry-After')));
