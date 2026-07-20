@@ -9,6 +9,11 @@ export const redirects: Redirect[] = [
   {
     source: "/testimony",
     destination: "https://ccicanada.churchcenter.com/people/forms/1211829",
-    permanent: false,
+    permanent: true,
+  },
+  {
+    source: "/ministers",
+    destination: "https://ccicanada.churchcenter.com/people/forms/1266296",
+    permanent: true,
   },
 ];
