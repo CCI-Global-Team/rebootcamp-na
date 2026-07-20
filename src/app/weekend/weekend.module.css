@@ -1,0 +1,65 @@
+.heroBackground {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(232, 93, 4, 0.22), transparent 30rem),
+    radial-gradient(circle at 90% 65%, rgba(232, 192, 51, 0.13), transparent 28rem),
+    linear-gradient(160deg, #080b1a, #12062b 58%, #1a0810);
+}
+
+.gridPattern {
+  background-image:
+    linear-gradient(rgba(232, 192, 51, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 192, 51, 0.45) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #f5d060, #e8c033 42%, #e85d04);
+  background-clip: text;
+  color: transparent;
+}
+
+.visualPlaceholder {
+  background:
+    linear-gradient(145deg, transparent 35%, rgba(232, 93, 4, 0.16)), linear-gradient(35deg, #11152c, #1e1233);
+}
+
+.visualPlaceholder::before {
+  content: '';
+  position: absolute;
+  inset: 8%;
+  border: 1px solid rgba(232, 192, 51, 0.18);
+  border-radius: 50%;
+}
+
+.visualMark {
+  font-size: clamp(7rem, 14vw, 13rem);
+  transform: rotate(90deg);
+}
+
+.skipLink {
+  transform: translateY(-180%);
+}
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+.gentleBounce {
+  animation: gentle-bounce 2.4s ease-in-out infinite;
+}
+
+@keyframes gentle-bounce {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gentleBounce {
+    animation: none;
+  }
+}
