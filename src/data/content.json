@@ -400,6 +400,7 @@
         "badgeColor": "#34D399",
         "badgeTextColor": "#000000",
         "partnerRate": true,
+        "partnerRateExpiresOn": "2026-08-01",
         "bookUrl": "https://www.ihg.com/holidayinn/hotels/us/en/find-hotels/select-roomrate?fromRedirect=true&qSrt=sBR&qIta=99801505&icdv=99801505&qSlH=YYZIA&qCiD=04&qCiMy=082026&qCoD=06&qCoMy=082026&qGrpCd=CCI&setPMCookies=true&qSHBrC=HI&qDest=970%20Dixon%20Road,%20Rexdale,%20Toronto,%20ON,%20CA&showApp=true&adjustMonth=false&srb_u=1&qRmFltr=",
         "description": "A comfortable, affordable option. Ideal for attendees on a budget."
       },
@@ -416,6 +417,7 @@
         "badgeColor": "#34D399",
         "badgeTextColor": "#000000",
         "partnerRate": true,
+        "partnerRateExpiresOn": "2026-08-05",
         "bookUrl": "https://www.marriott.com/event-reservations/reservation-link.mi?id=1781634904422&key=GRP&app=resvlink&_branch_match_id=1563633130684001217&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7IHytiCODmZedlqmSm2huYWhmbGJpYGJiZGRmrZqZW27kEBanVFqWmpQO156fFJRfnlxalFts4ZRfm5qQB%2BDEFOYQAAAA%3D%3D",
         "description": "Full-service hotel with modern amenities within walking distance of the venue."
       },
@@ -428,10 +430,11 @@
         "amenities": ["Free WiFi", "In Hotel Restaurants", "Indoor Pool", "Fitness Centre", "Self-Parking for $33.90 CAD (HST included) per night", "EV Charging", "Airport shuttle"],
         "imgUrl": "/images/hotels/crowne-plaza-toronto.avif",
         "imgPosition": "object-top",
-        "badge": "",
+        "badge": "Book By September 3, 2026",
         "badgeColor": "#E8C033",
-        "badgeTextColor": "#E8C033",
+        "badgeTextColor": "#080B1A",
         "partnerRate": true,
+        "partnerRateExpiresOn": "2026-09-03",
         "bookUrl": "https://www.ihg.com/redirect?path=asearch&brandCode=CP&localeCode=en&regionCode=1&hotelCode=yyzca&checkInDate=04&checkInMonthYear=082026&checkOutDate=06&checkOutMonthYear=082026&rateCode=6CBARC&_PMID=99801505&GPC=GTW&cn=no&adjustMonth=false&showApp=true&monthIndex=00",
         "description": "Full-service hotel with modern amenities within walking distance of the venue."
       },
@@ -448,6 +451,7 @@
         "badgeColor": "#34D399",
         "badgeTextColor": "#000000",
         "partnerRate": true,
+        "partnerRateExpiresOn": "2026-07-16",
         "bookUrl": "https://app.marriott.com/resview2?id=1779382902565&key=GRP&app=resvlink",
         "description": "Full-service hotel with modern amenities within walking distance of the venue."
       }
@@ -785,7 +789,7 @@
         "icon": "CreditCard",
         "title": "Online Giving",
         "description": "Give securely online via credit/debit card or Pre-authorized Debit. Quick and easy.",
-        "cta": "Give Online",
+        "cta": "Give Now",
         "url": "https://give.tithe.ly/?formId=3003d62b-3ed6-443d-94b2-d3f8ca9148b8",
         "highlight": true,
         "methods": ["Mastercard", "Visa", "AMEX", "Pre-authorized Debit"],

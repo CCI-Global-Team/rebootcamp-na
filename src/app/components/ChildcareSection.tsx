@@ -1,11 +1,19 @@
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 import { Baby, AlertTriangle, ArrowRight } from "lucide-react";
 
 export function ChildcareSection() {
   const { t } = useTheme();
   const { childcare } = useSiteContent();
+
+  function trackChildcareRegistrationClick() {
+    track("Registration CTA Clicked", {
+      cta: "childcare_registration",
+      page: "/",
+    });
+  }
 
   return (
     <section
@@ -112,6 +120,7 @@ export function ChildcareSection() {
               href={childcare.registrationUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackChildcareRegistrationClick}
               className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl self-start"
               style={{
                 background: t.ctaGradient,

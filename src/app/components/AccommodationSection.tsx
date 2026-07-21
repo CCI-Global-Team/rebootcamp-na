@@ -14,10 +14,24 @@ const amenityIcons: Record<string, React.ElementType> = {
   Kitchen: Coffee
 };
 
+function isHotelRateStillAvailable(expiresOn?: string) {
+  if (!expiresOn) return true;
+
+  const [year, month, day] = expiresOn.split("-").map(Number);
+  if (!year || !month || !day) return true;
+
+  const expiresAt = new Date(year, month - 1, day, 23, 59, 59, 999);
+  return Date.now() <= expiresAt.getTime();
+}
+
 export function AccommodationSection() {
   const { t } = useTheme();
   const { accommodation } = useSiteContent();
   const hotels = accommodation?.hotels ?? [];
+  const availableHotels = hotels.filter((hotel) =>
+    isHotelRateStillAvailable(hotel.partnerRateExpiresOn),
+  );
+  const allHotelsExpired = hotels.length > 0 && availableHotels.length === 0;
 
   return (
     <section
@@ -123,186 +137,224 @@ export function AccommodationSection() {
           variants={stagger}
           className="grid md:grid-cols-2 gap-6"
         >
-          {hotels.map((hotel) => (
-            <motion.div
-              key={hotel.name}
-              variants={scaleIn}
-              whileHover={{ scale: 1.02 }}
-              className="rounded-2xl overflow-hidden group"
-              style={{
-                background: t.accomCardBg,
-                border: `1px solid ${t.accomCardBorder}`,
-                willChange: "transform"
-              }}
-            >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <ImageWithFallback
-                  src={hotel.imgUrl}
-                  alt={hotel.name}
-                  className={cn("w-full h-full object-cover transition-transform duration-500 group-hover:scale-105", hotel.imgPosition)}
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ background: t.accomCardImgGradient }}
-                />
-
-                {/* Badge */}
-                {hotel.badge && (
+          {availableHotels.length > 0 ? (
+            availableHotels.map((hotel) => (
+              <motion.div
+                key={hotel.name}
+                variants={scaleIn}
+                whileHover={{ scale: 1.02 }}
+                className="rounded-2xl overflow-hidden group"
+                style={{
+                  background: t.accomCardBg,
+                  border: `1px solid ${t.accomCardBorder}`,
+                  willChange: "transform"
+                }}
+              >
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <ImageWithFallback
+                    src={hotel.imgUrl}
+                    alt={hotel.name}
+                    className={cn("w-full h-full object-cover transition-transform duration-500 group-hover:scale-105", hotel.imgPosition)}
+                  />
                   <div
-                    className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs uppercase tracking-wider"
-                    style={{
-                      background: `${hotel.badgeColor}`,
-                      border: `1px solid ${hotel.badgeColor}60`,
-                      color: hotel.badgeTextColor,
-                      fontFamily: "'Barlow Condensed', sans-serif",
-                      fontWeight: 600
-                    }}
-                  >
-                    {hotel.badge}
-                  </div>
-                )}
+                    className="absolute inset-0"
+                    style={{ background: t.accomCardImgGradient }}
+                  />
 
-                {hotel.partnerRate && (
-                  <div
-                    className="absolute top-3 left-3 px-2 py-1 rounded text-xs uppercase tracking-wider"
-                    style={{
-                      background: "rgba(232,192,51,0.9)",
-                      color: "#080B1A",
-                      fontFamily: "'Barlow Condensed', sans-serif",
-                      fontWeight: 700
-                    }}
-                  >
-                    Partner Rate
-                  </div>
-                )}
-              </div>
-
-              {/* Content */}
-              <div className="p-5">
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <div>
-                    <h3
+                  {/* Badge */}
+                  {hotel.badge && (
+                    <div
+                      className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs uppercase tracking-wider"
                       style={{
-                        fontFamily: "'Oswald', sans-serif",
-                        fontWeight: 600,
-                        fontSize: "1.15rem",
-                        color: t.textPrimary
-                      }}
-                    >
-                      {hotel.name}
-                    </h3>
-
-                    <p
-                      className="text-sm mt-0.5"
-                      style={{
+                        background: `${hotel.badgeColor}`,
+                        border: `1px solid ${hotel.badgeColor}60`,
+                        color: hotel.badgeTextColor,
                         fontFamily: "'Barlow Condensed', sans-serif",
-                        letterSpacing: "0.05em",
-                        color: "rgba(232,192,51,0.8)"
+                        fontWeight: 600
                       }}
                     >
-                      {hotel.category}
-                    </p>
-                  </div>
+                      {hotel.badge}
+                    </div>
+                  )}
 
-                  {hotel.stars > 0 && (
-                    <div className="flex gap-0.5 shrink-0 mt-1">
-                      {Array.from({ length: hotel.stars }).map((_, i) => (
-                        <Star
-                          key={i}
-                          size={12}
-                          fill={t.goldAccent}
-                          style={{ color: t.goldAccent }}
-                        />
-                      ))}
+                  {hotel.partnerRate && (
+                    <div
+                      className="absolute top-3 left-3 px-2 py-1 rounded text-xs uppercase tracking-wider"
+                      style={{
+                        background: "rgba(232,192,51,0.9)",
+                        color: "#080B1A",
+                        fontFamily: "'Barlow Condensed', sans-serif",
+                        fontWeight: 700
+                      }}
+                    >
+                      Partner Rate
                     </div>
                   )}
                 </div>
 
-                <p
-                  className="text-sm mb-4"
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    color: t.textMuted
-                  }}
-                >
-                  {hotel.description}
-                </p>
-
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin size={13} style={{ color: t.textDim }} />
-                  <span
-                    className="text-xs"
-                    style={{
-                      fontFamily: "'Inter', sans-serif",
-                      color: t.textVeryMuted
-                    }}
-                  >
-                    {hotel.distance}
-                  </span>
-                  <span style={{ color: t.textDim }}>·</span>
-                  <span
-                    className="text-base tracking-wide"
-                    style={{
-                      fontFamily: "'Oswald', sans-serif",
-                      fontWeight: 500,
-                      color: t.goldAccent
-                    }}
-                  >
-                    {hotel.price}
-                  </span>
-                </div>
-
-                {/* Amenities */}
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {hotel.amenities?.map((amenity) => {
-                    const Icon = amenityIcons[amenity] || Wifi;
-                    return (
-                      <motion.span
-                        key={amenity}
-                        variants={fadeUp}
-                        className="flex items-center gap-1 px-2 py-1 rounded text-xs"
+                {/* Content */}
+                <div className="p-5">
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <div>
+                      <h3
                         style={{
-                          background: t.accomAmenityBg,
-                          border: `1px solid ${t.accomAmenityBorder}`,
-                          color: t.accomAmenityColor,
-                          fontFamily: "'Inter', sans-serif"
+                          fontFamily: "'Oswald', sans-serif",
+                          fontWeight: 600,
+                          fontSize: "1.15rem",
+                          color: t.textPrimary
                         }}
                       >
-                        <Icon size={10} />
-                        {amenity}
-                      </motion.span>
-                    );
-                  })}
-                </div>
+                        {hotel.name}
+                      </h3>
 
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.97 }}
-                  href={hotel.bookUrl}
-                  target="_blank"
-                  className="block w-full py-2.5 rounded text-center text-sm uppercase tracking-wider cursor-pointer"
-                  style={{
-                    background: hotel.partnerRate
-                      ? t.ctaGradient
-                      : t.accomAmenityBg,
-                    color: hotel.partnerRate
-                      ? t.ctaText
-                      : t.textPrimary,
-                    border: hotel.partnerRate
-                      ? "none"
-                      : `1px solid ${t.cardBorder}`,
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontWeight: 700
-                  }}
-                >
-                  {hotel.partnerRate
-                    ? "Book with Partner Rate"
-                    : "View Options"}
-                </motion.a>
-              </div>
+                      <p
+                        className="text-sm mt-0.5"
+                        style={{
+                          fontFamily: "'Barlow Condensed', sans-serif",
+                          letterSpacing: "0.05em",
+                          color: "rgba(232,192,51,0.8)"
+                        }}
+                      >
+                        {hotel.category}
+                      </p>
+                    </div>
+
+                    {hotel.stars > 0 && (
+                      <div className="flex gap-0.5 shrink-0 mt-1">
+                        {Array.from({ length: hotel.stars }).map((_, i) => (
+                          <Star
+                            key={i}
+                            size={12}
+                            fill={t.goldAccent}
+                            style={{ color: t.goldAccent }}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <p
+                    className="text-sm mb-4"
+                    style={{
+                      fontFamily: "'Inter', sans-serif",
+                      color: t.textMuted
+                    }}
+                  >
+                    {hotel.description}
+                  </p>
+
+                  <div className="flex items-center gap-2 mb-4">
+                    <MapPin size={13} style={{ color: t.textDim }} />
+                    <span
+                      className="text-xs"
+                      style={{
+                        fontFamily: "'Inter', sans-serif",
+                        color: t.textVeryMuted
+                      }}
+                    >
+                      {hotel.distance}
+                    </span>
+                    <span style={{ color: t.textDim }}>·</span>
+                    <span
+                      className="text-base tracking-wide"
+                      style={{
+                        fontFamily: "'Oswald', sans-serif",
+                        fontWeight: 500,
+                        color: t.goldAccent
+                      }}
+                    >
+                      {hotel.price}
+                    </span>
+                  </div>
+
+                  {/* Amenities */}
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {hotel.amenities?.map((amenity) => {
+                      const Icon = amenityIcons[amenity] || Wifi;
+                      return (
+                        <motion.span
+                          key={amenity}
+                          variants={fadeUp}
+                          className="flex items-center gap-1 px-2 py-1 rounded text-xs"
+                          style={{
+                            background: t.accomAmenityBg,
+                            border: `1px solid ${t.accomAmenityBorder}`,
+                            color: t.accomAmenityColor,
+                            fontFamily: "'Inter', sans-serif"
+                          }}
+                        >
+                          <Icon size={10} />
+                          {amenity}
+                        </motion.span>
+                      );
+                    })}
+                  </div>
+
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.97 }}
+                    href={hotel.bookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full py-2.5 rounded text-center text-sm uppercase tracking-wider cursor-pointer"
+                    style={{
+                      background: hotel.partnerRate
+                        ? t.ctaGradient
+                        : t.accomAmenityBg,
+                      color: hotel.partnerRate
+                        ? t.ctaText
+                        : t.textPrimary,
+                      border: hotel.partnerRate
+                        ? "none"
+                        : `1px solid ${t.cardBorder}`,
+                      fontFamily: "'Barlow Condensed', sans-serif",
+                      fontWeight: 700
+                    }}
+                  >
+                    {hotel.partnerRate
+                      ? "Book with Partner Rate"
+                      : "View Options"}
+                  </motion.a>
+                </div>
+              </motion.div>
+            ))
+          ) : (
+            <motion.div
+              variants={fadeUp}
+              className="md:col-span-2 rounded-2xl p-8 text-center"
+              style={{
+                background: t.accomCardBg,
+                border: `1px solid ${t.accomCardBorder}`,
+              }}
+            >
+              <h3
+                className="mb-3 uppercase"
+                style={{
+                  fontFamily: "'Oswald', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "1.4rem",
+                  color: t.textPrimary
+                }}
+              >
+                {allHotelsExpired
+                  ? "Partner Hotel Rates Have Expired"
+                  : "Hotel Options Coming Soon"}
+              </h3>
+              <p
+                className="mx-auto max-w-2xl"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  color: t.textMuted,
+                  lineHeight: 1.7
+                }}
+              >
+                {allHotelsExpired
+                  ? "Our partner hotel booking windows have now closed, but we’re still excited to welcome you. Please book any nearby accommodation that works best for your travel plans."
+                  : "We don’t have any partner hotel options listed right now. Please check back soon, or feel free to book a nearby hotel that suits your plans."}
+              </p>
             </motion.div>
-          ))}
+          )}
         </motion.div>
 
         {/* Footer */}
