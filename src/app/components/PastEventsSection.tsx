@@ -8,7 +8,7 @@ export function PastEventsSection() {
   const { t } = useTheme();
   const { pastEvents } = useSiteContent();
   const [activeEvent, setActiveEvent] = useState(0);
-  const [galleryIndex, setGalleryIndex] = useState<null | { event: number; img: number }>(null);
+  const [_galleryIndex, setGalleryIndex] = useState<null | { event: number; img: number }>(null);
   const event = pastEvents.events?.[activeEvent];
 
   if (!event) return null;

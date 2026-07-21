@@ -1,7 +1,8 @@
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import { motion } from "framer-motion";
-import { MapPin, Calendar, Ticket, Music, BookOpen, Users, Zap, ArrowRight, Baby, CheckCircle, BusFront } from "lucide-react";
+import Image from "next/image";
+import { MapPin, Calendar, Ticket, Music, BookOpen, Users, Zap, ArrowRight, Baby, CheckCircle } from "lucide-react";
 import { fadeUp, stagger } from "@/app/components/ui/animation";
 
 const ICON_MAP: Record<string, React.ElementType> = { Music, BookOpen, Users, Zap, Ticket, Calendar, MapPin };
@@ -58,10 +59,12 @@ export function RegistrationSection() {
               >
                 {/* Image */}
                 <div className="relative h-40 overflow-hidden">
-                  <img
+                  <Image
                     src={imgUrl}
                     alt={title}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="h-full w-full object-cover"
                     style={{ filter: t.isDark ? "brightness(0.85)" : "brightness(0.9)" }}
                   />
                   {/* Colour tint overlay */}

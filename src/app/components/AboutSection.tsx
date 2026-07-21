@@ -2,6 +2,7 @@ import { Flame, Users, Globe, Star } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { fadeUp, scaleIn, stagger } from "@/app/components/ui/animation";
 
 const ICON_MAP: Record<string, React.ElementType> = { Users, Globe, Star, Flame };
@@ -115,7 +116,14 @@ export function AboutSection() {
 
             {/* Toronto image */}
             <motion.div variants={stagger} className="rounded-xl overflow-hidden" style={{ border: `1px solid ${t.aboutHighlightBorder}` }}>
-              <img src={about.imgUrl} alt="RBC" className="w-full h-auto object-cover" />
+              <Image
+                src={about.imgUrl}
+                alt="Reboot Camp North America"
+                width={2449}
+                height={1633}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="w-full h-auto object-cover"
+              />
             </motion.div>
 
             {/* What to Expect - HIDDEN */}
@@ -163,10 +171,12 @@ export function AboutSection() {
                 style={{ aspectRatio: "3/4", minHeight: "380px" }}
               >
                 {/* Background image */}
-                <img
+                <Image
                   src={imgUrl}
                   alt={word}
-                  className=" absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  sizes="(min-width: 1024px) 24vw, (min-width: 640px) 50vw, 100vw"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   style={{ filter: "brightness(0.45)" }}
                 />
 
