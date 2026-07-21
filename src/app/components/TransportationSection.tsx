@@ -2,11 +2,19 @@ import { BusFront, MapPin, ArrowRight, Bell } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 
 export function TransportationSection() {
   const { t } = useTheme();
   const { venue } = useSiteContent();
   const tr = venue.transport;
+
+  function trackTransportationRegistrationClick() {
+    track("Registration CTA Clicked", {
+      cta: "transportation_registration",
+      page: "/",
+    });
+  }
 
   return (
     <section
@@ -165,6 +173,7 @@ export function TransportationSection() {
                 href={tr.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackTransportationRegistrationClick}
                 className="group flex items-center justify-center gap-3 py-4 px-8 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl"
                 style={{ backgroundImage: t.ctaGradient, color: "#fff", fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.05rem", letterSpacing: "0.1em", textDecoration: "none", boxShadow: "0 6px 32px rgba(232,93,4,0.35)" }}
               >

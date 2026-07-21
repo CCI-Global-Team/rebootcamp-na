@@ -785,7 +785,7 @@
         "icon": "CreditCard",
         "title": "Online Giving",
         "description": "Give securely online via credit/debit card or Pre-authorized Debit. Quick and easy.",
-        "cta": "Give Online",
+        "cta": "Give Now",
         "url": "https://give.tithe.ly/?formId=3003d62b-3ed6-443d-94b2-d3f8ca9148b8",
         "highlight": true,
         "methods": ["Mastercard", "Visa", "AMEX", "Pre-authorized Debit"],

@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics/server';
 import { getChurchCenterFormUrl } from '@/lib/weekend/campaign';
 import { getLeadFieldErrors, leadSubmissionSchema } from '@/lib/weekend/lead-schema';
 import {
@@ -7,6 +8,17 @@ import {
 } from '@/lib/weekend/planning-center';
 
 export const runtime = 'nodejs';
+
+async function trackWeekendFormSubmission(mode: 'live' | 'mock') {
+  try {
+    await track('Weekend Form Submitted', {
+      mode,
+      page: '/weekend',
+    });
+  } catch (error) {
+    console.warn('[weekend] Failed to track Vercel analytics event', { error });
+  }
+}
 
 export async function POST(request: Request) {
   const input = await request.json().catch(() => null);
@@ -24,6 +36,7 @@ export async function POST(request: Request) {
   const fallbackHref = getChurchCenterFormUrl();
   try {
     const submission = await submitLead(parsed.data);
+    await trackWeekendFormSubmission(submission.mode);
     return Response.json({ message: 'Thanks. Your details were sent.', mode: submission.mode });
   } catch (error) {
     if (error instanceof MissingPlanningCenterConfigError) {

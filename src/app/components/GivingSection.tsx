@@ -1,12 +1,20 @@
 import { Heart, CreditCard, Smartphone, Globe, ExternalLink, Shield } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
+import { track } from "@vercel/analytics";
 
 const ICON_MAP: Record<string, React.ElementType> = { CreditCard, Smartphone, Globe };
 
 export function GivingSection() {
   const { t } = useTheme();
   const { giving } = useSiteContent();
+
+  function trackGivingCtaClick(method: string) {
+    track("Giving CTA Clicked", {
+      method,
+      page: "/",
+    });
+  }
 
   return (
     <section id="giving" className="relative py-24 overflow-hidden" style={{ background: t.sectionBgAlt, transition: "background 0.4s ease" }}>
@@ -75,7 +83,11 @@ export function GivingSection() {
                   </div>
                 </div>
 
-                <a href={option.url} target="_blank" className="flex items-center justify-center gap-2 py-3 rounded-lg text-sm transition-all duration-200 hover:scale-105 cursor-pointer"
+                <a href={option.url} target="_blank" rel="noopener noreferrer" onClick={() => {
+                  if (option.title === "Online Giving") {
+                    trackGivingCtaClick("tithely");
+                  }
+                }} className="flex items-center justify-center gap-2 py-3 rounded-lg text-sm transition-all duration-200 hover:scale-105 cursor-pointer"
                   style={{ background: option.highlight ? t.ctaGradient : t.givingMethodBg, color: option.highlight ? t.ctaText : t.textPrimary, border: option.highlight ? "none" : `1px solid ${t.cardBorder}`, fontFamily: "'Oswald', sans-serif", fontWeight: option.highlight ? 700 : 500, letterSpacing: "0.08em" }}
                 >
                   {option.cta}

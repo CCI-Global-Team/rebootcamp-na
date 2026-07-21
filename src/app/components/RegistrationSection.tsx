@@ -2,6 +2,7 @@ import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 import { MapPin, Calendar, Ticket, Music, BookOpen, Users, Zap, ArrowRight, Baby, CheckCircle } from "lucide-react";
 import { fadeUp, stagger } from "@/app/components/ui/animation";
 
@@ -10,6 +11,13 @@ const ICON_MAP: Record<string, React.ElementType> = { Music, BookOpen, Users, Za
 export function RegistrationSection() {
   const { t } = useTheme();
   const { registration, event, venue } = useSiteContent();
+
+  function trackRegistrationCtaClick() {
+    track("Registration CTA Clicked", {
+      cta: "main_registration",
+      page: "/",
+    });
+  }
 
   return (
     <section id="register" className="relative py-24 overflow-hidden" style={{ backgroundImage: t.sectionBgAlt, transition: "background 0.4s ease" }}>
@@ -201,6 +209,7 @@ export function RegistrationSection() {
                 href={event.registrationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackRegistrationCtaClick}
                 className="group w-full flex items-center justify-center gap-3 py-4 px-8 rounded-xl transition-all duration-200 hover:scale-[1.03] hover:shadow-2xl"
                 style={{ backgroundImage: t.ctaGradient, color: "#fff", fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.1rem", letterSpacing: "0.1em", textDecoration: "none", boxShadow: "0 6px 32px rgba(232,93,4,0.35)" }}
               >
