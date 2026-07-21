@@ -1,10 +1,18 @@
 import { Clock, MapPin, AlertCircle, ArrowRight, CalendarDays } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
+import { track } from "@vercel/analytics";
 
 export function SundayServiceSection() {
   const { t } = useTheme();
   const { sundayService, venue } = useSiteContent();
+
+  function trackSundayServiceRegistrationClick() {
+    track("Registration CTA Clicked", {
+      cta: "sunday_service_registration",
+      page: "/",
+    });
+  }
 
   return (
     <section
@@ -120,6 +128,7 @@ export function SundayServiceSection() {
             href={sundayService.registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackSundayServiceRegistrationClick}
             className="group inline-flex items-center gap-3 px-10 py-5 rounded-2xl transition-all duration-200 hover:scale-[1.03] hover:shadow-2xl"
             style={{
               backgroundImage: t.ctaGradient,

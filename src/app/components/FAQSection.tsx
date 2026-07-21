@@ -3,11 +3,12 @@ import { ChevronDown, Baby, BusFront } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 
-function AccordionList({ items, accentEmail, registerUrl, registerLabel }: {
+function AccordionList({ items, accentEmail, registerUrl, registerLabel, registerSectionId }: {
   items: { q: string; a: string; hasLink?: boolean }[];
   accentEmail?: string;
   registerUrl?: string;
   registerLabel?: string;
+  registerSectionId?: string;
 }) {
   const { t } = useTheme();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -35,11 +36,16 @@ function AccordionList({ items, accentEmail, registerUrl, registerLabel }: {
                   <a href={`mailto:${accentEmail}`} style={{ color: t.goldAccent }} className="hover:underline">{accentEmail}</a>
                 )}
               </p>
-              {faq.hasLink && registerUrl && (
+              {faq.hasLink && (registerUrl || registerSectionId) && (
                 <a
-                  href={registerUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={registerSectionId ? `#${registerSectionId}` : registerUrl}
+                  target={registerSectionId ? undefined : "_blank"}
+                  rel={registerSectionId ? undefined : "noopener noreferrer"}
+                  onClick={(e) => {
+                    if (!registerSectionId) return;
+                    e.preventDefault();
+                    document.querySelector(`#${registerSectionId}`)?.scrollIntoView({ behavior: "smooth" });
+                  }}
                   className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-[1.02]"
                   style={{ background: "rgba(232,93,4,0.12)", border: "1px solid rgba(232,93,4,0.3)", color: "#E85D04", fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.08em", textDecoration: "none" }}
                 >
@@ -59,6 +65,10 @@ export function FAQSection() {
   const { t } = useTheme();
   const { faqs, childcare, site, venue } = useSiteContent();
   const [activeTab, setActiveTab] = useState<"general" | "childcare" | "transport">("general");
+
+  function scrollToSection(sectionId: string) {
+    document.querySelector(`#${sectionId}`)?.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <section id="faqs" className="relative py-24 overflow-hidden" style={{ backgroundColor: t.sectionBg, transition: "background 0.4s ease" }}>
@@ -150,9 +160,11 @@ export function FAQSection() {
                 </p>
               </div>
               <a
-                href={venue.transport.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#transportation"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("transportation");
+                }}
                 className="ml-auto text-xs hover:underline"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.06em", color: t.goldAccent, textDecoration: "none", whiteSpace: "nowrap" }}
               >
@@ -163,8 +175,8 @@ export function FAQSection() {
             <AccordionList
               items={venue.transport.faqs}
               accentEmail={venue.transport.faqsContact}
-              registerUrl={venue.transport.url}
               registerLabel={venue.transport.ctaLabel}
+              registerSectionId="transportation"
             />
 
             <div className="mt-10 p-6 rounded-2xl text-center" style={{ background: t.faqContactBg, border: `1px solid ${t.faqContactBorder}` }}>
