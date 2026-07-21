@@ -1,7 +1,11 @@
 import { ArrowDown } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 
-import { getChurchCenterFormUrl, weekendCampaign } from "@/lib/weekend/campaign";
+import {
+  getChurchCenterFormUrl,
+  weekendCampaign,
+} from "@/lib/weekend/campaign";
 
 import { LeadForm } from "./LeadForm";
 
@@ -61,20 +65,16 @@ export default function WeekendPage() {
               </a>
             </div>
             <div
-              className={`${styles.visualPlaceholder} relative flex min-h-112 flex-col justify-end overflow-hidden rounded-lg border border-[#e8c033]/30 p-12 shadow-lg select-none max-[800px]:mx-auto max-[800px]:min-h-0 max-[800px]:w-full max-[800px]:max-w-md lg:aspect-4/5`}
-              aria-label="Campaign visual placeholder"
+              className={`${styles.bannerFloat} relative aspect-2/3 w-full overflow-hidden rounded-lg border border-[#e8c033]/30 max-[800px]:mx-auto max-[800px]:max-w-md`}
             >
-              <div
-                className={`${styles.visualMark} font-oswald absolute inset-y-[35%] leading-none font-bold text-white/15`}
-              >
-                HOPE
-              </div>
-              <p className="font-oswald relative text-2xl font-semibold uppercase">
-                Campaign artwork placeholder
-              </p>
-              <span className="relative mt-2 text-sm text-white/65">
-                Final creative coming soon
-              </span>
+              <Image
+                src="/images/weekend-campaign-banner.webp"
+                alt="Reboot Camp North America weekend campaign poster"
+                fill
+                priority
+                sizes="(min-width: 1280px) 448px, (min-width: 801px) 38vw, (min-width: 640px) 448px, calc(100vw - 2rem)"
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
