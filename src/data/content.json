@@ -69,7 +69,7 @@
     "sectionLabel": "About The Event",
     "headingPlain": "More than a",
     "headingAccent": "Conference",
-    "imgUrl": "/images/OMV-0020.jpg",
+    "imgUrl": "/images/OMV-0020.webp",
     "paragraphs": [
       "Reboot Camp North America is a three-day gathering of thousands of people from across Canada and the United States. It's an extended time of worship, teaching, prayer, and genuine human connection.",
       "Whether you've been part of a church for years, or you're walking into something like this for the very first time — you belong here.",
@@ -87,28 +87,28 @@
         "letter": "R",
         "word": "Rejuvenation",
         "desc": "Come tired. Leave renewed. This is a space built for restoration — of faith, of purpose, of fervor.",
-        "imgUrl": "/images/rejuvenation.jpg",
+        "imgUrl": "/images/rejuvenation.webp",
         "tint": "59,130,246"
       },
       {
         "letter": "I",
         "word": "Indoctrination",
         "desc": "The Word of God taught with precision, depth and accuracy. Not surface. Not performance. Truth that holds",
-        "imgUrl": "/images/teaching_slim.png",
+        "imgUrl": "/images/teaching_slim.webp",
         "tint": "232,192,51"
       },
       {
         "letter": "C",
         "word": "Celebration",
         "desc": "Live worship. Community. Joy. When thousands gather in faith, miracles happen. Come ready to receive your miracles, grow in faith, and help others encounter theirs",
-        "imgUrl": "/images/celebration.jpg",
+        "imgUrl": "/images/celebration.webp",
         "tint": "167,139,250"
       },
       {
         "letter": "H",
         "word": "Harvest",
         "desc": "Lives change at Reboot Camp. Come encounter Christ, discover endless life in Him, and find what you've been searching for",
-        "imgUrl": "/images/harvest.jpg",
+        "imgUrl": "/images/harvest.webp",
         "tint": "232,93,4"
       }
     ],
@@ -200,11 +200,11 @@
       "excerpts": [
         {
           "caption": "Oannes",
-          "url": "/videos/oannes.mov"
+          "url": "/videos/oannes.mp4"
         },
         {
           "caption": "Dagon will Bow!",
-          "url": "/videos/dagon-will-bow.mov"
+          "url": "/videos/dagon-will-bow.mp4"
         }
       ]
     },
@@ -215,7 +215,7 @@
         "city": "Vancouver, BC",
         "specialty": "Worship",
         "imgUrl": "/images/speakers/Brooke-Nicholls.jpg",
-        "videoUrl": "/videos/WhateverYouSay.mov"
+        "videoUrl": "/videos/WhateverYouSay.mp4"
       },
       {
         "name": "Limoblaze",
@@ -223,7 +223,7 @@
         "city": "London, UK",
         "specialty": "Worship",
         "imgUrl": "/images/speakers/Limoblaze.jpg",
-        "videoUrl": "/videos/Limoblaze-Calling--Bless-Me.mp4"
+        "videoUrl": "/videos/Limoblaze-Calling--Bless-Me-compressed.mp4"
       },
       {
         "name": "Tomi Favored",
@@ -262,7 +262,7 @@
         "rgb": "167,139,250",
         "title": "Worship Nights",
         "desc": "Three nights of deep, spirit-filled worship led by the Reboot Worship Team and special guest artists.",
-        "imgUrl": "/images/worship.jpg"
+        "imgUrl": "/images/worship.webp"
       },
       {
         "icon": "BookOpen",
@@ -270,7 +270,7 @@
         "rgb": "232,192,51",
         "title": "Powerful Teaching",
         "desc": "Anointed messages on the theme \u201cGreat Grace\u201d from leading ministers across North America and beyond.",
-        "imgUrl": "/images/teaching-2.jpg"
+        "imgUrl": "/images/teaching-2.webp"
       },
       {
         "icon": "Zap",
@@ -278,7 +278,7 @@
         "rgb": "232,93,4",
         "title": "Prophetic Activation",
         "desc": "Workshops, breakout sessions, and ministry gifts activation to stir up your calling and purpose.",
-        "imgUrl": "/images/prophetic-actv.jpg"
+        "imgUrl": "/images/prophetic-actv.webp"
       },
       {
         "icon": "Users",
@@ -286,7 +286,7 @@
         "rgb": "52,211,153",
         "title": "Community",
         "desc": "Connect with believers from across Canada and the world \u2014 fellowship, networking, and lifelong friendships.",
-        "imgUrl": "/images/community.jpg"
+        "imgUrl": "/images/community.webp"
       }
     ],
     "included": [
@@ -302,7 +302,7 @@
     "headingAccent": "Registration",
     "description": "Child care service is available at RBC'26 North America. Our dedicated CelebKids team will care for your children so you can fully engage in every session.",
     "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3629974/reservations/new",
-    "imageUrl": "/images/rbc-na-childcare.jpg",
+    "imageUrl": "/images/rbc-na-childcare.webp",
     "ctaLabel": "REGISTER YOUR CHILD NOW",
     "compulsoryTitle": "Registration is Compulsory",
     "compulsoryNote": "All children attending must be registered in advance. Unregistered children cannot be admitted to child care. Spots are limited — register early.",
@@ -473,7 +473,7 @@
       "isRoundTrip": true,
       "openToPublic": true,
       "contact": "canada@joincci.org",
-      "transportCover": "/images/transportation_cover.png",
+      "transportCover": "/images/transportation_cover.webp",
       "locations": [
         "Brampton", "Mississauga", "Oshawa", "Scarborough", "Markham",
         "Richmond Hill", "North York", "Etobicoke", "Downtown", "Midtown",

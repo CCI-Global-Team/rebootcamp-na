@@ -1,6 +1,7 @@
-import { BusFront, MapPin, Clock, ArrowRight, Users, RotateCcw, Bell } from "lucide-react";
+import { BusFront, MapPin, ArrowRight, Bell } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
+import Image from "next/image";
 
 export function TransportationSection() {
   const { t } = useTheme();
@@ -43,7 +44,14 @@ export function TransportationSection() {
                 style={{ backgroundImage: "radial-gradient(ellipse, rgba(232,93,4,0.35), transparent 70%)", filter: "blur(24px)" }} />
               <div className="relative rounded-2xl overflow-hidden"
                 style={{ boxShadow: "0 32px 80px rgba(232,93,4,0.3), 0 0 0 1px rgba(232,192,51,0.2)" }}>
-                <img src={tr.transportCover} alt="Event Transportation" className="w-full h-auto block" />
+                <Image
+                  src={tr.transportCover}
+                  alt="Event Transportation"
+                  width={2160}
+                  height={2700}
+                  sizes="(min-width: 1024px) 420px, 100vw"
+                  className="h-auto w-full block"
+                />
 
                 {/* Coming soon ribbon over image */}
                 {tr.comingSoon && (

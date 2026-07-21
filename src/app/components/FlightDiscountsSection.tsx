@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Plane, Copy, CheckCheck, Tag, Info, ExternalLink } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
-import { fadeUp, scaleIn, stagger } from "@/app/components/ui/animation";
 
 // The Airline type is now driven by the JSON shape
 type Airline = ReturnType<typeof useSiteContent>["flightDiscounts"]["airlines"][number];
