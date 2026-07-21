@@ -1,4 +1,4 @@
-import { MapPin, Star, Wifi, Car, Coffee, Check } from "lucide-react";
+import { MapPin, Star, Wifi, Car, Coffee } from "lucide-react";
 import { motion } from "framer-motion";
 import { ImageWithFallback } from "@/app/utils/ImageWithFallback";
 import { useTheme } from "@/app/contexts/ThemeContext";

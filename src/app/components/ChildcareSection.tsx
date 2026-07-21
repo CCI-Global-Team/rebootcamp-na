@@ -1,5 +1,6 @@
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
+import Image from "next/image";
 import { Baby, AlertTriangle, ArrowRight } from "lucide-react";
 
 export function ChildcareSection() {
@@ -45,7 +46,14 @@ export function ChildcareSection() {
                   : "0 16px 60px rgba(232,93,4,0.18), 0 0 0 1px rgba(232,192,51,0.12)",
               }}
             >
-              <img src={childcare.imageUrl} alt="CelebKids Childcare Registration" className="w-full h-auto block" />
+              <Image
+                src={childcare.imageUrl}
+                alt="CelebKids Childcare Registration"
+                width={2160}
+                height={2700}
+                sizes="(min-width: 1024px) 380px, 100vw"
+                className="h-auto w-full block"
+              />
             </div>
           </div>
 

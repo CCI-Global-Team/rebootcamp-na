@@ -5,9 +5,16 @@ import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, scaleIn, stagger } from "@/app/components/ui/animation";
-import { X } from "lucide-react";
+import { Play, X } from "lucide-react";
 
-function VideoModal({ speaker, onClose }: { speaker: { name: string; videoUrl: string }; onClose: () => void }) {
+type VideoAsset = {
+  name: string;
+  title: string;
+  videoUrl: string;
+  posterUrl: string;
+};
+
+function VideoModal({ video, onClose }: { video: VideoAsset; onClose: () => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -43,18 +50,26 @@ function VideoModal({ speaker, onClose }: { speaker: { name: string; videoUrl: s
 
         {/* Speaker name */}
         <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", color: "rgba(232,192,51,0.9)", textTransform: "uppercase" }}>
-          {speaker.name}
+          {video.name}
+        </p>
+
+        <p
+          className="text-center"
+          style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1.1rem", color: "#fff", letterSpacing: "0.03em" }}
+        >
+          {video.title}
         </p>
 
         {/* Video */}
         <div className="rounded-2xl overflow-hidden w-full" style={{ background: "#000", border: "1px solid rgba(255,255,255,0.1)" }}>
           <video
             ref={videoRef}
-            src={speaker.videoUrl}
+            src={video.videoUrl}
+            poster={video.posterUrl}
             controls
             autoPlay
             playsInline
-            preload="metadata"
+            preload="none"
             className="w-full h-full block"
             style={{ objectFit: "cover" }}
           />
@@ -67,7 +82,7 @@ function VideoModal({ speaker, onClose }: { speaker: { name: string; videoUrl: s
 export function SpeakersSection() {
   const { t } = useTheme();
   const { speakers } = useSiteContent();
-  const [activeVideo, setActiveVideo] = useState<{ name: string; videoUrl: string } | null>(null);
+  const [activeVideo, setActiveVideo] = useState<VideoAsset | null>(null);
 
   const invited = speakers?.invited ?? [];
   const main = speakers?.main;
@@ -252,9 +267,7 @@ export function SpeakersSection() {
                 {/* Instagram Reels */}
                 <motion.div variants={stagger}>
                   <div className="flex items-center gap-2 mb-3">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: t.goldAccent }}>
-                      <polygon points="5 3 19 12 5 21 5 3"/>
-                    </svg>
+                    <Play size={14} style={{ color: t.goldAccent }} />
                     <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.7rem", letterSpacing: "0.15em", color: t.textVeryMuted, textTransform: "uppercase" }}>
                       {main.excerptsTitle}
                     </span>
@@ -262,16 +275,48 @@ export function SpeakersSection() {
 
                   <div className="grid grid-cols-2 gap-3">
                     {main.excerpts.map(({url, caption}) => (
-                      <div key={caption} className="rounded-xl overflow-hidden" style={{ border: `1px solid rgba(${t.accentRgb},0.2)`, background: "#000", aspectRatio: "9/16" }}>
-                        <video
-                          src={url}
-                          controls
-                          playsInline
-                          preload="metadata"
-                          className="w-full h-full block"
-                          style={{ objectFit: "cover" }}
+                      <button
+                        key={caption}
+                        type="button"
+                        className="group relative rounded-xl overflow-hidden text-left transition-transform duration-300 hover:-translate-y-1"
+                        style={{ border: `1px solid rgba(${t.accentRgb},0.2)`, background: "#000", aspectRatio: "9/16" }}
+                        onClick={() => setActiveVideo({
+                          name: main.name,
+                          title: caption,
+                          videoUrl: url,
+                          posterUrl: main.imgUrl,
+                        })}
+                      >
+                        <Image
+                          src={main.imgUrl}
+                          alt={caption}
+                          fill
+                          sizes="(min-width: 1024px) 180px, 42vw"
+                          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                          style={{ filter: "brightness(0.5)" }}
                         />
-                      </div>
+                        <div
+                          className="absolute inset-0"
+                          style={{ background: "linear-gradient(to top, rgba(8,11,26,0.92) 0%, rgba(8,11,26,0.2) 55%, transparent 100%)" }}
+                        />
+                        <div className="absolute inset-0 flex flex-col justify-between p-4">
+                          <div
+                            className="w-11 h-11 rounded-full flex items-center justify-center"
+                            style={{ background: "rgba(0,0,0,0.58)", border: "1px solid rgba(255,255,255,0.18)", backdropFilter: "blur(8px)" }}
+                          >
+                            <Play size={16} fill="#fff" color="#fff" className="ml-0.5" />
+                          </div>
+
+                          <div>
+                            <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.68rem", letterSpacing: "0.16em", color: "rgba(232,192,51,0.88)", textTransform: "uppercase", marginBottom: "6px" }}>
+                              Watch Excerpt
+                            </p>
+                            <p style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1rem", color: "#fff", letterSpacing: "0.03em" }}>
+                              {caption}
+                            </p>
+                          </div>
+                        </div>
+                      </button>
                     ))}
                   </div>
                 </motion.div>
@@ -330,7 +375,12 @@ export function SpeakersSection() {
                   style={{ background: t.speakerCardBg, border: `1px solid ${t.speakerCardBorder}`, transform: "translateY(0)", cursor: hasVideo ? "pointer" : "default" }}
                   onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}
-                  onClick={() => hasVideo && setActiveVideo({ name: speaker.name, videoUrl: speaker.videoUrl })}
+                  onClick={() => hasVideo && setActiveVideo({
+                    name: speaker.name,
+                    title: speaker.title,
+                    videoUrl: speaker.videoUrl,
+                    posterUrl: speaker.imgUrl,
+                  })}
                 >
                   <div className="relative h-52 overflow-hidden">
                     <ImageWithFallback
@@ -423,7 +473,7 @@ export function SpeakersSection() {
         </motion.div>
       </motion.div>
 
-      {activeVideo && <VideoModal speaker={activeVideo} onClose={() => setActiveVideo(null)} />}
+      {activeVideo && <VideoModal video={activeVideo} onClose={() => setActiveVideo(null)} />}
     </section>
   );
 }
