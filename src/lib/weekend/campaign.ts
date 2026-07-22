@@ -26,6 +26,8 @@ export const weekendCampaign = {
       title: "Reboot Camp — Labour Day Weekend 2026 | Toronto",
       description:
         "Join thousands in Toronto, September 4–6, 2026, for three unforgettable days of worship, community, inspiration, and life-changing moments.",
+      image: "/images/teaching-2.webp",
+      imageAlt: "Apostle Emmanuel Iren preaching at Reboot Camp",
     },
     wordmark: "Reboot Camp",
     registerLabel: "Register Now",

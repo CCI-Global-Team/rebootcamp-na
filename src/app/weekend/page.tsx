@@ -35,7 +35,26 @@ export const metadata: Metadata = {
   title: weekendCampaign.landing.metadata.title,
   description: weekendCampaign.landing.metadata.description,
   alternates: { canonical: "/weekend" },
-  robots: { index: false, follow: true },
+  openGraph: {
+    type: "website",
+    url: "/weekend",
+    siteName: "Reboot Camp North America",
+    title: weekendCampaign.landing.metadata.title,
+    description: weekendCampaign.landing.metadata.description,
+    images: [
+      {
+        url: weekendCampaign.landing.metadata.image,
+        alt: weekendCampaign.landing.metadata.imageAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: weekendCampaign.landing.metadata.title,
+    description: weekendCampaign.landing.metadata.description,
+    images: [weekendCampaign.landing.metadata.image],
+  },
+  robots: { index: true, follow: true },
 };
 
 const eventDetailIcons = {
@@ -51,6 +70,12 @@ const ctaClass =
 
 const sectionHeadingClass =
   "font-big-shoulders text-[clamp(2.25rem,5vw,3.5rem)] leading-none font-extrabold tracking-tight uppercase";
+
+// TODO: Enable with the trailer section after the approved video is available.
+const SHOW_TRAILER_LINK = false;
+
+// TODO: Enable after the attendee testimonials and attributions are approved.
+const SHOW_TESTIMONIALS = false;
 
 export default function WeekendPage() {
   const registrationUrl = content.event.registrationUrl;
@@ -157,13 +182,15 @@ export default function WeekendPage() {
               >
                 {landing.registerLabel}
               </RegistrationLink>
-              <a
-                className="font-big-shoulders inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/35 px-6 md:px-8 py-4 font-bold tracking-wider uppercase transition hover:border-[#ffbb55] hover:text-[#ffbb55] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#ffbb55] motion-reduce:transition-none"
-                href="#trailer"
-              >
-                <Play size={16} fill="currentColor" aria-hidden="true" />
-                {landing.hero.trailerLabel}
-              </a>
+              {SHOW_TRAILER_LINK && (
+                <a
+                  className="font-big-shoulders inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/35 px-6 py-4 font-bold tracking-wider uppercase transition hover:border-[#ffbb55] hover:text-[#ffbb55] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#ffbb55] motion-reduce:transition-none md:px-8"
+                  href="#trailer"
+                >
+                  <Play size={16} fill="currentColor" aria-hidden="true" />
+                  {landing.hero.trailerLabel}
+                </a>
+              )}
             </div>
 
             <ul
@@ -182,36 +209,7 @@ export default function WeekendPage() {
           </div>
         </section>
 
-        <section
-          className="border-y border-white/15 bg-[#20130a] px-[6vw] py-20 sm:py-24"
-          id="trailer"
-          aria-labelledby="trailer-title"
-        >
-          <div className="mx-auto max-w-6xl">
-            <header className="mx-auto mb-12 max-w-2xl text-center">
-              <h2 className={sectionHeadingClass} id="trailer-title">
-                {landing.trailer.heading}
-              </h2>
-            </header>
-            <div
-              className={`${styles.videoPlaceholder} relative mx-auto flex aspect-video max-w-5xl items-center justify-center overflow-hidden rounded-2xl border-2 border-dashed border-[#ff8a33]/40`}
-              aria-label="Reboot Camp trailer coming soon"
-            >
-              <div
-                className="flex size-20 items-center justify-center rounded-full bg-linear-to-r from-[#e6321c] via-[#ff8a33] to-[#ffbb55] text-[#170c08] shadow-[0_10px_34px_rgba(255,138,51,.32)]"
-                aria-hidden="true"
-              >
-                <Play size={30} fill="currentColor" />
-              </div>
-              <span className="absolute bottom-4 left-4 rounded-full border border-white/15 bg-[#0a0b10]/70 px-3 py-2 text-xs tracking-widest text-[#d9cdb8] uppercase">
-                {landing.trailer.placeholderLabel}
-              </span>
-            </div>
-            <p className="mx-auto mt-6 max-w-lg text-center text-sm leading-6 text-[#d9cdb8]">
-              {landing.trailer.caption}
-            </p>
-          </div>
-        </section>
+        {/* TODO: Restore the trailer section and hero CTA when the approved video is available. */}
 
         <section
           className="px-[6vw] py-20 sm:py-24"
@@ -257,38 +255,40 @@ export default function WeekendPage() {
           </div>
         </section>
 
-        <section
-          className="border-y border-white/15 bg-[#20130a] px-[6vw] py-20 sm:py-24"
-          aria-labelledby="testimonials-title"
-        >
-          <div className="mx-auto max-w-6xl">
-            <h2
-              className="font-instrument-serif mx-auto mb-12 max-w-2xl text-center text-[clamp(1.6rem,3vw,2.25rem)] leading-snug text-[#ffbb55] italic"
-              id="testimonials-title"
-            >
-              {landing.socialProof.heading}
-            </h2>
-            <div className="grid gap-5 md:grid-cols-3">
-              {landing.socialProof.testimonials.map((testimonial) => (
-                <article
-                  className="rounded-2xl border border-white/15 bg-[#2a160a] p-7"
-                  key={testimonial.id}
-                >
-                  <div
-                    className="mb-5 flex size-14 items-center justify-center rounded-full border-2 border-dashed border-[#ff8a33]/45 text-[#d9cdb8]"
-                    aria-hidden="true"
+        {SHOW_TESTIMONIALS && (
+          <section
+            className="border-y border-white/15 bg-[#20130a] px-[6vw] py-20 sm:py-24"
+            aria-labelledby="testimonials-title"
+          >
+            <div className="mx-auto max-w-6xl">
+              <h2
+                className="font-instrument-serif mx-auto mb-12 max-w-2xl text-center text-[clamp(1.6rem,3vw,2.25rem)] leading-snug text-[#ffbb55] italic"
+                id="testimonials-title"
+              >
+                {landing.socialProof.heading}
+              </h2>
+              <div className="grid gap-5 md:grid-cols-3">
+                {landing.socialProof.testimonials.map((testimonial) => (
+                  <article
+                    className="rounded-2xl border border-white/15 bg-[#2a160a] p-7"
+                    key={testimonial.id}
                   >
-                    <UserRound size={24} />
-                  </div>
-                  <p className="leading-7">“{testimonial.quote}”</p>
-                  <p className="mt-5 text-xs tracking-wider text-[#d9cdb8] uppercase">
-                    {testimonial.attribution}
-                  </p>
-                </article>
-              ))}
+                    <div
+                      className="mb-5 flex size-14 items-center justify-center rounded-full border-2 border-dashed border-[#ff8a33]/45 text-[#d9cdb8]"
+                      aria-hidden="true"
+                    >
+                      <UserRound size={24} />
+                    </div>
+                    <p className="leading-7">“{testimonial.quote}”</p>
+                    <p className="mt-5 text-xs tracking-wider text-[#d9cdb8] uppercase">
+                      {testimonial.attribution}
+                    </p>
+                  </article>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         <section
           className="px-[6vw] py-20 sm:py-24"
