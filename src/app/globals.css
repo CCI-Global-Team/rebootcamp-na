@@ -125,6 +125,8 @@
   --font-oswald: var(--font-oswald);
   --font-barlow-condensed: var(--font-barlow-condensed);
   --font-inter: var(--font-inter);
+  --font-big-shoulders: var(--font-big-shoulders-loaded);
+  --font-instrument-serif: var(--font-instrument-serif-loaded);
 }
 
 html,
