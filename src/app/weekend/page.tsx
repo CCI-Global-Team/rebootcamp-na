@@ -15,6 +15,7 @@ import { Big_Shoulders, Instrument_Serif } from "next/font/google";
 import content from "@/data/content.json";
 import { weekendCampaign } from "@/lib/weekend/campaign";
 
+import { RegistrationLink } from "./RegistrationLink";
 import styles from "./weekend.module.css";
 
 const weekendDisplay = Big_Shoulders({
@@ -73,15 +74,16 @@ export default function WeekendPage() {
         >
           {landing.wordmark}
         </a>
-        <a
+        <RegistrationLink
           className={`${ctaClass} px-5 py-2 text-sm`}
           href={registrationUrl}
+          placement="header"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Register now for Reboot Camp (opens in a new tab)"
         >
           {landing.registerLabel}
-        </a>
+        </RegistrationLink>
       </header>
 
       <main id="main-content">
@@ -145,15 +147,16 @@ export default function WeekendPage() {
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <a
+              <RegistrationLink
                 className={`${ctaClass} px-9 py-4 w-fit`}
                 href={registrationUrl}
+                placement="hero"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Register now for Reboot Camp (opens in a new tab)"
               >
                 {landing.registerLabel}
-              </a>
+              </RegistrationLink>
               <a
                 className="font-big-shoulders inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/35 px-6 md:px-8 py-4 font-bold tracking-wider uppercase transition hover:border-[#ffbb55] hover:text-[#ffbb55] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#ffbb55] motion-reduce:transition-none"
                 href="#trailer"
@@ -338,15 +341,16 @@ export default function WeekendPage() {
             <p className="font-instrument-serif mx-auto mt-5 max-w-xl text-xl leading-8 text-[#ffbb55] italic">
               {landing.finalCta.body}
             </p>
-            <a
+            <RegistrationLink
               className={`${ctaClass} mt-10 px-10 py-4`}
               href={registrationUrl}
+              placement="final_cta"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Register now for Reboot Camp (opens in a new tab)"
             >
               {landing.registerLabel}
-            </a>
+            </RegistrationLink>
           </div>
         </section>
       </main>
