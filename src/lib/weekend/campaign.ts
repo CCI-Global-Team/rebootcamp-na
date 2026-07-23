@@ -51,7 +51,7 @@ export const weekendCampaign = {
     },
     benefits: {
       eyebrow: "Why Reboot",
-      heading: "Three Days. One Turning Point.",
+      heading: ["Three Days.", "One Turning Point."],
       items: [
         {
           title: "Encounter God",

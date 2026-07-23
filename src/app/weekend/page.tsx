@@ -220,7 +220,11 @@ export default function WeekendPage() {
               {landing.benefits.eyebrow}
             </p>
             <h2 className={sectionHeadingClass} id="why-title">
-              {landing.benefits.heading}
+              {landing.benefits.heading.map((line) => (
+                <span className="block" key={line}>
+                  {line}
+                </span>
+              ))}
             </h2>
           </header>
           <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
