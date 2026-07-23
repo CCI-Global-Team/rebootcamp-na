@@ -45,6 +45,8 @@ export const metadata: Metadata = {
       {
         url: weekendCampaign.landing.metadata.image,
         alt: weekendCampaign.landing.metadata.imageAlt,
+        width: weekendCampaign.landing.metadata.imageWidth,
+        height: weekendCampaign.landing.metadata.imageHeight,
       },
     ],
   },
