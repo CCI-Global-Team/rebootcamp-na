@@ -16,8 +16,7 @@ export function RegistrationLink({
   function handleClick(event: React.MouseEvent<HTMLAnchorElement>) {
     track("Registration CTA Clicked", {
       cta: "main_registration",
-      page: "/weekend",
-      placement,
+      page: `/weekend|${placement}`,
     });
 
     onClick?.(event);
