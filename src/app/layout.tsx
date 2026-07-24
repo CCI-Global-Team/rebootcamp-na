@@ -26,6 +26,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rebootcampna.org'),
   title: 'Reboot Camp - North America',
   description: 'Great Grace! 4 - 6 September, 2026',
 };

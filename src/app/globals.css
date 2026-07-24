@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -120,6 +120,13 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Font family */
+  --font-oswald: var(--font-oswald);
+  --font-barlow-condensed: var(--font-barlow-condensed);
+  --font-inter: var(--font-inter);
+  --font-big-shoulders: var(--font-big-shoulders-loaded);
+  --font-instrument-serif: var(--font-instrument-serif-loaded);
 }
 
 html,

@@ -1,0 +1,146 @@
+.skipLink {
+  transform: translateY(-180%);
+}
+
+.heroBackground {
+  background:
+    radial-gradient(55% 45% at 50% 0%, rgba(255, 138, 51, 0.28), transparent 65%),
+    radial-gradient(70% 55% at 20% 30%, rgba(230, 50, 28, 0.32), transparent 62%),
+    radial-gradient(70% 50% at 85% 15%, rgba(255, 187, 85, 0.16), transparent 60%),
+    linear-gradient(180deg, #170c08 0%, #2b140a 40%, #170c08 100%);
+}
+
+.beam {
+  position: absolute;
+  top: -10%;
+  z-index: 0;
+  width: 34vw;
+  max-width: 26rem;
+  height: 130%;
+  background: linear-gradient(180deg, rgba(255, 138, 51, 0.18), rgba(230, 50, 28, 0.08) 55%, transparent 85%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.beamOne {
+  left: 8%;
+  opacity: 0.7;
+  transform: skewX(-8deg);
+}
+
+.beamTwo {
+  left: 38%;
+  opacity: 0.45;
+  transform: skewX(6deg);
+}
+
+.beamThree {
+  left: 66%;
+  opacity: 0.6;
+  transform: skewX(-4deg);
+}
+
+.posterStage {
+  perspective: 75rem;
+  animation: poster-float 7s ease-in-out infinite;
+}
+
+.posterGlow {
+  position: absolute;
+  inset: 8% -8% -5%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(230, 50, 28, 0.38), rgba(255, 138, 51, 0.12) 45%, transparent 72%);
+  filter: blur(24px);
+  opacity: 0.72;
+  animation: poster-glow 5.5s ease-in-out infinite;
+}
+
+.posterFrame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 187, 85, 0.35);
+  border-radius: 1.25rem;
+  background: #2a0c08;
+  box-shadow:
+    0 2rem 5rem rgba(0, 0, 0, 0.48),
+    0 0 2.5rem rgba(230, 50, 28, 0.16);
+  transform: rotateY(-2deg) rotateX(1deg);
+}
+
+.posterImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.posterSheen {
+  position: absolute;
+  inset: -30% auto -30% -55%;
+  width: 34%;
+  background: linear-gradient(90deg, transparent, rgba(255, 245, 220, 0.12), transparent);
+  transform: skewX(-14deg);
+  animation: poster-sheen 8s ease-in-out infinite;
+}
+
+@keyframes poster-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.35deg);
+  }
+  50% {
+    transform: translateY(-0.65rem) rotate(0.35deg);
+  }
+}
+
+@keyframes poster-glow {
+  0%,
+  100% {
+    opacity: 0.58;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.82;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes poster-sheen {
+  0%,
+  24% {
+    left: -55%;
+    opacity: 0;
+  }
+  38% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    left: 125%;
+    opacity: 0;
+  }
+}
+
+.videoPlaceholder {
+  background:
+    radial-gradient(60% 60% at 50% 40%, rgba(255, 138, 51, 0.1), transparent 70%),
+    #2a160a;
+}
+
+.finalCta {
+  background:
+    radial-gradient(55% 55% at 50% 100%, rgba(255, 138, 51, 0.24), transparent 65%),
+    radial-gradient(60% 45% at 50% 100%, rgba(230, 50, 28, 0.18), transparent 60%),
+    linear-gradient(180deg, #170c08 0%, #24120a 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    scroll-behavior: auto;
+  }
+
+  .posterStage,
+  .posterGlow,
+  .posterSheen {
+    animation: none;
+  }
+}
