@@ -10,8 +10,10 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Big_Shoulders, Instrument_Serif } from "next/font/google";
 
+import logoWhite from "@/assets/logo/rbc-na-full-white.png";
 import content from "@/data/content.json";
 import { weekendCampaign } from "@/lib/weekend/campaign";
 
@@ -95,12 +97,18 @@ export default function WeekendPage() {
       </a>
 
       <header className="fixed inset-x-0 top-0 z-50 flex min-h-16 items-center justify-between border-b border-white/15 bg-[#0a0b10]/75 px-[5vw] backdrop-blur-md">
-        <a
-          className="font-big-shoulders text-lg font-extrabold tracking-wide uppercase focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ffbb55]"
-          href="#main-content"
+        <Link
+          className="inline-flex items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ffbb55]"
+          href="/"
+          aria-label="Reboot Camp North America home"
         >
-          {landing.wordmark}
-        </a>
+          <Image
+            src={logoWhite}
+            alt="Reboot Camp North America"
+            className="h-12 w-auto"
+            priority
+          />
+        </Link>
         <RegistrationLink
           className={`${ctaClass} px-5 py-2 text-sm`}
           href={registrationUrl}
