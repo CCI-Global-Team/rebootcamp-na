@@ -123,7 +123,7 @@ export default function WeekendPage() {
 
       <main id="main-content">
         <section
-          className={`${styles.hero} relative flex min-h-svh items-center overflow-hidden px-[6vw] pt-28 pb-28`}
+          className={`${styles.hero} relative flex min-h-svh items-center overflow-hidden px-[6vw] pt-28 pb-20 sm:pb-28`}
           aria-labelledby="weekend-title"
         >
           <div
@@ -142,80 +142,76 @@ export default function WeekendPage() {
             className={`${styles.beam} ${styles.beamThree}`}
             aria-hidden="true"
           />
-          <svg
-            className={styles.silhouette}
-            viewBox="0 0 300 400"
-            preserveAspectRatio="xMidYMax meet"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <defs>
-              <linearGradient
-                id="weekend-figure-gradient"
-                x1="0"
-                y1="0"
-                x2="0"
-                y2="1"
+          <div className="relative z-2 mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(19rem,0.68fr)] lg:gap-10 xl:gap-16">
+            <div className="max-w-3xl">
+              <p className="mb-5 text-xs font-bold tracking-[.28em] text-[#ff8a33] uppercase">
+                {landing.hero.eyebrow}
+              </p>
+              <h1
+                id="weekend-title"
+                className="font-big-shoulders max-w-3xl text-[clamp(3rem,9vw,6.5rem)] leading-[.92] font-extrabold tracking-tight uppercase"
               >
-                <stop offset="0%" stopColor="#170c08" stopOpacity="0.95" />
-                <stop offset="100%" stopColor="#170c08" stopOpacity="0.7" />
-              </linearGradient>
-            </defs>
-            <path
-              fill="url(#weekend-figure-gradient)"
-              d="M150 60 C175 60 190 82 188 108 C187 122 180 130 170 136 C200 148 222 172 226 206 L232 400 L68 400 L74 206 C78 172 100 148 130 136 C120 130 113 122 112 108 C110 82 125 60 150 60 Z"
-            />
-          </svg>
+                {landing.hero.title}
+              </h1>
+              <p className="mt-6 max-w-xl text-base leading-7 text-[#d9cdb8] sm:text-lg">
+                {landing.hero.description}
+              </p>
 
-          <div className="relative z-2 max-w-3xl">
-            <p className="mb-5 text-xs font-bold tracking-[.28em] text-[#ff8a33] uppercase">
-              {landing.hero.eyebrow}
-            </p>
-            <h1
-              id="weekend-title"
-              className="font-big-shoulders max-w-3xl text-[clamp(3rem,9vw,6.5rem)] leading-[.92] font-extrabold tracking-tight uppercase"
-            >
-              {landing.hero.title}
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-7 text-[#d9cdb8] sm:text-lg">
-              {landing.hero.description}
-            </p>
-
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <RegistrationLink
-                className={`${ctaClass} px-9 py-4 w-fit`}
-                href={registrationUrl}
-                placement="hero"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Register now for Reboot Camp (opens in a new tab)"
-              >
-                {landing.registerLabel}
-              </RegistrationLink>
-              {SHOW_TRAILER_LINK && (
-                <a
-                  className="font-big-shoulders inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/35 px-6 py-4 font-bold tracking-wider uppercase transition hover:border-[#ffbb55] hover:text-[#ffbb55] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#ffbb55] motion-reduce:transition-none md:px-8"
-                  href="#trailer"
+              <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                <RegistrationLink
+                  className={`${ctaClass} px-9 py-4 w-fit`}
+                  href={registrationUrl}
+                  placement="hero"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Register now for Reboot Camp (opens in a new tab)"
                 >
-                  <Play size={16} fill="currentColor" aria-hidden="true" />
-                  {landing.hero.trailerLabel}
-                </a>
-              )}
+                  {landing.registerLabel}
+                </RegistrationLink>
+                {SHOW_TRAILER_LINK && (
+                  <a
+                    className="font-big-shoulders inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/35 px-6 py-4 font-bold tracking-wider uppercase transition hover:border-[#ffbb55] hover:text-[#ffbb55] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#ffbb55] motion-reduce:transition-none md:px-8"
+                    href="#trailer"
+                  >
+                    <Play size={16} fill="currentColor" aria-hidden="true" />
+                    {landing.hero.trailerLabel}
+                  </a>
+                )}
+              </div>
+
+              <ul
+                className="mt-12 flex flex-wrap gap-x-0 gap-y-2.5 text-xs tracking-wider text-[#d9cdb8] uppercase"
+                aria-label="Event highlights"
+              >
+                {landing.hero.highlights.map((item) => (
+                  <li
+                    className="flex items-center after:mx-3 after:text-[#ff8a33] after:content-['•'] last:after:hidden"
+                    key={item}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <ul
-              className="mt-12 flex flex-wrap gap-x-0 gap-y-2.5 text-xs tracking-wider text-[#d9cdb8] uppercase"
-              aria-label="Event highlights"
+            <div
+              className={`${styles.posterStage} relative mx-auto w-full max-w-sm sm:max-w-md lg:mx-0 lg:ml-auto`}
+              aria-hidden="true"
             >
-              {landing.hero.highlights.map((item) => (
-                <li
-                  className="flex items-center after:mx-3 after:text-[#ff8a33] after:content-['•'] last:after:hidden"
-                  key={item}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
+              <div className={styles.posterGlow} />
+              <div className={styles.posterFrame}>
+                <Image
+                  className={styles.posterImage}
+                  src="/images/weekend-hero-banner.jpg"
+                  alt=""
+                  width={1060}
+                  height={1484}
+                  sizes="(min-width: 1280px) 28rem, (min-width: 1024px) 34vw, (min-width: 640px) 28rem, 88vw"
+                  priority
+                />
+                <span className={styles.posterSheen} />
+              </div>
+            </div>
           </div>
         </section>
 

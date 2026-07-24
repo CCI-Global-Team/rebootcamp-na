@@ -40,16 +40,84 @@
   transform: skewX(-4deg);
 }
 
-.silhouette {
+.posterStage {
+  perspective: 75rem;
+  animation: poster-float 7s ease-in-out infinite;
+}
+
+.posterGlow {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  z-index: 1;
-  width: min(46vw, 26.25rem);
-  height: 64%;
-  opacity: 0.85;
-  transform: translateX(-50%);
-  pointer-events: none;
+  inset: 8% -8% -5%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(230, 50, 28, 0.38), rgba(255, 138, 51, 0.12) 45%, transparent 72%);
+  filter: blur(24px);
+  opacity: 0.72;
+  animation: poster-glow 5.5s ease-in-out infinite;
+}
+
+.posterFrame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 187, 85, 0.35);
+  border-radius: 1.25rem;
+  background: #2a0c08;
+  box-shadow:
+    0 2rem 5rem rgba(0, 0, 0, 0.48),
+    0 0 2.5rem rgba(230, 50, 28, 0.16);
+  transform: rotateY(-2deg) rotateX(1deg);
+}
+
+.posterImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.posterSheen {
+  position: absolute;
+  inset: -30% auto -30% -55%;
+  width: 34%;
+  background: linear-gradient(90deg, transparent, rgba(255, 245, 220, 0.12), transparent);
+  transform: skewX(-14deg);
+  animation: poster-sheen 8s ease-in-out infinite;
+}
+
+@keyframes poster-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.35deg);
+  }
+  50% {
+    transform: translateY(-0.65rem) rotate(0.35deg);
+  }
+}
+
+@keyframes poster-glow {
+  0%,
+  100% {
+    opacity: 0.58;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.82;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes poster-sheen {
+  0%,
+  24% {
+    left: -55%;
+    opacity: 0;
+  }
+  38% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    left: 125%;
+    opacity: 0;
+  }
 }
 
 .videoPlaceholder {
@@ -65,16 +133,14 @@
     linear-gradient(180deg, #170c08 0%, #24120a 100%);
 }
 
-@media (max-width: 47.999rem) {
-  .silhouette {
-    width: min(76vw, 26.25rem);
-    height: 58%;
-    opacity: 0.58;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .hero {
     scroll-behavior: auto;
+  }
+
+  .posterStage,
+  .posterGlow,
+  .posterSheen {
+    animation: none;
   }
 }
