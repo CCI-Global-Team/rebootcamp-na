@@ -38,7 +38,7 @@ export const weekendCampaign = {
       eyebrow: "Labour Day Weekend · Toronto",
       title: "What If One Weekend Changed Everything?",
       description:
-        "Join thousands this Labour Day weekend for three unforgettable days of worship, community, inspiration, and life-changing moments.",
+        "Join thousands from across North America this Labour Day weekend for three unforgettable days of worship, community, inspiration, and life-changing moments.",
       trailerLabel: "Watch the 60-Second Trailer",
       highlights: [
         "Sept 4–6, 2026",
@@ -59,8 +59,8 @@ export const weekendCampaign = {
         {
           title: "Encounter God",
           description: "Real, personal moments of worship and presence.",
-          image: "/images/worship.webp",
-          alt: "Worshippers gathered at Reboot Camp",
+          image: "/images/harvest.webp",
+          alt: "Reboot Camp attendees supporting one another in prayer during an intense worship session",
         },
         {
           title: "Build Real Community",
