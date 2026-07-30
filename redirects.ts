@@ -16,4 +16,9 @@ export const redirects: Redirect[] = [
     destination: "https://ccicanada.churchcenter.com/people/forms/1266296",
     permanent: true,
   },
+  {
+    source: "/merch",
+    destination: "https://eden.cendance.com/store/reboot-camp-north-america-2026-merch",
+    permanent: true,
+  },
 ];
