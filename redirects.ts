@@ -21,4 +21,9 @@ export const redirects: Redirect[] = [
     destination: "https://eden.cendance.com/store/reboot-camp-north-america-2026-merch",
     permanent: true,
   },
+  {
+    source: "/give",
+    destination: "https://give.tithe.ly/?formId=3003d62b-3ed6-443d-94b2-d3f8ca9148b8",
+    permanent: true,
+  },
 ];
