@@ -43,7 +43,8 @@
         "label": "Travel",
         "items": [
           { "label": "Flight Discounts",    "href": "#flight-discounts", "desc": "Save on flights to Toronto" },
-          { "label": "Event Transportation","href": "#transportation",   "desc": "Subsidized shuttles" }
+          { "label": "Event Transportation","href": "#transportation",   "desc": "Subsidized shuttles" },
+          { "label": "Transportation Pickup Schedule", "href": "/pickup-schedules", "desc": "View all shuttle pickup times" }
         ]
       },
       {
@@ -488,6 +489,12 @@
         { "label": "Trip Type",             "value": "Round Trip Only" },
         { "label": "Open To",               "value": "Everyone (Public)" },
         { "label": "Cost",                  "value": "Subsidized — Partial Fee" }
+      ],
+      "pickupSchedules": [
+        {
+          "label": "View Pickup Schedules",
+          "href": "/pickup-schedules"
+        }
       ],
       "faqsLabel": "Transportation FAQs",
       "faqsContact": "canada@joincci.org",

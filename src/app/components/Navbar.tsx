@@ -94,8 +94,13 @@ export function Navbar() {
   const handleNavClick = (href: string) => {
     setMenuOpen(false);
     setOpenGroup(null);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith("#")) {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+
+    window.location.href = href;
   };
 
   return (

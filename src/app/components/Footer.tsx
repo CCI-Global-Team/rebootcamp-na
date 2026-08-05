@@ -14,7 +14,12 @@ export function Footer() {
   const { navbar, footer, site, venue } = useSiteContent();
 
   const scrollTo = (href: string) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith("#")) {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+
+    window.location.href = href;
   };
 
   return (
