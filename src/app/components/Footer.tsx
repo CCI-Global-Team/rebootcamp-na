@@ -7,6 +7,8 @@ import Image from "next/image";
 
 // const SOCIAL_ICON_MAP: Record<string, React.ElementType> = { Instagram, Facebook, Youtube, Twitter };
 
+const COPYRIGHT_YEAR = 2026;
+
 export function Footer() {
   const { t } = useTheme();
   const { navbar, footer, site, venue } = useSiteContent();
@@ -109,7 +111,7 @@ export function Footer() {
       <div className="border-t py-6" style={{ borderColor: t.footerBottomBorder }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs" style={{ fontFamily: "'Inter', sans-serif", color: t.textDim }}>
-            &copy; {new Date().getFullYear()} {site.orgName}. All rights reserved.
+            &copy; {COPYRIGHT_YEAR} {site.orgName}. All rights reserved.
           </p>
           <div className="flex gap-5">
             {footer.legalLinks.map((item) => (

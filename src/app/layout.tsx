@@ -38,7 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${barlowCondensed.variable} ${inter.variable} ${oswald.variable}`}>
+      <body
+        suppressHydrationWarning
+        className={`${barlowCondensed.variable} ${inter.variable} ${oswald.variable}`}
+      >
         {children}
         <Analytics />
         <SpeedInsights />
