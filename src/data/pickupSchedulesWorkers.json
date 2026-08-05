@@ -1,0 +1,226 @@
+{
+  "workersAndVolunteers": [
+    {
+      "date": "2026-09-04",
+      "dayLabel": "Friday, September 4",
+      "venueAddress": "272 Attwell Drive",
+      "departTime": "10:30 PM",
+      "stops": [
+        {
+          "city": "Mississauga",
+          "stopNumber": 1,
+          "landmark": "Square One Food District, 100 City Centre Dr, Mississauga",
+          "time": "2:00 PM"
+        },
+        {
+          "city": "Mississauga",
+          "stopNumber": 2,
+          "landmark": "Erin Mills Mall - 5100 Erin Mills Pkwy, Mississauga",
+          "time": "2:20 PM"
+        },
+        {
+          "city": "Downtown-Etobicoke",
+          "stopNumber": 1,
+          "landmark": "Downtown East - Sumach Str & Oak Str via Ratna Ln",
+          "time": "1:45 PM"
+        },
+        {
+          "city": "Downtown-Etobicoke",
+          "stopNumber": 2,
+          "landmark": "Downtown West - Eaton Center/Dundas Square via Gould Street",
+          "time": "2:10 PM"
+        },
+        {
+          "city": "Downtown-Etobicoke",
+          "stopNumber": 3,
+          "landmark": "Kipling Station Passenger Pick up",
+          "time": "2:50 PM"
+        },
+        {
+          "city": "Scarborough",
+          "stopNumber": 1,
+          "landmark": "U of T Scarborough, 1295-1307 Military Trail, Scarborough",
+          "time": "1:30 PM"
+        },
+        {
+          "city": "Scarborough",
+          "stopNumber": 2,
+          "landmark": "Centennial College, 941 Progress Ave, Scarborough",
+          "time": "1:50 PM"
+        },
+        {
+          "city": "Scarborough",
+          "stopNumber": 3,
+          "landmark": "Scarborough Town Centre (Cineplex), 300 Borough Dr, Scarborough",
+          "time": "2:10 PM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 1,
+          "landmark": "York University Station, 120 Ian MacDonald Blvd, North York",
+          "time": "2:00 PM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 2,
+          "landmark": "Jane & Finch Mall (Tim Hortons), 3981 Jane St, North York",
+          "time": "2:20 PM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 3,
+          "landmark": "Albion Mall Shopping Centre, 1530 Albion Rd, Etobicoke",
+          "time": "2:40 PM"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "dayLabel": "Saturday, September 5",
+      "venueAddress": "272 Attwell Drive",
+      "departTime": "10:30 PM",
+      "stops": [
+        {
+          "city": "Mississauga",
+          "stopNumber": 1,
+          "landmark": "Square One Food District, 100 City Centre Dr, Mississauga",
+          "time": "5:00 AM"
+        },
+        {
+          "city": "Mississauga",
+          "stopNumber": 2,
+          "landmark": "Erin Mills Mall - 5100 Erin Mills Pkwy, Mississauga",
+          "time": "5:20 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke",
+          "stopNumber": 1,
+          "landmark": "Downtown East - Sumach Str & Oak Str via Ratna Ln",
+          "time": "4:45 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke",
+          "stopNumber": 2,
+          "landmark": "Downtown West - Eaton Center/Dundas Square via Gould Street",
+          "time": "5:10 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke",
+          "stopNumber": 3,
+          "landmark": "Kipling Station Passenger Pick up",
+          "time": "5:30 AM"
+        },
+        {
+          "city": "Scarborough",
+          "stopNumber": 1,
+          "landmark": "U of T Scarborough, 1295-1307 Military Trail, Scarborough",
+          "time": "4:45 AM"
+        },
+        {
+          "city": "Scarborough",
+          "stopNumber": 2,
+          "landmark": "Centennial College, 941 Progress Ave, Scarborough",
+          "time": "5:10 AM"
+        },
+        {
+          "city": "Scarborough",
+          "stopNumber": 3,
+          "landmark": "Scarborough Town Centre (Cineplex), 300 Borough Dr, Scarborough",
+          "time": "5:15 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 1,
+          "landmark": "York University Station, 120 Ian MacDonald Blvd, North York",
+          "time": "4:45 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 2,
+          "landmark": "Jane & Finch Mall (Tim Hortons), 3981 Jane St, North York",
+          "time": "5:10 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 3,
+          "landmark": "Albion Mall Shopping Centre, 1530 Albion Rd, Etobicoke",
+          "time": "5:30 AM"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "dayLabel": "Sunday, September 6",
+      "venueAddress": "1000 Finch Ave West",
+      "departTime": "11:30 AM",
+      "stops": [
+        {
+          "city": "Mississauga",
+          "stopNumber": 1,
+          "landmark": "Square One Food District, 100 City Centre Dr, Mississauga",
+          "time": "7:00 AM"
+        },
+        {
+          "city": "Mississauga",
+          "stopNumber": 2,
+          "landmark": "Erin Mills Mall - 5100 Erin Mills Pkwy, Mississauga",
+          "time": "7:20 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke",
+          "stopNumber": 1,
+          "landmark": "Downtown East - Sumach Str & Oak Str via Ratna Ln",
+          "time": "6:45 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke",
+          "stopNumber": 2,
+          "landmark": "Downtown West - Eaton Center/Dundas Square via Gould Street",
+          "time": "7:10 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke",
+          "stopNumber": 3,
+          "landmark": "Kipling Station Passenger Pick up",
+          "time": "7:30 AM"
+        },
+        {
+          "city": "Scarborough",
+          "stopNumber": 1,
+          "landmark": "U of T Scarborough, 1295-1307 Military Trail, Scarborough",
+          "time": "6:40 AM"
+        },
+        {
+          "city": "Scarborough",
+          "stopNumber": 2,
+          "landmark": "Centennial College, 941 Progress Ave, Scarborough",
+          "time": "7:05 AM"
+        },
+        {
+          "city": "Scarborough",
+          "stopNumber": 3,
+          "landmark": "Scarborough Town Centre (Cineplex), 300 Borough Dr, Scarborough",
+          "time": "7:20 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 1,
+          "landmark": "York University Station, 120 Ian MacDonald Blvd, North York",
+          "time": "6:40 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 2,
+          "landmark": "Jane & Finch Mall (Tim Hortons), 3981 Jane St, North York",
+          "time": "7:05 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 3,
+          "landmark": "Albion Mall Shopping Centre, 1530 Albion Rd, Etobicoke",
+          "time": "7:20 AM"
+        }
+      ]
+    }
+  ]
+}

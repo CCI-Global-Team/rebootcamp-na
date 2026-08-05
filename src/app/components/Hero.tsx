@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { MapPin, Calendar, ChevronDown } from "lucide-react";
-import mainFlyer from "@/assets/images/rbc-na-pivot-main-flyer.jpg";
+import ministersFlyer from "@/assets/images/rbc-na-ministers-flyer.webp";
 import fireFlyer from "@/assets/images/rbc-na-fire-flyer.jpg";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
@@ -246,7 +246,13 @@ export function Hero() {
                 zIndex: 1,
               }}
             >
-              <Image src={mainFlyer} alt="Reboot Camp Fire" className="w-full h-auto" loading="eager" />
+              <Image
+                src={fireFlyer}
+                alt="Reboot Camp North America fire flyer"
+                className="w-full h-auto"
+                loading="eager"
+                sizes="(min-width: 1024px) 28rem, (min-width: 640px) 24rem, 20rem"
+              />
             </motion.div>
             <motion.div
               variants={scaleIn}
@@ -260,7 +266,13 @@ export function Hero() {
               className="relative rounded-xl overflow-hidden shadow-2xl"
               style={{ zIndex: 2, boxShadow: "0 20px 60px rgba(232,92,4,0.4)" }}
             >
-              <Image src={fireFlyer} alt={`${event.name} — ${event.theme}`} className="w-full h-auto" loading="eager" />
+              <Image
+                src={ministersFlyer}
+                alt={`${event.name} — ${event.theme}`}
+                className="w-full h-auto"
+                loading="eager"
+                sizes="(min-width: 1024px) 28rem, (min-width: 640px) 24rem, 20rem"
+              />
             </motion.div>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-12 rounded-full opacity-40" style={{ backgroundImage: "radial-gradient(ellipse, #E85D04, transparent 70%)", filter: "blur(12px)" }} />
           </div>

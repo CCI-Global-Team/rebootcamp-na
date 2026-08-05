@@ -1,0 +1,496 @@
+{
+  "generalAttendance": [
+    {
+      "date": "2026-09-04",
+      "dayLabel": "Friday, September 4",
+      "venueAddress": "272 Attwell Dr, Toronto",
+      "departTime": "10:00 PM",
+      "stops": [
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 1,
+          "landmark": "McMaster University - Williams Fresh Cafe, 1309 Main St W, Hamilton",
+          "time": "2:30 PM"
+        },
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 2,
+          "landmark": "126 James St S, Hamilton",
+          "time": "2:50 PM"
+        },
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 3,
+          "landmark": "UTM Oscar Peterson Hall, 3359 Mississauga Rd, Mississauga",
+          "time": "3:40 PM"
+        },
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 4,
+          "landmark": "Square One Food Court, 100 City Centre Dr, Mississauga",
+          "time": "4:00 PM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 1,
+          "landmark": "1351 Grandview St N, Oshawa",
+          "time": "1:50 PM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 2,
+          "landmark": "U of T Scarborough, 1295-1307 Military Trail, Scarborough",
+          "time": "2:50 PM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 3,
+          "landmark": "Centennial College, 941 Progress Ave, Scarborough",
+          "time": "3:20 PM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 4,
+          "landmark": "Scarborough Town Centre (Cineplex), 300 Borough Dr, Scarborough",
+          "time": "3:55 PM"
+        },
+        {
+          "city": "Downtown-Etobicoke South",
+          "stopNumber": 1,
+          "landmark": "Eaton Center/Dundas Square via Gould Street",
+          "time": "3:40 PM"
+        },
+        {
+          "city": "Downtown-Etobicoke South",
+          "stopNumber": 2,
+          "landmark": "Sumach Street Sumach & Oak - Ranta Ln",
+          "time": "3:40 PM"
+        },
+        {
+          "city": "Downtown-Etobicoke South",
+          "stopNumber": 3,
+          "landmark": "Kipling Station Passenger Pick up",
+          "time": "4:00 PM"
+        },
+        {
+          "city": "Brampton",
+          "stopNumber": 1,
+          "landmark": "Bramalea City Centre",
+          "time": "3:20 PM"
+        },
+        {
+          "city": "Brampton",
+          "stopNumber": 2,
+          "landmark": "Shoppers World",
+          "time": "3:45 PM"
+        },
+        {
+          "city": "Midtown",
+          "stopNumber": 1,
+          "landmark": "Eglinton Station",
+          "time": "2:55 PM"
+        },
+        {
+          "city": "Midtown",
+          "stopNumber": 2,
+          "landmark": "St Clair West Station",
+          "time": "3:30 PM"
+        },
+        {
+          "city": "Midtown",
+          "stopNumber": 3,
+          "landmark": "Bloor-Yonge Station",
+          "time": "3:55 PM"
+        },
+        {
+          "city": "Barrie-Vaughan",
+          "stopNumber": 1,
+          "landmark": "507 Cundles Rd E",
+          "time": "2:15 PM"
+        },
+        {
+          "city": "Barrie-Vaughan",
+          "stopNumber": 2,
+          "landmark": "Vaughan Metropolitan Centre",
+          "time": "3:30 PM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 1,
+          "landmark": "York University Station, 120 Ian MacDonald Blvd, North York",
+          "time": "3:10 PM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 2,
+          "landmark": "Jane & Finch Mall (Tim Hortons), 3981 Jane St, North York",
+          "time": "3:30 PM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 3,
+          "landmark": "Albion Mall Shopping Centre, 1530 Albion Rd, Etobicoke",
+          "time": "3:55 PM"
+        },
+        {
+          "city": "Markham-Richmond Hill",
+          "stopNumber": 1,
+          "landmark": "CF Markville Mall (Walmart), 5000 Hwy 7, Markham",
+          "time": "3:00 PM"
+        },
+        {
+          "city": "Markham-Richmond Hill",
+          "stopNumber": 2,
+          "landmark": "50 Red Maple Rd, Richmond Hill",
+          "time": "3:30 PM"
+        },
+        {
+          "city": "Markham-Richmond Hill",
+          "stopNumber": 3,
+          "landmark": "Rutherford Marketplace, 9370 Bathurst St #9300, Vaughan",
+          "time": "3:30 PM"
+        },
+        {
+          "city": "London-Kitchener",
+          "stopNumber": 1,
+          "landmark": "78 Riverside Dr",
+          "time": "1:15 PM"
+        },
+        {
+          "city": "London-Kitchener",
+          "stopNumber": 2,
+          "landmark": "1425 Block Line Rd",
+          "time": "2:25 PM"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "dayLabel": "Saturday, September 5",
+      "venueAddress": "272 Attwell Dr, Toronto",
+      "departTime": "10:00 PM",
+      "stops": [
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 1,
+          "landmark": "McMaster University - Williams Fresh Cafe, 1309 Main St W, Hamilton",
+          "time": "4:45 AM"
+        },
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 2,
+          "landmark": "126 James St S, Hamilton",
+          "time": "5:05 AM"
+        },
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 3,
+          "landmark": "UTM Oscar Peterson Hall, 3359 Mississauga Rd, Mississauga",
+          "time": "6:05 AM"
+        },
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 4,
+          "landmark": "Square One Food Court, 100 City Centre Dr, Mississauga",
+          "time": "6:25 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke South",
+          "stopNumber": 1,
+          "landmark": "Eaton Center/Dundas Square via Gould Street",
+          "time": "5:15 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke South",
+          "stopNumber": 2,
+          "landmark": "Sumach Street Sumach & Oak - Ranta Ln",
+          "time": "5:35 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke South",
+          "stopNumber": 3,
+          "landmark": "Kipling Station Passenger Pick up",
+          "time": "6:15 AM"
+        },
+        {
+          "city": "Midtown",
+          "stopNumber": 1,
+          "landmark": "Eglinton Station",
+          "time": "5:10 AM"
+        },
+        {
+          "city": "Midtown",
+          "stopNumber": 2,
+          "landmark": "St Clair West Station",
+          "time": "5:45 AM"
+        },
+        {
+          "city": "Midtown",
+          "stopNumber": 3,
+          "landmark": "Bloor-Yonge Station",
+          "time": "6:10 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 1,
+          "landmark": "York University Station, 120 Ian MacDonald Blvd, North York",
+          "time": "5:30 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 2,
+          "landmark": "Jane & Finch Mall (Tim Hortons), 3981 Jane St, North York",
+          "time": "5:50 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 3,
+          "landmark": "Albion Mall Shopping Centre, 1530 Albion Rd, Etobicoke",
+          "time": "6:20 AM"
+        },
+        {
+          "city": "Markham-Richmond Hill",
+          "stopNumber": 1,
+          "landmark": "CF Markville Mall (Walmart), 5000 Hwy 7, Markham",
+          "time": "5:15 AM"
+        },
+        {
+          "city": "Markham-Richmond Hill",
+          "stopNumber": 2,
+          "landmark": "50 Red Maple Rd, Richmond Hill",
+          "time": "5:45 AM"
+        },
+        {
+          "city": "Markham-Richmond Hill",
+          "stopNumber": 3,
+          "landmark": "Rutherford Marketplace, 9370 Bathurst St #9300, Vaughan",
+          "time": "6:05 AM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 1,
+          "landmark": "1351 Grandview St N, Oshawa",
+          "time": "4:30 AM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 2,
+          "landmark": "U of T Scarborough, 1295-1307 Military Trail, Scarborough",
+          "time": "5:30 AM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 3,
+          "landmark": "Centennial College, 941 Progress Ave, Scarborough",
+          "time": "6:00 AM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 4,
+          "landmark": "Scarborough Town Centre (Cineplex), 300 Borough Dr, Scarborough",
+          "time": "6:25 AM"
+        },
+        {
+          "city": "Brampton",
+          "stopNumber": 1,
+          "landmark": "Bramalea City Centre",
+          "time": "5:20 AM"
+        },
+        {
+          "city": "Brampton",
+          "stopNumber": 2,
+          "landmark": "Shoppers World",
+          "time": "5:50 AM"
+        },
+        {
+          "city": "Barrie-Vaughan",
+          "stopNumber": 1,
+          "landmark": "507 Cundles Rd E",
+          "time": "4:30 AM"
+        },
+        {
+          "city": "Barrie-Vaughan",
+          "stopNumber": 2,
+          "landmark": "Vaughan Metropolitan Centre",
+          "time": "6:10 AM"
+        },
+        {
+          "city": "London-Kitchener",
+          "stopNumber": 1,
+          "landmark": "78 Riverside Dr",
+          "time": "4:00 AM"
+        },
+        {
+          "city": "London-Kitchener",
+          "stopNumber": 2,
+          "landmark": "1425 Block Line Rd",
+          "time": "5:10 AM"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "dayLabel": "Sunday, September 6",
+      "venueAddress": "1000 Finch Ave West",
+      "departTime": "11:00 AM",
+      "stops": [
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 1,
+          "landmark": "McMaster University - Williams Fresh Cafe, 1309 Main St W, Hamilton",
+          "time": "5:30 AM"
+        },
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 2,
+          "landmark": "126 James St S, Hamilton",
+          "time": "5:50 AM"
+        },
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 3,
+          "landmark": "UTM Oscar Peterson Hall, 3359 Mississauga Rd, Mississauga",
+          "time": "6:55 AM"
+        },
+        {
+          "city": "Hamilton-Mississauga",
+          "stopNumber": 4,
+          "landmark": "Square One Food Court, 100 City Centre Dr, Mississauga",
+          "time": "7:10 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke South",
+          "stopNumber": 1,
+          "landmark": "Eaton Center/Dundas Square via Gould Street",
+          "time": "5:45 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke South",
+          "stopNumber": 2,
+          "landmark": "Sumach Street Sumach & Oak - Ranta Ln",
+          "time": "6:05 AM"
+        },
+        {
+          "city": "Downtown-Etobicoke South",
+          "stopNumber": 3,
+          "landmark": "Kipling Station Passenger Pick up",
+          "time": "6:45 AM"
+        },
+        {
+          "city": "Midtown",
+          "stopNumber": 1,
+          "landmark": "Eglinton Station",
+          "time": "6:15 AM"
+        },
+        {
+          "city": "Midtown",
+          "stopNumber": 2,
+          "landmark": "St Clair West Station",
+          "time": "6:45 AM"
+        },
+        {
+          "city": "Midtown",
+          "stopNumber": 3,
+          "landmark": "Bloor-Yonge Station",
+          "time": "7:05 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 1,
+          "landmark": "York University Station, 120 Ian MacDonald Blvd, North York",
+          "time": "6:45 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 2,
+          "landmark": "Jane & Finch Mall (Tim Hortons), 3981 Jane St, North York",
+          "time": "7:05 AM"
+        },
+        {
+          "city": "North York-Etobicoke North",
+          "stopNumber": 3,
+          "landmark": "Albion Mall Shopping Centre, 1530 Albion Rd, Etobicoke",
+          "time": "7:25 AM"
+        },
+        {
+          "city": "Markham-Richmond Hill",
+          "stopNumber": 1,
+          "landmark": "CF Markville Mall (Walmart), 5000 Hwy 7, Markham",
+          "time": "6:05 AM"
+        },
+        {
+          "city": "Markham-Richmond Hill",
+          "stopNumber": 2,
+          "landmark": "50 Red Maple Rd, Richmond Hill",
+          "time": "6:35 AM"
+        },
+        {
+          "city": "Markham-Richmond Hill",
+          "stopNumber": 3,
+          "landmark": "Rutherford Marketplace, 9370 Bathurst St #9300, Vaughan",
+          "time": "6:55 AM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 1,
+          "landmark": "1351 Grandview St N, Oshawa",
+          "time": "4:45 AM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 2,
+          "landmark": "U of T Scarborough, 1295-1307 Military Trail, Scarborough",
+          "time": "5:55 AM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 3,
+          "landmark": "Centennial College, 941 Progress Ave, Scarborough",
+          "time": "6:25 AM"
+        },
+        {
+          "city": "Oshawa-Scarborough",
+          "stopNumber": 4,
+          "landmark": "Scarborough Town Centre (Cineplex), 300 Borough Dr, Scarborough",
+          "time": "6:55 AM"
+        },
+        {
+          "city": "Brampton",
+          "stopNumber": 1,
+          "landmark": "Bramalea City Centre",
+          "time": "6:00 AM"
+        },
+        {
+          "city": "Brampton",
+          "stopNumber": 2,
+          "landmark": "Shoppers World",
+          "time": "6:30 AM"
+        },
+        {
+          "city": "Barrie-Vaughan",
+          "stopNumber": 1,
+          "landmark": "507 Cundles Rd E",
+          "time": "4:45 AM"
+        },
+        {
+          "city": "Barrie-Vaughan",
+          "stopNumber": 2,
+          "landmark": "Vaughan Metropolitan Centre",
+          "time": "6:25 AM"
+        },
+        {
+          "city": "London-Kitchener",
+          "stopNumber": 1,
+          "landmark": "78 Riverside Dr",
+          "time": "4:30 AM"
+        },
+        {
+          "city": "London-Kitchener",
+          "stopNumber": 2,
+          "landmark": "1425 Block Line Rd",
+          "time": "5:45 AM"
+        }
+      ]
+    }
+  ]
+}

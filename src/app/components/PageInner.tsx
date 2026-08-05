@@ -19,36 +19,42 @@ import { GivingSection } from "@/app/components/GivingSection";
 import { Footer } from "@/app/components/Footer";
 
 export function PageInner() {
+  return (
+    <ThemeProvider>
+      <PageContent />
+    </ThemeProvider>
+  );
+}
+
+function PageContent() {
   const { t } = useTheme();
 
   return (
-    <ThemeProvider>
-      <div
-        style={{
-          background: t.pageBg,
-          minHeight: "100vh",
-          fontFamily: "'Inter', sans-serif",
-          overflowX: "hidden",
-          transition: "background 0.4s ease",
-        }}
-      >
-        <Navbar />
-        <Hero />
-        <AboutSection />
-        <RegistrationSection />
-        <ChildcareSection />
-        <SundayServiceSection />
-        <ScheduleSection />
-        <SpeakersSection />
-        <AccommodationSection />
-        <FlightDiscountsSection />
-        <TransportationSection />
-        <VenueSection />
-        {/* <PastEventsSection /> */}
-        <FAQSection />
-        <GivingSection />
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div
+      style={{
+        background: t.pageBg,
+        minHeight: "100vh",
+        fontFamily: "'Inter', sans-serif",
+        overflowX: "hidden",
+        transition: "background 0.4s ease",
+      }}
+    >
+      <Navbar />
+      <Hero />
+      <AboutSection />
+      <RegistrationSection />
+      <ChildcareSection />
+      <SundayServiceSection />
+      <ScheduleSection />
+      <SpeakersSection />
+      <AccommodationSection />
+      <FlightDiscountsSection />
+      <TransportationSection />
+      <VenueSection />
+      {/* <PastEventsSection /> */}
+      <FAQSection />
+      <GivingSection />
+      <Footer />
+    </div>
   );
 }

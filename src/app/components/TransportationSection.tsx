@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BusFront, MapPin, ArrowRight, Bell } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
@@ -182,6 +183,29 @@ export function TransportationSection() {
                 <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
               </a>
             )}
+
+            <div className="rounded-2xl p-5"
+              style={{ background: t.isDark ? "rgba(255,255,255,0.04)" : "rgba(0,0,0,0.03)", border: `1px solid rgba(${t.accentRgb},0.15)` }}>
+              <div className="flex items-center gap-2 mb-3">
+                <BusFront size={16} style={{ color: t.goldAccent }} />
+                <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "0.72rem", letterSpacing: "0.15em", color: t.textVeryMuted, textTransform: "uppercase" }}>
+                  Pickup Schedules
+                </span>
+              </div>
+              <div className="grid gap-3">
+                {tr.pickupSchedules.map((schedule) => (
+                  <Link
+                    key={schedule.href}
+                    href={schedule.href}
+                    className="group flex items-center justify-center gap-2 py-3 px-4 rounded-xl transition-all duration-200 hover:scale-[1.02]"
+                    style={{ border: `1px solid rgba(${t.accentRgb},0.25)`, color: t.textPrimary, textDecoration: "none", background: t.isDark ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.7)", fontFamily: "'Oswald', sans-serif", fontWeight: 600, letterSpacing: "0.04em" }}
+                  >
+                    <span>{schedule.label}</span>
+                    <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1" />
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             {/* FAQ + contact links */}
             <div className="flex flex-wrap items-center gap-4 pt-1">
