@@ -1,5 +1,6 @@
 import logo from "@/assets/logo/rbc-na-full-blue.png";
 import logoWhite from "@/assets/logo/rbc-na-full-white.png";
+import { usePathname } from "next/navigation";
 import { Mail, MapPin } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
@@ -12,9 +13,15 @@ const COPYRIGHT_YEAR = 2026;
 export function Footer() {
   const { t } = useTheme();
   const { navbar, footer, site, venue } = useSiteContent();
+  const pathname = usePathname();
 
   const scrollTo = (href: string) => {
     if (href.startsWith("#")) {
+      if (pathname !== "/") {
+        window.location.href = `/${href}`;
+        return;
+      }
+
       document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
       return;
     }
