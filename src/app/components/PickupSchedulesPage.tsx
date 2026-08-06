@@ -342,7 +342,7 @@ export function PickupSchedulesPage() {
                           style={{ fontFamily: "'Inter', sans-serif", opacity: isActive ? 0.8 : 0.7 }}
                         >
                           <Clock3 size={14} />
-                          Depart {day.departTime}
+                          Return bus leaves venue at {day.departTime}
                         </div>
                       </button>
                     );
@@ -398,8 +398,8 @@ export function PickupSchedulesPage() {
                         className="mt-3 max-w-3xl text-sm leading-7 sm:text-base"
                         style={{ color: t.textSecondary, fontFamily: "'Inter', sans-serif" }}
                       >
-                        The venue departure for this day is <strong style={{ color: t.textPrimary }}>{activeDay.departTime}</strong> from{" "}
-                        <strong style={{ color: t.textPrimary }}>{activeDay.venueAddress}</strong>. Please arrive early enough to board at your stop before the listed time.
+                        Pickup times below are the times your bus reaches each city stop. Please arrive early enough to board at your stop before the listed time. The <strong style={{ color: t.textPrimary }}>return bus leaves the venue at the end of the day at {activeDay.departTime}</strong> from{" "}
+                        <strong style={{ color: t.textPrimary }}>{activeDay.venueAddress}</strong>.
                       </p>
                     </div>
 
@@ -414,11 +414,17 @@ export function PickupSchedulesPage() {
                         <div className="mb-2 flex items-center gap-2" style={{ color: t.goldAccent }}>
                           <Clock3 size={16} />
                           <span className="text-xs uppercase tracking-[0.16em]" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-                            Depart Time
+                            Return Bus Leaves Venue
                           </span>
                         </div>
                         <p style={{ fontFamily: "'Oswald', sans-serif", fontSize: "1.35rem", fontWeight: 700 }}>
                           {activeDay.departTime}
+                        </p>
+                        <p
+                          className="mt-2 text-sm leading-6"
+                          style={{ fontFamily: "'Inter', sans-serif", color: t.textMuted }}
+                        >
+                          End-of-day departure from the venue, not the pickup start time.
                         </p>
                       </div>
 
