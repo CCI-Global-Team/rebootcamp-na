@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Image from 'next/image';
 import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
@@ -81,6 +82,7 @@ function DropdownGroup({ group, onNavigate, t }: { group: NavGroup; onNavigate: 
 export function Navbar() {
   const { t, toggleTheme } = useTheme();
   const { navbar } = useSiteContent();
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
@@ -95,6 +97,11 @@ export function Navbar() {
     setMenuOpen(false);
     setOpenGroup(null);
     if (href.startsWith("#")) {
+      if (pathname !== "/") {
+        window.location.href = `/${href}`;
+        return;
+      }
+
       const el = document.querySelector(href);
       if (el) el.scrollIntoView({ behavior: "smooth" });
       return;
