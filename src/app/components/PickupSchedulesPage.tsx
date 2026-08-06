@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import {
-  ArrowUpRight,
   BusFront,
   Clock3,
   MapPin,
@@ -77,10 +76,19 @@ export function PickupSchedulesPage() {
   const { t } = useTheme();
   const [activeScheduleIndex, setActiveScheduleIndex] = useState(0);
   const [activeDayIndex, setActiveDayIndex] = useState(0);
+  const [activeCity, setActiveCity] = useState("All Cities");
 
   const activeSchedule = scheduleSets[activeScheduleIndex]!;
   const activeDay = activeSchedule.days[activeDayIndex]!;
   const cities = uniqueCities(activeDay.stops);
+  const filteredStops =
+    activeCity === "All Cities"
+      ? activeDay.stops
+      : activeDay.stops.filter((stop) => stop.city === activeCity);
+  const groupedStops = (activeCity === "All Cities" ? cities : [activeCity]).map((city) => ({
+    city,
+    stops: filteredStops.filter((stop) => stop.city === city),
+  }));
 
   return (
     <div
@@ -240,6 +248,7 @@ export function PickupSchedulesPage() {
                         onClick={() => {
                           setActiveScheduleIndex(index);
                           setActiveDayIndex(0);
+                          setActiveCity("All Cities");
                         }}
                         className="rounded-[1.4rem] p-4 text-left transition-all duration-200 hover:scale-[1.01]"
                         style={{
@@ -258,7 +267,6 @@ export function PickupSchedulesPage() {
                           >
                             {schedule.audience}
                           </span>
-                          <ArrowUpRight size={16} />
                         </div>
                         <div
                           style={{
@@ -306,7 +314,10 @@ export function PickupSchedulesPage() {
                     return (
                       <button
                         key={day.date}
-                        onClick={() => setActiveDayIndex(index)}
+                        onClick={() => {
+                          setActiveDayIndex(index);
+                          setActiveCity("All Cities");
+                        }}
                         className="rounded-2xl p-4 text-left transition-all duration-200 hover:translate-y-[-1px]"
                         style={{
                           background: isActive ? t.ctaGradient : t.cardBg,
@@ -440,118 +451,152 @@ export function PickupSchedulesPage() {
                   }}
                 >
                   <div className="mb-5 flex flex-wrap gap-2">
-                    {cities.map((city) => (
-                      <span
+                    {["All Cities", ...cities].map((city) => {
+                      const isActive = city === activeCity;
+
+                      return (
+                      <button
                         key={city}
-                        className="rounded-full px-3 py-1.5 text-xs"
+                        onClick={() => setActiveCity(city)}
+                        className="shrink-0 rounded-full px-3 py-1.5 text-xs transition-[background,color,border-color,box-shadow] duration-200"
                         style={{
-                          background: `rgba(${t.accentRgb},0.08)`,
-                          border: `1px solid rgba(${t.accentRgb},0.16)`,
-                          color: t.textSecondary,
+                          background: isActive ? t.ctaGradient : `rgba(${t.accentRgb},0.08)`,
+                          border: `1px solid ${isActive ? "transparent" : `rgba(${t.accentRgb},0.16)`}`,
+                          color: isActive ? t.ctaText : t.textSecondary,
                           fontFamily: "'Inter', sans-serif",
+                          fontWeight: 600,
+                          boxShadow: isActive ? "0 10px 22px rgba(232,93,4,0.18)" : "none",
                         }}
                       >
                         {city}
-                      </span>
-                    ))}
+                      </button>
+                    )})}
                   </div>
 
-                  <div className="hidden overflow-hidden rounded-3xl md:block" style={{ border: `1px solid ${t.cardBorderThin}` }}>
-                    <div
-                      className="grid grid-cols-[1.2fr_0.65fr_3fr_0.85fr] gap-4 px-5 py-4"
-                      style={{
-                        background: t.sectionBgAlt2,
-                        color: t.textMuted,
-                        fontFamily: "'Barlow Condensed', sans-serif",
-                        letterSpacing: "0.16em",
-                        textTransform: "uppercase",
-                        fontSize: "0.78rem",
-                      }}
-                    >
-                      <span>City</span>
-                      <span>Stop</span>
-                      <span>Landmark</span>
-                      <span>Time</span>
-                    </div>
-
-                    <div>
-                      {activeDay.stops.map((stop, index) => (
+                  <div className="grid gap-5">
+                    {groupedStops.map((group) => (
+                      <div
+                        key={group.city}
+                        className="rounded-3xl overflow-hidden"
+                        style={{ border: `1px solid ${t.cardBorderThin}` }}
+                      >
                         <div
-                          key={`${stop.city}-${stop.stopNumber}-${stop.time}`}
-                          className="grid grid-cols-[1.2fr_0.65fr_3fr_0.85fr] gap-4 px-5 py-4"
-                          style={{
-                            background: index % 2 === 0
-                              ? t.isDark
-                                ? "rgba(255,255,255,0.015)"
-                                : "rgba(255,255,255,0.68)"
-                              : "transparent",
-                            borderTop: index === 0 ? "none" : `1px solid ${t.cardBorderThin}`,
-                          }}
+                          className="flex items-center justify-between gap-3 px-5 py-4"
+                          style={{ background: t.sectionBgAlt2 }}
                         >
                           <div>
-                            <div style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600 }}>
-                              {stop.city}
-                            </div>
-                          </div>
-                          <div style={{ fontFamily: "'Oswald', sans-serif", color: t.goldAccent }}>
-                            #{stop.stopNumber}
-                          </div>
-                          <div style={{ fontFamily: "'Inter', sans-serif", color: t.textSecondary }}>
-                            {stop.landmark}
-                          </div>
-                          <div style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600 }}>
-                            {stop.time}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="grid gap-3 md:hidden">
-                    {activeDay.stops.map((stop) => (
-                      <article
-                        key={`${stop.city}-${stop.stopNumber}-${stop.time}`}
-                        className="rounded-3xl p-4"
-                        style={{
-                          background: t.sectionBgAlt2,
-                          border: `1px solid ${t.cardBorderThin}`,
-                        }}
-                      >
-                        <div className="mb-3 flex items-start justify-between gap-3">
-                          <div>
+                            <h3
+                              style={{
+                                fontFamily: "'Oswald', sans-serif",
+                                fontWeight: 700,
+                                fontSize: "1.3rem",
+                                lineHeight: 1.1,
+                              }}
+                            >
+                              {group.city}
+                            </h3>
                             <p
-                              className="text-xs uppercase tracking-[0.16em]"
+                              className="mt-1 text-xs uppercase tracking-[0.16em]"
                               style={{ fontFamily: "'Barlow Condensed', sans-serif", color: t.textMuted }}
                             >
-                              {stop.city}
+                              {group.stops.length} {group.stops.length === 1 ? "stop" : "stops"}
                             </p>
-                            <h3
-                              className="mt-1"
-                              style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.1rem" }}
-                            >
-                              Stop #{stop.stopNumber}
-                            </h3>
-                          </div>
-                          <div
-                            className="rounded-full px-3 py-1.5"
-                            style={{
-                              background: `rgba(${t.accentRgb},0.12)`,
-                              color: t.goldAccent,
-                              fontFamily: "'Oswald', sans-serif",
-                              fontWeight: 700,
-                            }}
-                          >
-                            {stop.time}
                           </div>
                         </div>
 
-                        <p
-                          className="text-sm leading-6"
-                          style={{ fontFamily: "'Inter', sans-serif", color: t.textSecondary }}
-                        >
-                          {stop.landmark}
-                        </p>
-                      </article>
+                        <div className="hidden md:block">
+                          <div
+                            className="grid grid-cols-[0.7fr_3fr_0.85fr] gap-4 px-5 py-4"
+                            style={{
+                              color: t.textMuted,
+                              fontFamily: "'Barlow Condensed', sans-serif",
+                              letterSpacing: "0.16em",
+                              textTransform: "uppercase",
+                              fontSize: "0.78rem",
+                              borderTop: `1px solid ${t.cardBorderThin}`,
+                            }}
+                          >
+                            <span>Stop</span>
+                            <span>Landmark</span>
+                            <span>Time</span>
+                          </div>
+
+                          <div>
+                            {group.stops.map((stop, index) => (
+                              <div
+                                key={`${stop.city}-${stop.stopNumber}-${stop.time}`}
+                                className="grid grid-cols-[0.7fr_3fr_0.85fr] gap-4 px-5 py-4"
+                                style={{
+                                  background: index % 2 === 0
+                                    ? t.isDark
+                                      ? "rgba(255,255,255,0.015)"
+                                      : "rgba(255,255,255,0.68)"
+                                    : "transparent",
+                                  borderTop: `1px solid ${t.cardBorderThin}`,
+                                }}
+                              >
+                                <div style={{ fontFamily: "'Oswald', sans-serif", color: t.goldAccent }}>
+                                  #{stop.stopNumber}
+                                </div>
+                                <div style={{ fontFamily: "'Inter', sans-serif", color: t.textSecondary }}>
+                                  {stop.landmark}
+                                </div>
+                                <div style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600 }}>
+                                  {stop.time}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="grid gap-3 p-4 md:hidden">
+                          {group.stops.map((stop) => (
+                            <article
+                              key={`${stop.city}-${stop.stopNumber}-${stop.time}`}
+                              className="rounded-3xl p-4"
+                              style={{
+                                background: t.isDark ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.8)",
+                                border: `1px solid ${t.cardBorderThin}`,
+                              }}
+                            >
+                              <div className="mb-3 flex items-start justify-between gap-3">
+                                <div>
+                                  <p
+                                    className="text-xs uppercase tracking-[0.16em]"
+                                    style={{ fontFamily: "'Barlow Condensed', sans-serif", color: t.textMuted }}
+                                  >
+                                    {group.city}
+                                  </p>
+                                  <h3
+                                    className="mt-1"
+                                    style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.1rem" }}
+                                  >
+                                    Stop #{stop.stopNumber}
+                                  </h3>
+                                </div>
+                                <div
+                                  className="rounded-full px-3 py-1.5"
+                                  style={{
+                                    background: `rgba(${t.accentRgb},0.12)`,
+                                    color: t.goldAccent,
+                                    fontFamily: "'Oswald', sans-serif",
+                                    fontWeight: 700,
+                                  }}
+                                >
+                                  {stop.time}
+                                </div>
+                              </div>
+
+                              <p
+                                className="text-sm leading-6"
+                                style={{ fontFamily: "'Inter', sans-serif", color: t.textSecondary }}
+                              >
+                                {stop.landmark}
+                              </p>
+                            </article>
+                          ))}
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </section>
