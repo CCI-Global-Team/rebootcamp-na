@@ -144,7 +144,7 @@
           { "time": "",  "title": "Praise and Worship",                             "type": "worship",   "speaker": "Celebration Church Worship" },
           { "time": "", "title": "Short Charge + Prayers + Declaration",            "type": "prayer",    "speaker": "" },
           { "time": "",  "title": "Special Song",                                   "type": "special",   "speaker": "Celebration Church Worship", "note": "" },
-          { "time": "",  "title": "Teaching/Ministration",                          "type": "special",   "speaker": "", "note": "" },
+          { "time": "",  "title": "Guest Ministration",                             "type": "special",   "speaker": "Tomi Favored", "note": "" },
           { "time": "", "title": "Teaching",                                        "type": "preaching", "speaker": "" },
           { "time": "", "title": "Offering/Announcements/Closing",                  "type": "break",     "note": "" }
         ]
@@ -156,14 +156,14 @@
           { "time": "",  "title": "Praise and Worship",                                "type": "worship",   "speaker": "Celebration Church Worship" },
           { "time": "", "title": "Prayer Charge",                                      "type": "preaching", "speaker": "" },
           { "time": "", "title": "Prayer Stretch",                                     "type": "prayer", "speaker": "" },
-          { "time": "",  "title": "Guest ministration",                                "type": "special",   "speaker": "Brooke Nicholls", "note": "" },
+          { "time": "",  "title": "Special Song",                                      "type": "special",   "speaker": "Celebration Church Worship", "note": "" },
           { "time": "", "title": "Teaching",                                           "type": "preaching", "speaker": "" },
           { "time": "", "title": "Announcements and closing",                          "type": "break",     "note": "" },
           { "time": "", "title": "Break",                                              "type": "break",     "note": "" },
           { "time": "", "title": "Afternoon - Opening Prayer",                         "type": "prayer" },
           { "time": "",  "title": "Praise and Worship",                                "type": "worship",   "speaker": "Celebration Church Worship" },
           { "time": "", "title": "Prayers + Declaration",                              "type": "prayer", "speaker": "" },
-          { "time": "",  "title": "Special Song",                                      "type": "special",   "speaker": "Celebration Church Worship", "note": "" },
+          { "time": "",  "title": "Guest ministration",                                "type": "special",   "speaker": "Brooke Nicholls", "note": "" },
           { "time": "", "title": "Teaching",                                           "type": "preaching", "speaker": "" },
           { "time": "", "title": "Closing",                                            "type": "break",     "note": "" },
           { "time": "", "title": "Lunch Break",                                        "type": "break",     "note": "On your own" },
@@ -171,15 +171,15 @@
           { "time": "",  "title": "Praise and Worship",                                "type": "worship",   "speaker": "Celebration Church Worship" },
           { "time": "", "title": "Short Charge + Prayers + Declaration",               "type": "prayer", "speaker": "" },
           { "time": "",  "title": "Special Song",                                      "type": "special",   "speaker": "Celebration Church Worship", "note": "" },
+          { "time": "", "title": "Guest Ministration",                                 "type": "special", "speaker": "Joe Mettle" },
           { "time": "", "title": "Teaching and Ministration",                          "type": "preaching", "speaker": "" },
-          { "time": "", "title": "Guest Ministration",                                 "type": "special", "speaker": "" },
           { "time": "", "title": "Offering & Closing",                                 "type": "break",     "note": "" }
         ]
       },
       {
         "day": "Day 3", "date": "September 6", "label": "Sunday",
         "sessions": [
-          { "time": "",  "title": "Sunday Services",                      "type": "special", "speaker": "Celebration Church, Toronto", "note": "Join any of the services" }
+          { "time": "",  "title": "Sunday Services",                      "type": "special", "speaker": "Celebration Church, Toronto", "note": "Register and Join any of the services" }
         ]
       }
     ]
