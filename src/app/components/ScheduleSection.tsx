@@ -195,19 +195,6 @@ export function ScheduleSection() {
                     willChange: "transform"
                   }}
                 >
-                  {/* Time (HIDDEN) */}
-                  {/* <div
-                    className="w-20 shrink-0 pt-0.5 text-right"
-                    style={{
-                      fontFamily: "'Barlow Condensed', sans-serif",
-                      fontSize: "0.85rem",
-                      color: t.scheduleTimeColor,
-                      letterSpacing: "0.04em"
-                    }}
-                  >
-                    {session.time}
-                  </div> */}
-
                   {/* Timeline */}
                   <div className="flex flex-col items-center">
                     <motion.div
@@ -238,6 +225,35 @@ export function ScheduleSection() {
                   <div className="flex-1 pb-2">
                     <div className="flex flex-wrap items-start justify-between gap-2">
                       <div>
+                        {session.time && (
+                          <div
+                            className="inline-flex items-center gap-1.5 mb-2 px-2 py-1 rounded-md"
+                            style={{
+                              background: `rgba(${t.accentRgb},0.1)`,
+                              border: `1px solid rgba(${t.accentRgb},0.2)`,
+                              color: t.goldAccent,
+                              fontFamily: "'Barlow Condensed', sans-serif",
+                              fontSize: "0.75rem",
+                              fontWeight: 600,
+                              letterSpacing: "0.08em"
+                            }}
+                          >
+                            <Clock size={12} aria-hidden="true" />
+                            <span className="uppercase opacity-75">
+                              {"endTime" in session && typeof session.endTime === "string"
+                                ? "Starts"
+                                : "Session starts"}
+                            </span>
+                            <span>{session.time} ET</span>
+                            {"endTime" in session && typeof session.endTime === "string" && (
+                              <>
+                                <span className="opacity-40">•</span>
+                                <span className="uppercase opacity-75">Ends</span>
+                                <span>{session.endTime} ET</span>
+                              </>
+                            )}
+                          </div>
+                        )}
                         <h4
                           style={{
                             fontFamily: "'Barlow Condensed', sans-serif",

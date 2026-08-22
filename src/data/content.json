@@ -139,7 +139,7 @@
       {
         "day": "Day 1", "date": "September 4", "label": "Friday",
         "sessions": [
-          { "time": "",  "title": "Check-In",                                       "type": "break",     "note": "Main Entrance" },
+          { "time": "6:00 PM",  "title": "Check-In",                                "type": "break",     "note": "Main Entrance" },
           { "time": "", "title": "Opening Prayer + Declaration",                    "type": "prayer" },
           { "time": "",  "title": "Praise and Worship",                             "type": "worship",   "speaker": "Celebration Church Worship" },
           { "time": "", "title": "Short Charge + Prayers + Declaration",            "type": "prayer",    "speaker": "" },
@@ -152,7 +152,7 @@
       {
         "day": "Day 2", "date": "September 5", "label": "Saturday",
         "sessions": [
-          { "time": "",  "title": "Morning - Opening Prayer",                          "type": "prayer" },
+          { "time": "7:00 AM",  "title": "Morning - Opening Prayer",                  "type": "prayer" },
           { "time": "",  "title": "Praise and Worship",                                "type": "worship",   "speaker": "Celebration Church Worship" },
           { "time": "", "title": "Prayer Charge",                                      "type": "preaching", "speaker": "" },
           { "time": "", "title": "Prayer Stretch",                                     "type": "prayer", "speaker": "" },
@@ -160,14 +160,14 @@
           { "time": "", "title": "Teaching",                                           "type": "preaching", "speaker": "" },
           { "time": "", "title": "Announcements and closing",                          "type": "break",     "note": "" },
           { "time": "", "title": "Break",                                              "type": "break",     "note": "" },
-          { "time": "", "title": "Afternoon - Opening Prayer",                         "type": "prayer" },
+          { "time": "1:00 PM", "title": "Afternoon - Opening Prayer",                  "type": "prayer" },
           { "time": "",  "title": "Praise and Worship",                                "type": "worship",   "speaker": "Celebration Church Worship" },
           { "time": "", "title": "Prayers + Declaration",                              "type": "prayer", "speaker": "" },
           { "time": "",  "title": "Guest ministration",                                "type": "special",   "speaker": "Brooke Nicholls", "note": "" },
           { "time": "", "title": "Teaching",                                           "type": "preaching", "speaker": "" },
           { "time": "", "title": "Closing",                                            "type": "break",     "note": "" },
           { "time": "", "title": "Lunch Break",                                        "type": "break",     "note": "On your own" },
-          { "time": "", "title": "Evening - Opening Prayer + Declaration",             "type": "prayer" },
+          { "time": "5:00 PM", "title": "Evening - Opening Prayer + Declaration",       "type": "prayer" },
           { "time": "",  "title": "Praise and Worship",                                "type": "worship",   "speaker": "Celebration Church Worship" },
           { "time": "", "title": "Short Charge + Prayers + Declaration",               "type": "prayer", "speaker": "" },
           { "time": "",  "title": "Special Song",                                      "type": "special",   "speaker": "Celebration Church Worship", "note": "" },
@@ -179,7 +179,9 @@
       {
         "day": "Day 3", "date": "September 6", "label": "Sunday",
         "sessions": [
-          { "time": "",  "title": "Sunday Services",                      "type": "special", "speaker": "Celebration Church, Toronto", "note": "Register and Join any of the services" }
+          { "time": "9:00 AM", "endTime": "10:30 AM", "title": "Sunday Service", "type": "special", "speaker": "Celebration Church Toronto", "note": "First Service" },
+          { "time": "11:00 AM", "endTime": "12:30 PM", "title": "Sunday Service", "type": "special", "speaker": "Celebration Church Toronto", "note": "Second Service" },
+          { "time": "1:00 PM", "endTime": "2:30 PM", "title": "Sunday Service", "type": "special", "speaker": "Celebration Church Toronto", "note": "Third Service" }
         ]
       }
     ]
@@ -374,9 +376,9 @@
     "venueNote": "Sunday services take place at a different venue — 1000 Finch Ave W, North York, ON M3J 2V5",
     "requiredNote": "Registration is required to attend any of the services. You will only be checked in for the service you register for.",
     "services": [
-      { "label": "First Service",  "time": "9:00 AM - 10:30 AM EST" },
-      { "label": "Second Service", "time": "11:00 AM - 12:30 PM EST" },
-      { "label": "Third Service",  "time": "1:00 PM - 2:30 PM EST" }
+      { "label": "First Service",  "time": "9:00 AM - 10:30 AM ET" },
+      { "label": "Second Service", "time": "11:00 AM - 12:30 PM ET" },
+      { "label": "Third Service",  "time": "1:00 PM - 2:30 PM ET" }
     ]
   },
   "accommodation": {
@@ -898,7 +900,7 @@
         "headerTextColor": "#fff",
         "routes": "All International to Toronto Pearson (YYZ)",
         "validity": "September 8, 2026",
-        "instructions": "Book online by clicking the button below or You may also call Conferences and Events® at 1.800.328.1111 Monday - Friday, 8:00 a.m. - 8:00 p.m. (EST) and refer to Meeting Event Code  NY4SX"
+        "instructions": "Book online by clicking the button below or You may also call Conferences and Events® at 1.800.328.1111 Monday - Friday, 8:00 a.m. - 8:00 p.m. (ET) and refer to Meeting Event Code  NY4SX"
       }
     ]
   },
