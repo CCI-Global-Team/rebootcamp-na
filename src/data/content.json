@@ -54,7 +54,7 @@
     ],
     "directLinks": [
       { "label": "FAQs", "href": "#faqs" },
-      { "label": "Give", "href": "#giving" }
+      { "label": "Give", "href": "/give" }
     ],
     "ctaLabel": "Register Now"
   },

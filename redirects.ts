@@ -27,12 +27,6 @@ export const trackedRedirects: TrackedRedirect[] = [
     label: 'Reboot Camp North America 2026 Merch',
   },
   {
-    source: '/give',
-    destination: 'https://give.tithe.ly/?formId=3003d62b-3ed6-443d-94b2-d3f8ca9148b8',
-    permanent: true,
-    label: 'Give',
-  },
-  {
     source: '/cellchurch',
     destination: 'https://ccicanada.churchcenter.com/people/forms/1282963',
     permanent: false,

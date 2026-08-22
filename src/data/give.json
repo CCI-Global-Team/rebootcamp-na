@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "title": "Give | Reboot Camp - North America",
+    "description": "Give to Reboot Camp North America.",
+    "canonical": "/give"
+  },
+  "header": {
+    "title": "Give to Reboot Camp NA",
+    "event": "Great Grace · September 4-6, 2026",
+    "location": "Toronto, Ontario · Canada"
+  },
+  "sectionLabel": "Support the Ministry",
+  "givingOptions": {
+    "online": {
+      "title": "Give to Reboot Camp NA",
+      "description": "Card or bank transfer · Powered by Tithely",
+      "url": "https://give.tithe.ly/?formId=3003d62b-3ed6-443d-94b2-d3f8ca9148b8",
+      "show": true
+    },
+    "building": {
+      "title": "Toronto Building Project",
+      "description": "Support the CCI Canada church facility",
+      "url": "https://canada.joincci.org/building-project",
+      "show": true
+    },
+    "etransfer": {
+      "title": "Interac E-Transfer (Canada)",
+      "email": "giving@rebootcamp.ca",
+      "copyButtonLabel": "Copy e-transfer email",
+      "show": false
+    }
+  },
+  "scripture": {
+    "text": "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.",
+    "reference": "2 Corinthians 9:7"
+  },
+  "trustNote": "All transactions are SSL-secured. Receipts available on request.",
+  "transparencyNote": "We are a registered non-profit operating with full financial transparency."
+}
