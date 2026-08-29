@@ -32,6 +32,12 @@ export const trackedRedirects: TrackedRedirect[] = [
     permanent: false,
     label: 'Cell Church Form',
   },
+  {
+    source: '/books',
+    destination: 'https://eden.cendance.com/store/apostle-iren-books',
+    permanent: false,
+    label: "Apostle Emmanuel Iren's Books",
+  },
 ];
 
 export function getTrackedRedirect(source: TrackedRedirect['source']) {
