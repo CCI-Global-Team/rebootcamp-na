@@ -213,12 +213,12 @@ export function FAQSection() {
                   Questions about child care at the event
                 </p>
               </div>
-              <a href={`#childcare`}
-                onClick={(e) => { e.preventDefault(); document.querySelector("#childcare")?.scrollIntoView({ behavior: "smooth" }); }}
-                className="ml-auto text-xs hover:underline"
-                style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.06em", color: t.goldAccent, textDecoration: "none", whiteSpace: "nowrap" }}>
-                Register →
-              </a>
+              <span
+                className="ml-auto text-xs"
+                style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.06em", color: t.textMuted, whiteSpace: "nowrap" }}
+              >
+                Registration closed
+              </span>
             </div>
 
             <AccordionList items={childcare.faqs} accentEmail={childcare.faqsContact} />
