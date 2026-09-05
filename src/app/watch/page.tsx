@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { ExternalLink, Play, Radio } from "lucide-react";
 
 import logoWhite from "@/assets/logo/rbc-na-full-white.png";
@@ -26,12 +27,14 @@ export default function WatchPage() {
       />
 
       <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl flex-col items-center justify-center text-center">
-        <Image
-          src={logoWhite}
-          alt="Reboot Camp North America"
-          className="mb-12 h-auto w-40 sm:w-48"
-          priority
-        />
+        <Link href="/" aria-label="Reboot Camp North America home" className="mb-12 inline-flex rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f6d561]">
+          <Image
+            src={logoWhite}
+            alt="Reboot Camp North America"
+            className="h-auto w-40 sm:w-48"
+            priority
+          />
+        </Link>
 
         <div className="inline-flex items-center gap-2 rounded-full border border-[#e8c033]/45 bg-[#e8c033]/10 px-4 py-2 text-xs font-semibold tracking-[0.18em] text-[#f6d561] uppercase">
           <span className="relative flex h-2.5 w-2.5">
