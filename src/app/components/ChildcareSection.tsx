@@ -1,19 +1,11 @@
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
 import Image from "next/image";
-import { track } from "@vercel/analytics";
-import { Baby, AlertTriangle, ArrowRight } from "lucide-react";
+import { Baby, AlertTriangle } from "lucide-react";
 
 export function ChildcareSection() {
   const { t } = useTheme();
   const { childcare } = useSiteContent();
-
-  function trackChildcareRegistrationClick() {
-    track("Registration CTA Clicked", {
-      cta: "childcare_registration",
-      page: "/",
-    });
-  }
 
   return (
     <section
@@ -80,7 +72,7 @@ export function ChildcareSection() {
               </p>
             </div>
 
-            {/* Compulsory notice */}
+            {/* Registration status */}
             <div
               className="flex items-start gap-3 rounded-xl px-5 py-4"
               style={{
@@ -91,10 +83,10 @@ export function ChildcareSection() {
               <AlertTriangle size={18} style={{ color: "#E85D04", marginTop: "2px", flexShrink: 0 }} />
               <div>
                 <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "0.95rem", color: "#E85D04", letterSpacing: "0.04em", marginBottom: "2px" }}>
-                  {childcare.compulsoryTitle}
+                  {childcare.closedTitle}
                 </p>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: t.textSecondary, lineHeight: 1.6, margin: 0 }}>
-                  {childcare.compulsoryNote}
+                  {childcare.closedNote}
                 </p>
               </div>
             </div>
@@ -115,28 +107,22 @@ export function ChildcareSection() {
               ))}
             </div>
 
-            {/* CTA */}
-            <a
-              href={childcare.registrationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={trackChildcareRegistrationClick}
-              className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl self-start"
+            <div
+              role="status"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl self-start"
               style={{
-                background: t.ctaGradient,
-                color: "#fff",
+                background: t.isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)",
+                border: `1px solid ${t.isDark ? "rgba(255,255,255,0.18)" : "rgba(0,0,0,0.14)"}`,
+                color: t.textSecondary,
                 fontFamily: "'Oswald', sans-serif",
                 fontWeight: 700,
                 fontSize: "1rem",
                 letterSpacing: "0.1em",
-                textDecoration: "none",
-                boxShadow: "0 6px 32px rgba(232,93,4,0.35)",
               }}
             >
               <Baby size={18} />
-              {childcare.ctaLabel}
-              <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
-            </a>
+              {childcare.closedTitle.toUpperCase()}
+            </div>
           </div>
 
         </div>

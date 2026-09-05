@@ -304,11 +304,10 @@
     "headingPlain": "Child Care",
     "headingAccent": "Registration",
     "description": "Child care service is available at RBC'26 North America. Our dedicated CelebKids team will care for your children so you can fully engage in every session.",
-    "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3629974/reservations/new",
     "imageUrl": "/images/rbc-na-childcare.webp",
-    "ctaLabel": "REGISTER YOUR CHILD NOW",
-    "compulsoryTitle": "Registration is Compulsory",
-    "compulsoryNote": "All children attending must be registered in advance. Unregistered children cannot be admitted to child care. Spots are limited — register early.",
+    "registrationClosed": true,
+    "closedTitle": "Registration Is Closed",
+    "closedNote": "CelebKids registration is now closed. Please contact the CelebKids team if you have questions.",
     "chips": [
       { "label": "CelebKids RBC'26 NA" },
       { "label": "Sept 4 - 6, 2026" }
@@ -322,7 +321,7 @@
       },
       {
         "q": "Do I need to register my child?",
-        "a": "Yes, please! Every child must be registered so we can keep accurate records, prepare and ensure their safety at all times. Register now at the link provided on this page."
+        "a": "CelebKids registration is now closed. Please contact the CelebKids team if you have questions."
       },
       {
         "q": "Are there any requirements when bringing my child(ren)?",

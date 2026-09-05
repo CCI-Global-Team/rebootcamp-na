@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { ThemeProvider, useTheme } from "@/app/contexts/ThemeContext";
 import { Navbar } from "@/app/components/Navbar";
 import { Hero } from "@/app/components/Hero";
+import { HeroWatchLive, isRebootCampLivePeriod } from "@/app/components/HeroWatchLive";
 import { AboutSection } from "@/app/components/AboutSection";
 import { RegistrationSection } from "@/app/components/RegistrationSection";
 import { ChildcareSection } from "@/app/components/ChildcareSection";
@@ -28,6 +30,14 @@ export function PageInner() {
 
 function PageContent() {
   const { t } = useTheme();
+  const [showLiveHero, setShowLiveHero] = useState(false);
+
+  useEffect(() => {
+    const updateHero = () => setShowLiveHero(isRebootCampLivePeriod());
+    updateHero();
+    const interval = window.setInterval(updateHero, 60_000);
+    return () => window.clearInterval(interval);
+  }, []);
 
   return (
     <div
@@ -40,7 +50,7 @@ function PageContent() {
       }}
     >
       <Navbar />
-      <Hero />
+      {showLiveHero ? <HeroWatchLive /> : <Hero />}
       <AboutSection />
       <RegistrationSection />
       <ChildcareSection />
