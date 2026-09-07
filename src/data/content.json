@@ -13,8 +13,12 @@
     "dates": "September 4 - 6, 2026",
     "datesDisplay": "SEPTEMBER 4 - 6, 2026",
     "countdownTarget": "2026-09-04T17:00:00",
-    "admission": "Free (Registration Required)",
-    "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3565021/reservations/new"
+    "admission": "Free — Registration Closed",
+    "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3565021/reservations/new",
+    "registrationClosed": true,
+    "registrationClosedTitle": "Registration Is Closed",
+    "registrationClosedNote": "Reboot Camp North America 2026 has ended. Thank you to everyone who joined us.",
+    "heroPostEventMessage": "Thank you for making Great Grace unforgettable. See you next year!"
   },
   "navbar": {
     "keepHere": [
@@ -56,13 +60,13 @@
       { "label": "FAQs", "href": "#faqs" },
       { "label": "Give", "href": "/give" }
     ],
-    "ctaLabel": "Register Now"
+    "ctaLabel": "Registration Closed"
   },
   "hero": {
     "badge": "Camp Meeting · North America",
     "themeLines": ["Great", "Grace"],
     "description": "An extraordinary gathering of faith, fire and fellowship. Come encounter the transforming power of God's grace.",
-    "ctaPrimary": "REGISTER NOW — FREE",
+    "ctaPrimary": "REGISTRATION CLOSED",
     "ctaSecondary": "LEARN MORE",
     "countdownLabel": "Event Begins In"
   },
@@ -247,16 +251,16 @@
     ]
   },
   "registration": {
-    "sectionLabel": "Secure Your Place",
-    "headingPlain": "Register",
-    "headingAccent": "Free",
-    "description": "Admission is completely free. Reserve your spot and join thousands of believers for three transformative days of Great Grace.",
-    "urgencyHeadingPlain": "You Don't Want to Miss",
+    "sectionLabel": "Event Update",
+    "headingPlain": "Registration",
+    "headingAccent": "Closed",
+    "description": "Reboot Camp North America 2026 has ended. Thank you to everyone who joined us for a weekend of Great Grace.",
+    "urgencyHeadingPlain": "Thank You For Joining",
     "urgencyHeadingAccent": "Reboot Camp",
-    "ctaLabel": "REGISTER NOW",
-    "childcareCta": "BRINGING CHILDREN? REGISTER FOR CHILDCARE",
-    "externalNote": "For children under 12 years of age, please use the link below: 👇🏼",
-    "contactNote": "Registration is free and open to all.\nFor group inquiries or accessibility needs,\ncontact us at",
+    "ctaLabel": "REGISTRATION CLOSED",
+    "childcareCta": "CHILDCARE REGISTRATION CLOSED",
+    "externalNote": "This event has ended.",
+    "contactNote": "For event-related questions,\ncontact us at",
     "contactEmail": "canada@joincci.org",
     "highlights": [
       {
@@ -369,11 +373,14 @@
     "sectionLabel": "September 6, 2026",
     "heading": "Reboot Camp",
     "headingAccent": "Sunday Service",
-    "subheading": "Register for your service time.",
+    "subheading": "This service has concluded.",
     "registrationUrl": "https://ccicanada.churchcenter.com/registrations/events/3713464/reservations/new",
-    "ctaLabel": "REGISTER FOR A SERVICE",
+    "registrationClosed": true,
+    "closedTitle": "Registration Is Closed",
+    "closedNote": "The Reboot Camp Sunday services have concluded. Thank you for worshipping with us.",
+    "ctaLabel": "REGISTRATION CLOSED",
     "venueNote": "Sunday services take place at a different venue — 1000 Finch Ave W, North York, ON M3J 2V5",
-    "requiredNote": "Registration is required to attend any of the services. You will only be checked in for the service you register for.",
+    "requiredNote": "The Reboot Camp Sunday services have concluded. Thank you for worshipping with us.",
     "services": [
       { "label": "First Service",  "time": "9:00 AM - 10:30 AM ET" },
       { "label": "Second Service", "time": "11:00 AM - 12:30 PM ET" },
@@ -468,8 +475,11 @@
       "url": "https://ccicanada.churchcenter.com/people/forms/1261898",
       "label": "Subsidized Transportation Service",
       "heading": "Need a Ride?",
-      "desc": "The cost of transportation has been subsidized to convey members to and from designated stops to the RBC NA venue. Register now to secure your seat on the shuttle.",
-      "ctaLabel": "REGISTER FOR TRANSPORTATION",
+      "desc": "Transportation service for Reboot Camp North America 2026 has concluded.",
+      "ctaLabel": "TRANSPORTATION REGISTRATION CLOSED",
+      "registrationClosed": true,
+      "closedTitle": "Transportation Registration Closed",
+      "closedNote": "The Reboot Camp North America 2026 transportation service has concluded.",
       "comingSoon": false,
       "comingSoonText": "Registration Opening Soon",
       "sectionLabel": "Event Transportation",
@@ -909,7 +919,7 @@
       { "label": "Theme",     "value": "Great Grace" },
       { "label": "Dates",     "value": "September 4 \u2013 6, 2026" },
       { "label": "Location",  "value": "272 Attwell Dr, Toronto, ON" },
-      { "label": "Admission", "value": "Free (Registration Required)" }
+      { "label": "Admission", "value": "Registration Closed" }
     ],
     "socials": [
       { "platform": "Instagram", "url": "#" },
@@ -918,6 +928,6 @@
       { "platform": "Twitter",   "url": "#" }
     ],
     "legalLinks": ["Privacy Policy", "Terms of Use", "Contact"],
-    "registerCta": "REGISTER NOW \u2014 FREE"
+    "registerCta": "REGISTRATION CLOSED"
   }
 }

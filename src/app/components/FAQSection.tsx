@@ -159,7 +159,7 @@ export function FAQSection() {
                   {venue.transport.desc}
                 </p>
               </div>
-              <a
+              {!venue.transport.registrationClosed && <a
                 href="#transportation"
                 onClick={(e) => {
                   e.preventDefault();
@@ -168,8 +168,8 @@ export function FAQSection() {
                 className="ml-auto text-xs hover:underline"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.06em", color: t.goldAccent, textDecoration: "none", whiteSpace: "nowrap" }}
               >
-                Register Now →
-              </a>
+                View shuttle details →
+              </a>}
             </div>
 
             <AccordionList

@@ -214,12 +214,16 @@ export function Hero() {
           </motion.div>
 
           {/* CTAs */}
-          <HeroCta
-            ctaPrimary={hero.ctaPrimary}
-            ctaSecondary={hero.ctaSecondary}
-            handleScroll={handleScroll}
-            className="hidden lg:flex"
-          />
+          {event.registrationClosed ? (
+            <motion.div variants={fadeUp} className="hidden lg:flex flex-col gap-2 rounded-lg px-5 py-4" style={{ background: t.isDark ? "rgba(255,255,255,0.05)" : "rgba(8,11,26,0.05)", border: `1px solid ${t.heroMetaBorder}`, maxWidth: "30rem" }}>
+              <p className="uppercase tracking-widest" style={{ fontFamily: "'Barlow Condensed', sans-serif", color: t.goldAccent, margin: 0 }}>
+                {event.registrationClosedTitle}
+              </p>
+              <p style={{ color: t.heroSubtextColor, fontFamily: "'Inter', sans-serif", lineHeight: 1.5, margin: 0 }}>
+                {event.heroPostEventMessage}
+              </p>
+            </motion.div>
+          ) : <HeroCta ctaPrimary={hero.ctaPrimary} ctaSecondary={hero.ctaSecondary} handleScroll={handleScroll} className="hidden lg:flex" />}
         </motion.div>
 
         {/* Right — Flyer Images */}

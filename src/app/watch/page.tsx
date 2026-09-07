@@ -8,8 +8,8 @@ import logoWhite from "@/assets/logo/rbc-na-full-white.png";
 const YOUTUBE_STREAMS_URL = "https://www.youtube.com/@CelebrationChurchCanada/streams";
 
 export const metadata: Metadata = {
-  title: "Watch Live | Reboot Camp North America",
-  description: "Join the Reboot Camp North America live stream on YouTube.",
+  title: "Watch Recordings | Reboot Camp North America",
+  description: "The Reboot Camp North America live stream has ended. Catch up on the recordings on YouTube.",
   alternates: { canonical: "/watch" },
 };
 
@@ -37,16 +37,12 @@ export default function WatchPage() {
         </Link>
 
         <div className="inline-flex items-center gap-2 rounded-full border border-[#e8c033]/45 bg-[#e8c033]/10 px-4 py-2 text-xs font-semibold tracking-[0.18em] text-[#f6d561] uppercase">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-red-500" />
-          </span>
-          Live stream
+          Registration closed · Live stream ended
         </div>
 
         <h1 className="mt-6 max-w-4xl font-[family-name:var(--font-oswald)] text-[clamp(3.5rem,10vw,7.5rem)] leading-[0.88] font-bold tracking-[0.01em] uppercase">
-          Join the
-          <span className="block bg-linear-to-r from-[#f6d561] via-[#f88a36] to-[#e85d04] bg-clip-text text-transparent">live broadcast</span>
+          Catch up on the
+          <span className="block bg-linear-to-r from-[#f6d561] via-[#f88a36] to-[#e85d04] bg-clip-text text-transparent">recordings</span>
         </h1>
 
         <a
@@ -58,7 +54,7 @@ export default function WatchPage() {
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ff0000] text-white">
             <Play size={17} fill="currentColor" className="ml-0.5" />
           </span>
-          Watch on YouTube
+          Watch recordings on YouTube
           <ExternalLink size={18} aria-hidden="true" />
         </a>
 
@@ -68,8 +64,8 @@ export default function WatchPage() {
             <p className="font-[family-name:var(--font-oswald)] text-xl">YouTube · Celebration Church Canada</p>
           </div>
           <div className="bg-[#121016]/90 p-5 sm:p-6">
-            <p className="mb-2 font-[family-name:var(--font-barlow-condensed)] text-xs tracking-[0.17em] text-[#f6d561] uppercase">How to join</p>
-            <p className="font-[family-name:var(--font-oswald)] text-xl">Open the stream and press play</p>
+            <p className="mb-2 font-[family-name:var(--font-barlow-condensed)] text-xs tracking-[0.17em] text-[#f6d561] uppercase">Catch up anytime</p>
+            <p className="font-[family-name:var(--font-oswald)] text-xl">The recordings are available on the same YouTube link</p>
           </div>
         </div>
 

@@ -12,7 +12,7 @@ const COPYRIGHT_YEAR = 2026;
 
 export function Footer() {
   const { t } = useTheme();
-  const { navbar, footer, site, venue } = useSiteContent();
+  const { navbar, footer, site, venue, event } = useSiteContent();
   const pathname = usePathname();
 
   const scrollTo = (href: string) => {
@@ -107,14 +107,7 @@ export function Footer() {
             </div>
 
             {/* Register CTA */}
-            <a
-              href="#register"
-              onClick={(e) => { e.preventDefault(); scrollTo("#register"); }}
-              className="block px-5 py-3 rounded text-center text-sm transition-all duration-200 hover:scale-105 hover:shadow-lg"
-              style={{ background: t.ctaGradient, color: t.ctaText, fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: "0.1em" }}
-            >
-              {footer.registerCta}
-            </a>
+            {event.registrationClosed ? <span className="block px-5 py-3 rounded text-center text-sm" style={{ border: `1px solid ${t.footerBottomBorder}`, color: t.textVeryMuted, fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: "0.1em" }}>{footer.registerCta}</span> : <a href="#register" onClick={(e) => { e.preventDefault(); scrollTo("#register"); }} className="block px-5 py-3 rounded text-center text-sm transition-all duration-200 hover:scale-105 hover:shadow-lg" style={{ background: t.ctaGradient, color: t.ctaText, fontFamily: "'Oswald', sans-serif", fontWeight: 700, letterSpacing: "0.1em" }}>{footer.registerCta}</a>}
           </div>
         </div>
       </div>

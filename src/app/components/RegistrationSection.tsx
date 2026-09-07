@@ -205,22 +205,18 @@ export function RegistrationSection() {
                 </p>
               </div>
 
-              <a
-                href={event.registrationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={trackRegistrationCtaClick}
-                className="group w-full flex items-center justify-center gap-3 py-4 px-8 rounded-xl transition-all duration-200 hover:scale-[1.03] hover:shadow-2xl"
-                style={{ backgroundImage: t.ctaGradient, color: "#fff", fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.1rem", letterSpacing: "0.1em", textDecoration: "none", boxShadow: "0 6px 32px rgba(232,93,4,0.35)" }}
-              >
-                {registration.ctaLabel}
-                <motion.span
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.6 }}
+              {event.registrationClosed ? (
+                <div
+                  className="w-full flex items-center justify-center gap-3 py-4 px-8 rounded-xl"
+                  style={{ background: t.isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.05)", border: `1px dashed rgba(${t.accentRgb},0.3)`, color: t.textVeryMuted, fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.1rem", letterSpacing: "0.1em" }}
                 >
-                  <ArrowRight size={18} />
-                </motion.span>
-              </a>
+                  {registration.ctaLabel}
+                </div>
+              ) : (
+                <a href={event.registrationUrl} target="_blank" rel="noopener noreferrer" onClick={trackRegistrationCtaClick} className="group w-full flex items-center justify-center gap-3 py-4 px-8 rounded-xl transition-all duration-200 hover:scale-[1.03] hover:shadow-2xl" style={{ backgroundImage: t.ctaGradient, color: "#fff", fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.1rem", letterSpacing: "0.1em", textDecoration: "none", boxShadow: "0 6px 32px rgba(232,93,4,0.35)" }}>
+                  {registration.ctaLabel}<ArrowRight size={18} />
+                </a>
+              )}
 
               <p
                 className="flex items-center gap-1.5 transition-opacity duration-200 hover:opacity-70"
@@ -229,7 +225,7 @@ export function RegistrationSection() {
                 {registration.externalNote}
               </p>
 
-              <button
+              {!event.registrationClosed && <button
                 onClick={() => document.querySelector("#childcare")?.scrollIntoView({ behavior: "smooth" })}
                 className="group w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl transition-all duration-200 hover:scale-[1.02]"
                 style={{
@@ -254,7 +250,7 @@ export function RegistrationSection() {
                 <Baby size={15} />
                 {registration.childcareCta}
                 <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
-              </button>
+              </button>}
 
               <div className="w-full" style={{ borderTop: `1px solid rgba(${t.accentRgb},0.12)` }} />
 

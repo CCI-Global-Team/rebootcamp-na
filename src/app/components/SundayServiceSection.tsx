@@ -1,18 +1,10 @@
-import { Clock, MapPin, AlertCircle, ArrowRight, CalendarDays } from "lucide-react";
+import { Clock, MapPin, AlertCircle, CalendarDays } from "lucide-react";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import { useSiteContent } from "@/app/hooks/useSiteContent";
-import { track } from "@vercel/analytics";
 
 export function SundayServiceSection() {
   const { t } = useTheme();
   const { sundayService, venue } = useSiteContent();
-
-  function trackSundayServiceRegistrationClick() {
-    track("Registration CTA Clicked", {
-      cta: "sunday_service_registration",
-      page: "/",
-    });
-  }
 
   return (
     <section
@@ -100,7 +92,7 @@ export function SundayServiceSection() {
           style={{ background: t.isDark ? "rgba(232,93,4,0.08)" : "rgba(232,93,4,0.06)", border: "1px solid rgba(232,93,4,0.3)" }}>
           <AlertCircle size={17} style={{ color: "#E85D04", flexShrink: 0, marginTop: "1px" }} />
           <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem", color: t.textSecondary, lineHeight: 1.65, margin: 0 }}>
-            <strong style={{ color: "#E85D04" }}>Registration required. </strong>
+            <strong style={{ color: "#E85D04" }}>{sundayService.registrationClosed ? "Registration closed. " : "Registration required. "}</strong>
             {sundayService.requiredNote.replace("Registration is required to attend any of the services. ", "")}
           </p>
         </div>
@@ -124,27 +116,14 @@ export function SundayServiceSection() {
 
         {/* CTA */}
         <div className="flex justify-center">
-          <a
-            href={sundayService.registrationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={trackSundayServiceRegistrationClick}
-            className="group inline-flex items-center gap-3 px-10 py-5 rounded-2xl transition-all duration-200 hover:scale-[1.03] hover:shadow-2xl"
-            style={{
-              backgroundImage: t.ctaGradient,
-              color: "#fff",
-              fontFamily: "'Oswald', sans-serif",
-              fontWeight: 700,
-              fontSize: "1.15rem",
-              letterSpacing: "0.1em",
-              textDecoration: "none",
-              boxShadow: "0 8px 40px rgba(232,93,4,0.4)",
-            }}
+          <div
+            aria-disabled="true"
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl"
+            style={{ background: t.isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.05)", border: `1px dashed rgba(${t.accentRgb},0.3)`, color: t.textVeryMuted, fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1.15rem", letterSpacing: "0.1em" }}
           >
             <CalendarDays size={20} />
-            {sundayService.ctaLabel}
-            <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-1" />
-          </a>
+            REGISTRATION CLOSED
+          </div>
         </div>
 
       </div>

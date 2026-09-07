@@ -135,7 +135,7 @@ export function TransportationSection() {
             </div>
 
             {/* Coming soon notice + CTA */}
-            {tr.comingSoon ? (
+            {tr.registrationClosed || tr.comingSoon ? (
               <div className="rounded-2xl overflow-hidden"
                 style={{ border: "1px solid rgba(232,192,51,0.3)", background: t.isDark ? "rgba(232,192,51,0.05)" : "rgba(232,192,51,0.04)" }}>
                 <div className="flex items-start gap-4 p-5">
@@ -145,10 +145,10 @@ export function TransportationSection() {
                   </div>
                   <div>
                     <p style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "1rem", color: t.textPrimary, marginBottom: "4px", letterSpacing: "0.03em" }}>
-                      Registration Opening Soon
+                      {tr.registrationClosed ? tr.closedTitle : tr.comingSoonText}
                     </p>
                     <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: t.textSecondary, lineHeight: 1.6, margin: 0 }}>
-                      Seats are limited!  — the registration deadline is <strong style={{ color: t.goldAccent }}>{tr.deadline}</strong>. Be ready to register as soon as it opens.
+                      {tr.registrationClosed ? tr.closedNote : <>Seats are limited! — the registration deadline is <strong style={{ color: t.goldAccent }}>{tr.deadline}</strong>. Be ready to register as soon as it opens.</>}
                     </p>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ export function TransportationSection() {
                     </span>
                   </div>
                   <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.7rem", color: t.textVeryMuted, textAlign: "center" }}>
-                    Registration link will be activated when registration opens.
+                    {tr.registrationClosed ? "No new transportation registrations are being accepted." : "Registration link will be activated when registration opens."}
                   </p>
                 </div>
               </div>

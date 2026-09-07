@@ -185,17 +185,11 @@ export function VenueSection() {
                     {venue.transport.desc}
                   </p>
                 </div>
-                <a
-                  href={venue.transport.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-center gap-2 py-3 px-5 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-lg"
-                  style={{ background: t.ctaGradient, color: "#fff", fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "0.88rem", letterSpacing: "0.09em", textDecoration: "none", boxShadow: "0 4px 20px rgba(232,93,4,0.28)" }}
-                >
-                  <BusFront size={15} />
-                  {venue.transport.ctaLabel}
-                  <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
-                </a>
+                {venue.transport.registrationClosed ? (
+                  <div className="flex items-center justify-center gap-2 py-3 px-5 rounded-xl" style={{ border: `1px dashed rgba(${t.accentRgb},0.3)`, color: t.textVeryMuted, fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "0.88rem", letterSpacing: "0.09em" }}>
+                    <BusFront size={15} /> {venue.transport.ctaLabel}
+                  </div>
+                ) : <a href={venue.transport.url} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-2 py-3 px-5 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-lg" style={{ background: t.ctaGradient, color: "#fff", fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: "0.88rem", letterSpacing: "0.09em", textDecoration: "none", boxShadow: "0 4px 20px rgba(232,93,4,0.28)" }}><BusFront size={15} />{venue.transport.ctaLabel}<ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" /></a>}
               </div>
             </div>
 
