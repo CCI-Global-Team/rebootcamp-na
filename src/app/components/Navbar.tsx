@@ -81,7 +81,7 @@ function DropdownGroup({ group, onNavigate, t }: { group: NavGroup; onNavigate: 
 
 export function Navbar() {
   const { t, toggleTheme } = useTheme();
-  const { navbar } = useSiteContent();
+  const { navbar, event } = useSiteContent();
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -171,14 +171,7 @@ export function Navbar() {
             >
               {t.isDark ? <Sun size={15} style={{ color: t.goldAccent }} /> : <Moon size={15} style={{ color: "#080B1A" }} />}
             </button>
-            <a
-              href="#register"
-              onClick={(e) => { e.preventDefault(); handleNavClick("#register"); }}
-              className="px-5 py-2.5 rounded text-sm uppercase tracking-wider transition-all duration-200 hover:scale-105 hover:shadow-lg"
-              style={{ fontFamily: "'Barlow Condensed', sans-serif", background: t.ctaGradient, color: t.ctaText, fontWeight: 700, letterSpacing: "0.12em" }}
-            >
-              {navbar.ctaLabel}
-            </a>
+            {event.registrationClosed ? <span className="px-5 py-2.5 rounded text-sm uppercase tracking-wider" style={{ fontFamily: "'Barlow Condensed', sans-serif", border: `1px solid ${t.navbarMobileBorder}`, color: t.textVeryMuted, fontWeight: 700, letterSpacing: "0.12em" }}>{navbar.ctaLabel}</span> : <a href="#register" onClick={(e) => { e.preventDefault(); handleNavClick("#register"); }} className="px-5 py-2.5 rounded text-sm uppercase tracking-wider transition-all duration-200 hover:scale-105 hover:shadow-lg" style={{ fontFamily: "'Barlow Condensed', sans-serif", background: t.ctaGradient, color: t.ctaText, fontWeight: 700, letterSpacing: "0.12em" }}>{navbar.ctaLabel}</a>}
           </div>
 
           {/* Mobile: theme + hamburger */}
@@ -257,14 +250,7 @@ export function Navbar() {
               </a>
             ))}
 
-            <a
-              href="#register"
-              onClick={(e) => { e.preventDefault(); handleNavClick("#register"); }}
-              className="mt-3 px-5 py-3 rounded text-center text-sm uppercase tracking-wider"
-              style={{ fontFamily: "'Barlow Condensed', sans-serif", background: t.ctaGradient, color: t.ctaText, fontWeight: 700 }}
-            >
-              {navbar.ctaLabel}
-            </a>
+            {event.registrationClosed ? <span className="mt-3 px-5 py-3 rounded text-center text-sm uppercase tracking-wider" style={{ fontFamily: "'Barlow Condensed', sans-serif", border: `1px solid ${t.navbarMobileBorder}`, color: t.textVeryMuted, fontWeight: 700 }}>{navbar.ctaLabel}</span> : <a href="#register" onClick={(e) => { e.preventDefault(); handleNavClick("#register"); }} className="mt-3 px-5 py-3 rounded text-center text-sm uppercase tracking-wider" style={{ fontFamily: "'Barlow Condensed', sans-serif", background: t.ctaGradient, color: t.ctaText, fontWeight: 700 }}>{navbar.ctaLabel}</a>}
           </div>
         </div>
       )}

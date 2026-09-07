@@ -83,6 +83,7 @@ const SHOW_TESTIMONIALS = false;
 
 export default function WeekendPage() {
   const registrationUrl = content.event.registrationUrl;
+  const registrationClosed = content.event.registrationClosed;
   const { landing } = weekendCampaign;
 
   return (
@@ -109,7 +110,7 @@ export default function WeekendPage() {
             priority
           />
         </Link>
-        <RegistrationLink
+        {registrationClosed ? <span className={`${ctaClass} px-5 py-2 text-sm opacity-60 cursor-not-allowed`}>Registration Closed</span> : <RegistrationLink
           className={`${ctaClass} px-5 py-2 text-sm`}
           href={registrationUrl}
           placement="header"
@@ -118,7 +119,7 @@ export default function WeekendPage() {
           aria-label="Register now for Reboot Camp (opens in a new tab)"
         >
           {landing.registerLabel}
-        </RegistrationLink>
+        </RegistrationLink>}
       </header>
 
       <main id="main-content">
@@ -158,7 +159,7 @@ export default function WeekendPage() {
               </p>
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-                <RegistrationLink
+                {registrationClosed ? <span className={`${ctaClass} px-9 py-4 w-fit opacity-60 cursor-not-allowed`}>Registration Closed</span> : <RegistrationLink
                   className={`${ctaClass} px-9 py-4 w-fit`}
                   href={registrationUrl}
                   placement="hero"
@@ -167,7 +168,7 @@ export default function WeekendPage() {
                   aria-label="Register now for Reboot Camp (opens in a new tab)"
                 >
                   {landing.registerLabel}
-                </RegistrationLink>
+                </RegistrationLink>}
                 {SHOW_TRAILER_LINK && (
                   <a
                     className="font-big-shoulders inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/35 px-6 py-4 font-bold tracking-wider uppercase transition hover:border-[#ffbb55] hover:text-[#ffbb55] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#ffbb55] motion-reduce:transition-none md:px-8"
@@ -351,7 +352,7 @@ export default function WeekendPage() {
             <p className="font-instrument-serif mx-auto mt-5 max-w-xl text-xl leading-8 text-[#ffbb55] italic">
               {landing.finalCta.body}
             </p>
-            <RegistrationLink
+            {registrationClosed ? <span className={`${ctaClass} mt-10 px-10 py-4 opacity-60 cursor-not-allowed`}>Registration Closed</span> : <RegistrationLink
               className={`${ctaClass} mt-10 px-10 py-4`}
               href={registrationUrl}
               placement="final_cta"
@@ -360,7 +361,7 @@ export default function WeekendPage() {
               aria-label="Register now for Reboot Camp (opens in a new tab)"
             >
               {landing.registerLabel}
-            </RegistrationLink>
+            </RegistrationLink>}
           </div>
         </section>
       </main>

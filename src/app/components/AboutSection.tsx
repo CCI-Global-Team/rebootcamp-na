@@ -78,7 +78,7 @@ export function AboutSection() {
               </p>
             </motion.div> */}
 
-            <motion.a
+            {!event.registrationClosed && <motion.a
               variants={fadeUp}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
@@ -89,7 +89,7 @@ export function AboutSection() {
             >
               <Flame size={16} />
               {about.ctaLabel}
-            </motion.a>
+            </motion.a>}
           </motion.div>
 
           {/* Right — Stats & highlights */}
