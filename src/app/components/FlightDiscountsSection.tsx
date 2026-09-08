@@ -58,7 +58,7 @@ function CopyButton({ code, isDark }: { code: string; isDark: boolean }) {
 }
 
 /* ─── Individual airline card ─────────────────────────────────────────── */
-function AirlineCard({ airline }: { airline: Airline }) {
+function AirlineCard({ airline, closed }: { airline: Airline; closed: boolean }) {
   const { t } = useTheme();
   const [expanded, setExpanded] = useState(false);
 
@@ -227,7 +227,7 @@ function AirlineCard({ airline }: { airline: Airline }) {
               {airline.code}
             </span>
           </div>
-          <CopyButton code={airline.code} isDark={t.isDark} />
+          {!closed && <CopyButton code={airline.code} isDark={t.isDark} />}
         </div>
 
         {/* Routes */}
@@ -306,41 +306,15 @@ function AirlineCard({ airline }: { airline: Airline }) {
           </p>
         )}
 
-        {/* Book Now button */}
-        <a
-          href={airline.bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "6px",
-            marginTop: "14px",
-            padding: "9px",
-            borderRadius: "8px",
-            background: airline.color,
-            color: isCustomAccent ? airline.accentColor : airline.headerTextColor,
-            textDecoration: "none",
-            fontFamily: "'Oswald', sans-serif",
-            fontWeight: 600,
-            fontSize: "0.82rem",
-            letterSpacing: "0.09em",
-            transition: "opacity 0.2s ease, transform 0.2s ease",
-            border: isCustomAccent ? `1px solid ${airline.accentColor}55` : "none",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.opacity = "0.85";
-            (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.02)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.opacity = "1";
-            (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
-          }}
-        >
-          BOOK NOW
-          <ExternalLink size={13} />
-        </a>
+        {closed ? (
+          <div aria-disabled="true" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "6px", marginTop: "14px", padding: "9px", borderRadius: "8px", border: `1px dashed rgba(${airline.cardRgb}, ${t.isDark ? "0.45" : "0.35"})`, color: t.textVeryMuted, fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "0.82rem", letterSpacing: "0.09em" }}>
+            FLIGHT DISCOUNT CLOSED
+          </div>
+        ) : (
+          <a href={airline.bookingUrl} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "6px", marginTop: "14px", padding: "9px", borderRadius: "8px", background: airline.color, color: isCustomAccent ? airline.accentColor : airline.headerTextColor, textDecoration: "none", fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: "0.82rem", letterSpacing: "0.09em", transition: "opacity 0.2s ease, transform 0.2s ease", border: isCustomAccent ? `1px solid ${airline.accentColor}55` : "none" }}>
+            BOOK NOW <ExternalLink size={13} />
+          </a>
+        )}
       </div>
     </div>
   );
@@ -394,10 +368,17 @@ export function FlightDiscountsSection() {
           </p>
         </div> */}
 
+        {flightDiscounts.closed && (
+          <div className="max-w-3xl mx-auto mb-10 rounded-xl px-5 py-4 text-center" style={{ background: t.isDark ? "rgba(255,255,255,0.05)" : "rgba(8,11,26,0.04)", border: `1px solid ${t.heroMetaBorder}` }}>
+            <p className="uppercase tracking-widest" style={{ fontFamily: "'Barlow Condensed', sans-serif", color: t.goldAccent, margin: 0 }}>{flightDiscounts.closedTitle}</p>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.9rem", color: t.textSecondary, margin: "6px 0 0" }}>{flightDiscounts.closedNote}</p>
+          </div>
+        )}
+
         {/* Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {flightDiscounts.airlines.map((airline) => (
-            <AirlineCard key={airline.abbr} airline={airline} />
+            <AirlineCard key={airline.abbr} airline={airline} closed={flightDiscounts.closed} />
           ))}
         </div>
       </div>

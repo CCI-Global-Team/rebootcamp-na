@@ -846,7 +846,10 @@
     "sectionLabel": "Travel Smart",
     "headingPlain": "Flight",
     "headingAccent": "Discounts",
-    "description": "We\u2019ve partnered with major airlines to bring Reboot Camp attendees exclusive discounts on flights to Toronto.",
+    "description": "Flight discounts for Reboot Camp North America 2026 have ended.",
+    "closed": true,
+    "closedTitle": "Flight Discounts Closed",
+    "closedNote": "The event has concluded, and these airline offers are no longer available.",
     "footnote": "",
     "airlines": [
       {
